@@ -15,7 +15,7 @@ const users = [
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/image.jpg'.
     image: '/img/undraw_open_source.svg',
-    infoLink: 'https://www.facebook.com',
+    infoLink: 'https://arianee.org',
     pinned: true,
   },
 ];
@@ -24,10 +24,12 @@ const siteConfig = {
   title: 'Arianee Docs', // Title for your website.
   tagline: 'Documentation for Arianee Protocol',
   url: 'https://arianee.github.io', // Your website URL
-  baseUrl: '/docs/', // Base URL for your project */
+  baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
+
+  cname : 'docs.arianee.org',
 
   // Used for publishing and more
   projectName: 'docs',
@@ -73,7 +75,7 @@ const siteConfig = {
   */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} Arianee`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
@@ -97,10 +99,10 @@ const siteConfig = {
   // docsSideNavCollapsible: true,
 
   // Show documentation's last contributor's name.
-  // enableUpdateBy: true,
+   enableUpdateBy: true,
 
   // Show documentation's last update time.
-  // enableUpdateTime: true,
+   enableUpdateTime: true,
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
