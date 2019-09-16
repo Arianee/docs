@@ -24,7 +24,7 @@ const siteConfig = {
   title: 'Arianee Docs', // Title for your website.
   tagline: 'Documentation for Arianee Protocol',
   url: 'https://arianee.github.io', // Your website URL
-  baseUrl: '/', // Base URL for your project */
+  baseUrl: '/docs/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
