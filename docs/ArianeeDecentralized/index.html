@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Arianee decentralized platform · Arianee Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## **What is a decentralized platform?**"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Arianee decentralized platform · Arianee Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://arianee.github.io/"/><meta property="og:description" content="## **What is a decentralized platform?**"/><meta property="og:image" content="https://arianee.github.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://arianee.github.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon.png" alt="Arianee Docs"/><h2 class="headerTitleWithLogo">Arianee Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://arianee.org" target="_self">Arianee Home</a></li><li class=""><a href="https://github.com/arianee" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Overview</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Overview</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/intro">Arianee Project</a></li><li class="navListItem"><a class="navItem" href="/docs/AriaEconomy">Arianee Economy</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/ArianeeDecentralized">Arianee decentralized platform</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/howToProceed">How to proceed</a></li><li class="navListItem"><a class="navItem" href="/docs/Requirements">Requirements</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">SDK</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/livedemo">Live Demo</a></li><li class="navListItem"><a class="navItem" href="/docs/ArianeeJS">ArianeeJS</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Standards</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/introstd">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/ArianeeAsset">Arianee Asset</a></li><li class="navListItem"><a class="navItem" href="/docs/ArianeeIdentity">Arianee Identity</a></li><li class="navListItem"><a class="navItem" href="/docs/ArianeeEvent">Arianee Event</a></li><li class="navListItem"><a class="navItem" href="/docs/ArianeeMessage">Arianee Message</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Smart Contracts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/testnet">Arianee Testnet</a></li><li class="navListItem"><a class="navItem" href="/docs/mainnet">Arianee Mainnet</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Arianee decentralized platform</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="what-is-a-decentralized-platform"></a><a href="#what-is-a-decentralized-platform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>What is a decentralized platform?</strong></h2>
+<p>In the Blockchain context a decentralized platform means that there is no centralized data storage mechanism. The information is available with all the participants in the network. From a system design perspective, you will have nodes instead of a client server.</p>
+<h2><a class="anchor" aria-hidden="true" id="about-the-poa-network-blockchain"></a><a href="#about-the-poa-network-blockchain" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>About the POA Network blockchain</strong></h2>
+<p>Interoperability is a major asset for a Blockchain standard and the Arianee protocol aims to be as flexible as possible when a company will have to select the underlying Blockchain it uses.</p>
+<p>For the first deployment of the Arianee protocol, the Arianee project selected the POA Network Blockchain for the following reasons:</p>
+<ul>
+<li>POA Network is a sidechain of the Ethereum blockchain which has the second-biggest market capitalization in the Blockchain world. That means POA Network provides interoperability and facilitate asset transfers between Ethereum-based networks. To learn more please refer to the <em>cross-chain bridge documentation</em>.</li>
+<li>POA Network is based on the Ethereum protocol, the most mature and spread one to manage smart contracts as we write these lines. To learn more about smart contracts please refer to the dedicated section (just below).</li>
+<li>The price of transactions is cheaper and more stable on POA Network than the Ethereum main blockchain. This is essentially due to the difference of consensus mechanism between POA Network (Proof of Authonomy) and the Ethereum main blockchain (Proof of Work). To learn more about consensus mechanisms you we suggest reading this.</li>
+<li>The time to validate transactions is lower on POA Network (around 5 seconds) than the Ethereum main blockchain (around 15 seconds).</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="what-is-a-smart-contract"></a><a href="#what-is-a-smart-contract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>What is a smart contract?</strong></h2>
+<p>Smart contracts were first proposed in 1994 by Nick Szabo. He defined them as computerized transaction protocols that execute terms of a contract.</p>
+<p>In practical words, a Blockchain smart contract is a collection of code (its functions) and data (its state) that resides at a specific address on the Blockchain. Smart contracts are self-executing and render transactions traceable and irreversible.</p>
+<h2><a class="anchor" aria-hidden="true" id="the-arianee-smart-contracts"></a><a href="#the-arianee-smart-contracts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>The Arianee smart contracts</strong></h2>
+<p>The Arianee protocol defines a set of smart contracts to manage tokens related to certificates. Certificates themselves are one type of smart contract, called Arianee Smart Asset.</p>
+<p>Here is an overview of the Arianee protocol smart contracts:</p>
+<p><img src="../img/arianeesmartcontract.png" alt="alt_text" title="image_tooltip"></p>
+<p>To favor interoperability and adoption the Arianee protocol designed a crypto currency (the ARIA token) compliant with the<a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md" target="_blank" rel="nofollow noreferrer noopener"> ERC-20 Token Standard</a> and certificates compliant (The Arianee Smart Assets) with the<a href="https://github.com/ethereum/eips/issues/721" target="_blank" rel="nofollow noreferrer noopener"> ERC-721 Token Standard</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="about-data-storage"></a><a href="#about-data-storage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>About data storage</strong></h2>
+<p>The Arianee protocol when used at its core <strong><span style="text-decoration:underline;">never</span></strong> asks, stores or uses personal information about owners but their wallet public key. Owners are anonymous using the Arianee protocol.</p>
+<p><img src="../img/arianeedatastorage.png" alt="alt_text" title="image_tooltip"></p>
+<p>Information and content of certificates remain available to stakeholders with the right level of permission if:</p>
+<ul>
+<li>The stakeholder has access to the Blockchain **OR **the stakeholder can provide the secret keys provided by the Owner or the Arianee tag on the product to unlock access to the information and content of the related certificate.</li>
+<li>The links within the certificates still point to active content.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="about-data-recovery"></a><a href="#about-data-recovery" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>About data recovery</strong></h2>
+<p>Data from the Arianee protocol stored on a specific address on a Blockchain can be:</p>
+<ul>
+<li>Read and/or enriched if and only if a set of cryptographic keys, including the public key but excluding the private key of this address, is provided.</li>
+<li>Transferred if and only if the private key of this address is used in signed transaction. There is no recovery if the private key cannot be use for signing.</li>
+</ul>
+<p>Data stored by the Vault provider can be updated and recovered according to the Vault provider policy. Brands should be especially cautious when selecting their Vault provider because:</p>
+<ul>
+<li>Updates of the data provided by the Vault provider may lead to an authentication failure of certificates.</li>
+<li>If the links within the Blockchain certificates do not point to active content anymore, owners will not have access to this content anymore.</li>
+<li>Vault breach may lead to the hack of a Brand private keys, leading to the misuse of features available to the Brand.</li>
+</ul>
+<p>Data stored by the Wallet provider can be recovered according to the Wallet provider policy. Owners should be especially cautious when selecting their Wallet provider because:</p>
+<ul>
+<li>Recovery of the owner’s wallet depends on the Wallet provider ability to safely save the owner’s private keys or to give him/her a way, such as mnemonic words, to recover their private keys in case of the loss of the wallet.</li>
+<li>Wallet breach may lead to the hack of the owner private keys, leading to the misuse of his certificates.</li>
+</ul>
+<p><img src="../img/arianeewallet.png" alt="alt_text" title="image_tooltip"></p>
+<h2><a class="anchor" aria-hidden="true" id="about-certificate-authenticity"></a><a href="#about-certificate-authenticity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>About certificate authenticity</strong></h2>
+<p>The Arianee protocol provides the tools to verify the authenticity of a certificate based on three criteria:</p>
+<ul>
+<li>The Brand identity is verified. That means the Brand went through a <em>Know Your Business</em> (KYB) process and was registered by the Arianee project as a verified Brand.</li>
+</ul>
+<ul>
+<li>The Brand identity is authentic. That means the Brand identity used to issue the certificate is the same than the one verified by the Arianee project.</li>
+<li>The certificate is authentic. That means the content of the certificate has not changed since the certificate issuance.</li>
+</ul>
+<p>Arianee use the certification process designed by <a href="https://0xcert.org/" target="_blank" rel="nofollow noreferrer noopener">0xCert</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="compatible-applications"></a><a href="#compatible-applications" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Compatible applications</strong></h2>
+<p>The Arianee project embraces a world where developers, startups, integrators or even Brands build their own applications, integrations or connectors to leverage the Arianee protocol.</p>
+<p>Such world does not exist (yet!), so Arianee SAS developed a suite of applications to support pilot projects and the adoption of the Arianee protocol:</p>
+<ul>
+<li>The <strong>Brand Data Hub</strong>: A web Certificate Management Platform for Brands to create and manage certificates. Each Brand Data Hub is dedicated to one Brand only.</li>
+<li>The <strong>Arianee .Wallet application</strong> is a mobile application available on the App Store and Google Play for owners to claim and manage their certificates. The application let the owner import or use a newly created POA Network address to manage his/her certificates.</li>
+</ul>
+<p><a href="https://apps.apple.com/ch/app/arianee-wallet/id1435782507" target="_blank"><img src="../img/appstore.svg" alt="drawing" width="200"/></a>
+<a href="https://play.google.com/store/apps/details?id=com.arianee.wallet&hl=ln" target="_blank"><img src="../img/googleplay.svg" alt="drawing" width="200"/></a></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/AriaEconomy"><span class="arrow-prev">← </span><span>Arianee Economy</span></a><a class="docs-next button" href="/docs/howToProceed"><span>How to proceed</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-is-a-decentralized-platform"><strong>What is a decentralized platform?</strong></a></li><li><a href="#about-the-poa-network-blockchain"><strong>About the POA Network blockchain</strong></a></li><li><a href="#what-is-a-smart-contract"><strong>What is a smart contract?</strong></a></li><li><a href="#the-arianee-smart-contracts"><strong>The Arianee smart contracts</strong></a></li><li><a href="#about-data-storage"><strong>About data storage</strong></a></li><li><a href="#about-data-recovery"><strong>About data recovery</strong></a></li><li><a href="#about-certificate-authenticity"><strong>About certificate authenticity</strong></a></li><li><a href="#compatible-applications"><strong>Compatible applications</strong></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.png" alt="Arianee Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://t.me/arianeeproject" target="_blank">Telegram</a><div class="social"><a href="https://twitter.com/ArianeeProject" class="twitter-follow-button">Follow @ArianeeProject</a></div></div><div><h5>More</h5><a href="https://github.com/Arianee">GitHub</a><a class="github-button" href="https://github.com/Arianee/ArianeeMaster" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 Arianee</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Arianee Asset · Arianee Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="```"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Arianee Asset · Arianee Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://arianee.github.io/"/><meta property="og:description" content="```"/><meta property="og:image" content="https://arianee.github.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://arianee.github.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon.png" alt="Arianee Docs"/><h2 class="headerTitleWithLogo">Arianee Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://arianee.org" target="_self">Arianee Home</a></li><li class=""><a href="https://github.com/arianee" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Standards</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Overview</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/intro">Arianee Project</a></li><li class="navListItem"><a class="navItem" href="/docs/AriaEconomy">Arianee Economy</a></li><li class="navListItem"><a class="navItem" href="/docs/ArianeeDecentralized">Arianee decentralized platform</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/howToProceed">How to proceed</a></li><li class="navListItem"><a class="navItem" href="/docs/Requirements">Requirements</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">SDK</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/livedemo">Live Demo</a></li><li class="navListItem"><a class="navItem" href="/docs/ArianeeJS">ArianeeJS</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Standards</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/introstd">Introduction</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/ArianeeAsset">Arianee Asset</a></li><li class="navListItem"><a class="navItem" href="/docs/ArianeeIdentity">Arianee Identity</a></li><li class="navListItem"><a class="navItem" href="/docs/ArianeeEvent">Arianee Event</a></li><li class="navListItem"><a class="navItem" href="/docs/ArianeeMessage">Arianee Message</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Smart Contracts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/testnet">Arianee Testnet</a></li><li class="navListItem"><a class="navItem" href="/docs/mainnet">Arianee Mainnet</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Arianee Asset</h1></header><article><div><span><pre><code class="hljs">{
+ <span class="hljs-attr">"$schema"</span>: <span class="hljs-string">"https://cert.arianee.org/version1/ArianeeAsset.json"</span>,
+ <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Arianee Certificate"</span>,
+ <span class="hljs-attr">"type"</span>: <span class="hljs-string">"object"</span>,
+ <span class="hljs-attr">"properties"</span>: {
+   <span class="hljs-attr">"$schema"</span>: {
+     <span class="hljs-attr">"title"</span>: <span class="hljs-string">"$schema"</span>,
+     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+     <span class="hljs-attr">"format"</span>: <span class="hljs-string">"uri"</span>,
+     <span class="hljs-attr">"default"</span>: <span class="hljs-string">"https://cert.arianee.org/version1/ArianeeAsset.json"</span>,
+     <span class="hljs-attr">"widget"</span>: <span class="hljs-string">"hidden"</span>
+   },
+   <span class="hljs-attr">"name"</span>: {
+     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+     <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Name"</span>,
+     <span class="hljs-attr">"format"</span>: <span class="hljs-string">"string"</span>,
+     <span class="hljs-attr">"default"</span>: <span class="hljs-string">""</span>
+   },
+   <span class="hljs-attr">"v"</span>: {
+     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+     <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Version"</span>,
+     <span class="hljs-attr">"format"</span>: <span class="hljs-string">"string"</span>,
+     <span class="hljs-attr">"default"</span>: <span class="hljs-string">"0.1"</span>
+   },
+   <span class="hljs-attr">"serialnumber"</span>: {
+     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"array"</span>,
+     <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Serial Number"</span>,
+     <span class="hljs-attr">"items"</span>: {
+       <span class="hljs-attr">"type"</span>: <span class="hljs-string">"object"</span>,
+       <span class="hljs-attr">"properties"</span>: {
+         <span class="hljs-attr">"type"</span>: {
+           <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+           <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Type"</span>,
+           <span class="hljs-attr">"widget"</span>: {
+             <span class="hljs-attr">"id"</span>: <span class="hljs-string">"select"</span>
+           },
+           <span class="hljs-attr">"oneOf"</span>: [
+             {
+               <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Serial Number"</span>,
+               <span class="hljs-attr">"enum"</span>: [
+                 <span class="hljs-string">"serialnumber"</span>
+               ]
+             },
+             {
+               <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Case Number"</span>,
+               <span class="hljs-attr">"enum"</span>: [
+                 <span class="hljs-string">"casenumber"</span>
+               ]
+             },
+             {
+               <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Movement Number"</span>,
+               <span class="hljs-attr">"enum"</span>: [
+                 <span class="hljs-string">"movementnumber"</span>
+               ]
+             }
+           ]
+         },
+         <span class="hljs-attr">"value"</span>: {
+           <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+           <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Value"</span>,
+           <span class="hljs-attr">"widget"</span>: {
+             <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>
+           }
+         }
+       }
+     }
+   },
+   <span class="hljs-attr">"brand"</span>: {
+     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+     <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Brand"</span>,
+     <span class="hljs-attr">"format"</span>: <span class="hljs-string">"string"</span>
+   },
+   <span class="hljs-attr">"model"</span>: {
+     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+     <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Model"</span>,
+     <span class="hljs-attr">"format"</span>: <span class="hljs-string">"string"</span>
+   },
+   <span class="hljs-attr">"description"</span>: {
+     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+     <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Description"</span>,
+     <span class="hljs-attr">"format"</span>: <span class="hljs-string">"string"</span>,
+     <span class="hljs-attr">"widget"</span>: {
+       <span class="hljs-attr">"id"</span>: <span class="hljs-string">"textarea"</span>
+     }
+   },
+   <span class="hljs-attr">"type"</span>: {
+     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+     <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Type"</span>,
+     <span class="hljs-attr">"format"</span>: <span class="hljs-string">"string"</span>,
+     <span class="hljs-attr">"default"</span>: <span class="hljs-string">"SmartAsset"</span>
+   },
+   <span class="hljs-attr">"brandLogoHeader"</span>: {
+     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+     <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Brand Logo Header"</span>,
+     <span class="hljs-attr">"description"</span>: <span class="hljs-string">"url"</span>,
+     <span class="hljs-attr">"format"</span>: <span class="hljs-string">"string"</span>
+   },
+   <span class="hljs-attr">"picture"</span>: {
+     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+     <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Main picture"</span>,
+     <span class="hljs-attr">"description"</span>: <span class="hljs-string">"url"</span>,
+     <span class="hljs-attr">"format"</span>: <span class="hljs-string">"string"</span>,
+     <span class="hljs-attr">"buttons"</span>: [
+       {
+         <span class="hljs-attr">"id"</span>: <span class="hljs-string">"file"</span>,
+         <span class="hljs-attr">"label"</span>: <span class="hljs-string">"Browse"</span>
+       }
+     ]
+   },
+   <span class="hljs-attr">"pictures"</span>: {
+     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"array"</span>,
+     <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Pictures"</span>,
+     <span class="hljs-attr">"items"</span>: {
+       <span class="hljs-attr">"type"</span>: <span class="hljs-string">"object"</span>,
+       <span class="hljs-attr">"properties"</span>: {
+         <span class="hljs-attr">"src"</span>: {
+           <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+           <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Picture URL"</span>,
+           <span class="hljs-attr">"description"</span>: <span class="hljs-string">"url"</span>,
+           <span class="hljs-attr">"widget"</span>: {
+             <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>
+           }
+         }
+       }
+     }
+   },
+   <span class="hljs-attr">"attributes"</span>: {
+     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"array"</span>,
+     <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Attributes"</span>,
+     <span class="hljs-attr">"items"</span>: {
+       <span class="hljs-attr">"type"</span>: <span class="hljs-string">"object"</span>,
+       <span class="hljs-attr">"properties"</span>: {
+         <span class="hljs-attr">"type"</span>: {
+           <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+           <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Type"</span>,
+           <span class="hljs-attr">"widget"</span>: {
+             <span class="hljs-attr">"id"</span>: <span class="hljs-string">"select"</span>
+           },
+           <span class="hljs-attr">"oneOf"</span>: [
+             {
+               <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Color"</span>,
+               <span class="hljs-attr">"enum"</span>: [
+                 <span class="hljs-string">"color"</span>
+               ]
+             },
+             {
+               <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Material"</span>,
+               <span class="hljs-attr">"enum"</span>: [
+                 <span class="hljs-string">"material"</span>
+               ]
+             },
+             {
+               <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Printed"</span>,
+               <span class="hljs-attr">"enum"</span>: [
+                 <span class="hljs-string">"printed"</span>
+               ]
+             }
+           ]
+         },
+         <span class="hljs-attr">"value"</span>: {
+           <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+           <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Value"</span>,
+           <span class="hljs-attr">"widget"</span>: {
+             <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>
+           }
+         }
+       }
+     }
+   },
+   <span class="hljs-attr">"size"</span>: {
+     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"array"</span>,
+     <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Sizes"</span>,
+     <span class="hljs-attr">"items"</span>: {
+       <span class="hljs-attr">"type"</span>: <span class="hljs-string">"object"</span>,
+       <span class="hljs-attr">"properties"</span>: {
+         <span class="hljs-attr">"type"</span>: {
+           <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+           <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Type"</span>,
+           <span class="hljs-attr">"widget"</span>: {
+             <span class="hljs-attr">"id"</span>: <span class="hljs-string">"select"</span>
+           },
+           <span class="hljs-attr">"oneOf"</span>: [
+             {
+               <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Height"</span>,
+               <span class="hljs-attr">"enum"</span>: [
+                 <span class="hljs-string">"height"</span>
+               ]
+             },
+             {
+               <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Width"</span>,
+               <span class="hljs-attr">"enum"</span>: [
+                 <span class="hljs-string">"width"</span>
+               ]
+             },
+             {
+               <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Depth"</span>,
+               <span class="hljs-attr">"enum"</span>: [
+                 <span class="hljs-string">"depth"</span>
+               ]
+             },
+             {
+               <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Size"</span>,
+               <span class="hljs-attr">"enum"</span>: [
+                 <span class="hljs-string">"depth"</span>
+               ]
+             }
+           ]
+         },
+         <span class="hljs-attr">"value"</span>: {
+           <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+           <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Value"</span>,
+           <span class="hljs-attr">"widget"</span>: {
+             <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>
+           }
+         },
+         <span class="hljs-attr">"unit"</span>: {
+           <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+           <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Unit"</span>,
+           <span class="hljs-attr">"widget"</span>: {
+             <span class="hljs-attr">"id"</span>: <span class="hljs-string">"select"</span>
+           },
+           <span class="hljs-attr">"oneOf"</span>: [
+             {
+               <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Inch"</span>,
+               <span class="hljs-attr">"enum"</span>: [
+                 <span class="hljs-string">"in"</span>
+               ]
+             },
+             {
+               <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Centimer"</span>,
+               <span class="hljs-attr">"enum"</span>: [
+                 <span class="hljs-string">"cm"</span>
+               ]
+             },
+             {
+               <span class="hljs-attr">"description"</span>: <span class="hljs-string">"EU"</span>,
+               <span class="hljs-attr">"enum"</span>: [
+                 <span class="hljs-string">"eu"</span>
+               ]
+             },
+             {
+               <span class="hljs-attr">"description"</span>: <span class="hljs-string">"UK"</span>,
+               <span class="hljs-attr">"enum"</span>: [
+                 <span class="hljs-string">"uk"</span>
+               ]
+             },
+             {
+               <span class="hljs-attr">"description"</span>: <span class="hljs-string">"US"</span>,
+               <span class="hljs-attr">"enum"</span>: [
+                 <span class="hljs-string">"us"</span>
+               ]
+             }
+           ]
+         }
+       }
+     }
+   },
+   <span class="hljs-attr">"socialmedia"</span>: {
+     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"object"</span>,
+     <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Social Media"</span>,
+     <span class="hljs-attr">"properties"</span>: {
+       <span class="hljs-attr">"facebook"</span>: {
+         <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+         <span class="hljs-attr">"minLength"</span>: <span class="hljs-number">2</span>,
+         <span class="hljs-attr">"maxLength"</span>: <span class="hljs-number">40</span>,
+         <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Facebook"</span>,
+         <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Facebook Page Id"</span>,
+         <span class="hljs-attr">"widget"</span>: {
+           <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>
+         }
+       },
+       <span class="hljs-attr">"instagram"</span>: {
+         <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+         <span class="hljs-attr">"minLength"</span>: <span class="hljs-number">2</span>,
+         <span class="hljs-attr">"maxLength"</span>: <span class="hljs-number">40</span>,
+         <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Instagram"</span>,
+         <span class="hljs-attr">"description"</span>: <span class="hljs-string">"account"</span>,
+         <span class="hljs-attr">"widget"</span>: {
+           <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>
+         }
+       },
+       <span class="hljs-attr">"twitter"</span>: {
+         <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+         <span class="hljs-attr">"minLength"</span>: <span class="hljs-number">2</span>,
+         <span class="hljs-attr">"maxLength"</span>: <span class="hljs-number">40</span>,
+         <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Twitter"</span>,
+         <span class="hljs-attr">"description"</span>: <span class="hljs-string">"account"</span>,
+         <span class="hljs-attr">"widget"</span>: {
+           <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>
+         }
+       }
+     }
+   },
+   <span class="hljs-attr">"externalContents"</span>: {
+     <span class="hljs-attr">"required"</span>: <span class="hljs-literal">false</span>,
+     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"array"</span>,
+     <span class="hljs-attr">"title"</span>: <span class="hljs-string">"External Contents"</span>,
+     <span class="hljs-attr">"items"</span>: {
+       <span class="hljs-attr">"type"</span>: <span class="hljs-string">"object"</span>,
+       <span class="hljs-attr">"properties"</span>: {
+         <span class="hljs-attr">"title"</span>: {
+           <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+           <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Title"</span>,
+           <span class="hljs-attr">"widget"</span>: {
+             <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>
+           }
+         },
+         <span class="hljs-attr">"url"</span>: {
+           <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+           <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Url"</span>,
+           <span class="hljs-attr">"widget"</span>: {
+             <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>
+           }
+         },
+         <span class="hljs-attr">"backgroundColor"</span>: {
+           <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+           <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Background Color"</span>,
+           <span class="hljs-attr">"widget"</span>: {
+             <span class="hljs-attr">"id"</span>: <span class="hljs-string">"color"</span>
+           }
+         },
+         <span class="hljs-attr">"color"</span>: {
+           <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+           <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Color"</span>,
+           <span class="hljs-attr">"widget"</span>: {
+             <span class="hljs-attr">"id"</span>: <span class="hljs-string">"color"</span>
+           }
+         },
+         <span class="hljs-attr">"icon"</span>: {
+           <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+           <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Icon"</span>,
+           <span class="hljs-attr">"description"</span>: <span class="hljs-string">"URL"</span>,
+           <span class="hljs-attr">"widget"</span>: {
+             <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>
+           }
+         }
+       }
+     }
+   },
+   <span class="hljs-attr">"jsonSurcharger"</span>: {
+     <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+     <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Json Surcharger"</span>,
+     <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Json URL to surcharge this certificate overtime"</span>,
+     <span class="hljs-attr">"format"</span>: <span class="hljs-string">"string"</span>
+   }
+ },
+ <span class="hljs-attr">"required"</span>: [
+   <span class="hljs-string">"$schema"</span>
+ ]
+}
+
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/introstd"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/docs/ArianeeIdentity"><span>Arianee Identity</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/favicon.png" alt="Arianee Docs" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/en/doc1.html">Getting Started (or other categories)</a><a href="/docs/en/doc2.html">Guides (or other categories)</a><a href="/docs/en/doc3.html">API Reference (or other categories)</a></div><div><h5>Community</h5><a href="https://t.me/arianeeproject" target="_blank">Telegram</a><div class="social"><a href="https://twitter.com/ArianeeProject" class="twitter-follow-button">Follow @ArianeeProject</a></div></div><div><h5>More</h5><a href="https://github.com/Arianee">GitHub</a><a class="github-button" href="https://github.com/Arianee/ArianeeMaster" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 Arianee</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
