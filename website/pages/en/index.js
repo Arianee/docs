@@ -13,6 +13,8 @@ const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
+
+
 class HomeSplash extends React.Component {
   render() {
     const {siteConfig, language = ''} = this.props;
@@ -22,10 +24,16 @@ class HomeSplash extends React.Component {
     const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
 
     const SplashContainer = props => (
+             <div class="docMainWrapper wrapper     ">
+                   <div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Overview</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Overview</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/intro">Arianee Project</a></li><li class="navListItem"><a class="navItem" href="/docs/AriaEconomy">Aria Economy</a></li><li class="navListItem"><a class="navItem" href="/docs/ArianeeDecentralized">The Arianee decentralized platform</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/howToProceed">How to proceed</a></li><li class="navListItem"><a class="navItem" href="/docs/Requirements">Requirements</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Smart Contracts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/doc3">This is document number 3</a></li></ul></div></div></section></div></nav></div>
+
       <div className="homeContainer">
+      
         <div className="homeSplashFade">
+        
           <div className="wrapper homeWrapper">{props.children}</div>
         </div>
+      </div>
       </div>
     );
 
@@ -39,7 +47,11 @@ class HomeSplash extends React.Component {
       <h2 className="projectTitle">
         {siteConfig.title}
         <small>{siteConfig.tagline}</small>
+        
       </h2>
+
+
+
     );
 
     const PromoSection = props => (
@@ -60,13 +72,15 @@ class HomeSplash extends React.Component {
 
     return (
       <SplashContainer>
-        <Logo img_src={`${baseUrl}img/undraw_monitor.svg`} />
+      
         <div className="inner">
-          <ProjectTitle siteConfig={siteConfig} />
+        
+          <ProjectTitle siteConfig={siteConfig} /><br/>
+          
+      <Logo img_src={`https://github.com/Arianee/ArianeeMaster/raw/master/assets/cover.png`} />
+
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html')}>Example Link</Button>
-            <Button href={docUrl('doc2.html')}>Example Link 2</Button>
+            <Button href={docUrl('intro.html')}>Get Started</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -75,6 +89,8 @@ class HomeSplash extends React.Component {
 }
 
 class Index extends React.Component {
+
+
   render() {
     const {config: siteConfig, language = ''} = this.props;
     const {baseUrl} = siteConfig;
@@ -194,16 +210,11 @@ class Index extends React.Component {
     };
 
     return (
-      <div>
+      <div class="sideNavVisible separateOnPageNav"> 
+      
+      
         <HomeSplash siteConfig={siteConfig} language={language} />
-        <div className="mainContainer">
-          <Features />
-          <FeatureCallout />
-          <LearnHow />
-          <TryOut />
-          <Description />
-          <Showcase />
-        </div>
+        
       </div>
     );
   }

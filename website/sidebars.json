@@ -1,10 +1,13 @@
 {
   "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
+    "Overview": ["intro","AriaEconomy", "ArianeeDecentralized"],
+    "Getting Started": ["howToProceed", "Requirements"],
+
+    "SDK": ["livedemo","ArianeeJS"],
+
+    "Standards": ["introstd","ArianeeAsset", "ArianeeIdentity", "ArianeeEvent", "ArianeeMessage"],
+
+    "Smart Contracts": ["testnet","mainnet"]
+
   }
 }

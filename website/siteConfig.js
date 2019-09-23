@@ -8,8 +8,10 @@
 // See https://docusaurus.io/docs/site-config for all the possible
 // site configuration options.
 
+const extlink = require('remarkable-extlink');
+
 // List of projects/orgs using your project for the users page.
-const users = [
+const usersBAK = [
   {
     caption: 'Arianee',
     // You will need to prepend the image path with your baseUrl
@@ -19,6 +21,8 @@ const users = [
     pinned: true,
   },
 ];
+
+const users = [];
 
 const siteConfig = {
   title: 'Arianee Docs', // Title for your website.
@@ -40,8 +44,8 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {href: 'https://arianee.org', label: 'Arianee Home'},
-    {href: 'https://github.org/arianee', label: 'GitHub'},    
+    {href: 'https://arianee.org', label: 'Arianee Home', target:'_blank'},
+    {href: 'https://github.com/arianee', label: 'GitHub', target:'_blank'},    
 
   ],
 
@@ -51,12 +55,12 @@ const siteConfig = {
   /* path to images for header/footer */
   headerIcon: 'img/favicon.png',
   footerIcon: 'img/favicon.png',
-  favicon: 'img/favicon.png',
+  favicon: 'img/favicon.ico',
 
   /* Colors for website */
   colors: {
-    primaryColor: '#000',
-    secondaryColor: '#b79144',
+    primaryColor: '#b79144',
+    secondaryColor: '#000',
   },
 
   /* Custom fonts for website */
@@ -93,19 +97,31 @@ const siteConfig = {
   ogImage: 'img/undraw_online.svg',
   twitterImage: 'img/undraw_tweetstorm.svg',
 
+  twitterUsername: 'ArianeeProject',
+
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.
   // docsSideNavCollapsible: true,
 
   // Show documentation's last contributor's name.
-   enableUpdateBy: true,
+   //enableUpdateBy: true,
 
   // Show documentation's last update time.
    enableUpdateTime: true,
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  //   repoUrl: 'https://github.com/facebook/test-site',
+     repoUrl: 'https://github.com/Arianee/ArianeeMaster',
+
+  markdownPlugins: [
+      function(md) {
+        extlink(md, {
+          host: 'localhost', // The hrefs that you DON'T want to be external
+        });
+      },
+    ],
+
 };
 
 module.exports = siteConfig;
+
