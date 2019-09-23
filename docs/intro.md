@@ -12,7 +12,7 @@ The **Arianee project** is an independent & participative association that promo
 
  
 
-_If you are a developer, reading this documentation and going through the demo should take about height hours. No previous knowledge of Blockchain is required. Once you are done, you will know how to manage a certificate on a Blockchain using the Arianee protocol._
+_If you are a developer, reading this documentation and going through the demo should take a couple of hours. No previous knowledge of Blockchain is required. Once you are done, you will know how to manage a certificate on a Blockchain using the Arianee protocol._
 
 
 ## **The Arianee project**

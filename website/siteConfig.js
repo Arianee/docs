@@ -99,6 +99,8 @@ const siteConfig = {
 
   twitterUsername: 'ArianeeProject',
 
+  
+
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.
   // docsSideNavCollapsible: true,
@@ -107,11 +109,11 @@ const siteConfig = {
    //enableUpdateBy: true,
 
   // Show documentation's last update time.
-   enableUpdateTime: true,
+  enableUpdateTime: true,
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-     repoUrl: 'https://github.com/Arianee/ArianeeMaster',
+  repoUrl: 'https://github.com/Arianee/ArianeeMaster',
 
   markdownPlugins: [
       function(md) {
