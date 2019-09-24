@@ -99,6 +99,8 @@ const siteConfig = {
 
   twitterUsername: 'ArianeeProject',
 
+  gaTrackingId: 'UA-112469684-3',
+
   
 
   // For sites with a sizable amount of content, set collapsible to true.

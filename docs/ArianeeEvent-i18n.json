@@ -1,0 +1,224 @@
+{
+    "$id": "https://cert.arianee.org/version1/ArianeeEventi18n.json",
+    "$schema": "https://cert.arianee.org/version1/ArianeeEventi18n.json",
+    "title": "Event default template",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "title": "$schema",
+            "type": "string",
+            "default": "https://cert.arianee.org/version1/ArianeeEventi18n.json",
+            "widget": "hidden"
+        },
+        "title": {
+            "type": "string",
+            "title": "Title",
+            "description": "Event title",
+            "default": ""
+        },
+        "titlei18n": {
+            "type": "array",
+            "title": "Title (languages)",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "language": {
+                        "type": "string",
+                        "title": "Language",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "description": "French",
+                                "enum": [
+                                    "fr-FR"
+                                ]
+                            },
+                            {
+                                "description": "English (US)",
+                                "enum": [
+                                    "en-US"
+                                ]
+                            },
+                            {
+                                "description": "Chinese (traditional)",
+                                "enum": [
+                                    "zh-TW"
+                                ]
+                            },
+                            {
+                                "description": "Chinese (simplified)",
+                                "enum": [
+                                    "zh-CN"
+                                ]
+                            }
+                        ]
+                    },
+                    "content": {
+                        "type": "string",
+                        "title": "Content",
+                        "widget": {
+                            "id": "textarea"
+                        }
+                    }
+                }
+            }
+        },
+        "eventType": {
+            "type": "string",
+            "title": "Type",
+            "description": "Event type",
+            "widget": {
+                "id": "select"
+            },
+            "oneOf": [
+                {
+                    "description": "Service",
+                    "enum": [
+                        "service"
+                    ]
+                },
+                {
+                    "description": "Auction",
+                    "enum": [
+                        "auction"
+                    ]
+                }
+            ]
+        },
+        "description": {
+            "type": "string",
+            "title": "Description",
+            "widget": {
+                "id": "textarea"
+            }
+        },
+        "descriptioni18n": {
+            "type": "array",
+            "title": "Description (languages)",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "language": {
+                        "type": "string",
+                        "title": "Language",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "description": "French",
+                                "enum": [
+                                    "fr-FR"
+                                ]
+                            },
+                            {
+                                "description": "English (US)",
+                                "enum": [
+                                    "en-US"
+                                ]
+                            },
+                            {
+                                "description": "Chinese (traditional)",
+                                "enum": [
+                                    "zh-TW"
+                                ]
+                            },
+                            {
+                                "description": "Chinese (simplified)",
+                                "enum": [
+                                    "zh-CN"
+                                ]
+                            }
+                        ]
+                    },
+                    "content": {
+                        "type": "string",
+                        "title": "Content",
+                        "widget": {
+                            "id": "textarea"
+                        }
+                    }
+                }
+            }
+        },
+        "attributes": {
+            "type": "array",
+            "title": "Attributes",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "title": "Type",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "description": "Color",
+                                "enum": [
+                                    "color"
+                                ]
+                            },
+                            {
+                                "description": "Material",
+                                "enum": [
+                                    "material"
+                                ]
+                            },
+                            {
+                                "description": "Printed",
+                                "enum": [
+                                    "printed"
+                                ]
+                            }
+                        ]
+                    },
+                    "value": {
+                        "type": "string",
+                        "title": "Value",
+                        "widget": {
+                            "id": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "externalContents": {
+            "required": false,
+            "type": "array",
+            "title": "External Contents",
+            "description": "pictures / files",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "title": "Title",
+                        "widget": {
+                            "id": "string"
+                        }
+                    },
+                    "url": {
+                        "type": "string",
+                        "title": "Url",
+                        "widget": {
+                            "id": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "location": {
+            "type": "string",
+            "title": "Location",
+            "description": "Event Location",
+            "default": ""
+        }
+    },
+    "required": [
+        "$schema"
+    ]
+}

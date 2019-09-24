@@ -1,12 +1,12 @@
 # Arianee Identity Schema
 
 ```
-https://cert.arianee.org/version1/ArianeeIdentity.json
+https://cert.arianee.org/version1/ArianeeIdentity-18n.json
 ```
 
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                   |
-| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | -------------------------------------------- |
-| Can be instantiated | No         | Experimental | No           | Forbidden         | Permitted             | [ArianeeIdentity.json](ArianeeIdentity.json) |
+| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                             |
+| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ------------------------------------------------------ |
+| Can be instantiated | No         | Experimental | No           | Forbidden         | Permitted             | [ArianeeIdentity-i18n.json](ArianeeIdentity-i18n.json) |
 
 # Arianee Identity Properties
 
@@ -14,16 +14,16 @@ https://cert.arianee.org/version1/ArianeeIdentity.json
 | ------------------------------------- | ---------- | ------------ | -------- | ---------------------------------------------------------- | ------------------------------ |
 | [\$schema](#schema)                   | `string`   | **Required** | No       | `"https://cert.arianee.org/version1/ArianeeIdentity.json"` | Arianee Identity (this schema) |
 | [address](#address)                   | `object`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| [arianee_member](#arianee_member)     | `boolean`  | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| [brandLogoHeader](#brandlogoheader)   | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| [brandLogoSquare](#brandlogosquare)   | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| [certificate_uri](#certificate_uri)   | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
+| [arianeeMember](#arianeemember)       | `boolean`  | Optional     | No       |                                                            | Arianee Identity (this schema) |
 | [contacts](#contacts)                 | `object[]` | Optional     | No       |                                                            | Arianee Identity (this schema) |
+| [coverPicture](#coverpicture)         | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
 | [externalContents](#externalcontents) | `object[]` | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| [inAppHTML](#inapphtml)               | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| [mother_company](#mother_company)     | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
+| [logoHeader](#logoheader)             | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
+| [logoSquare](#logosquare)             | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
+| [motherCompany](#mothercompany)       | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
 | [name](#name)                         | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| [socialmedia](#socialmedia)           | `object`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
+| [rpcEndpoint](#rpcendpoint)           | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
+| [socialmedia](#socialmedia)           | `object[]` | Optional     | No       |                                                            | Arianee Identity (this schema) |
 | [website](#website)                   | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
 | `*`                                   | any        | Additional   | Yes      | this schema _allows_ additional properties                 |
 
@@ -129,65 +129,21 @@ https://cert.arianee.org/version1/ArianeeIdentity.json
 
 `string`
 
-## arianee_member
+## arianeeMember
 
 ### Arianee Member
 
-`arianee_member`
+Company is part of Arianee Association
+
+`arianeeMember`
 
 - is optional
 - type: `boolean`
 - defined in this schema
 
-### arianee_member Type
+### arianeeMember Type
 
 `boolean`
-
-## brandLogoHeader
-
-### Brand Logo Header
-
-url
-
-`brandLogoHeader`
-
-- is optional
-- type: `string`
-- defined in this schema
-
-### brandLogoHeader Type
-
-`string`
-
-## brandLogoSquare
-
-### Brand Logo Square
-
-url
-
-`brandLogoSquare`
-
-- is optional
-- type: `string`
-- defined in this schema
-
-### brandLogoSquare Type
-
-`string`
-
-## certificate_uri
-
-### Certificate URI
-
-`certificate_uri`
-
-- is optional
-- type: `string`
-- defined in this schema
-
-### certificate_uri Type
-
-`string`
 
 ## contacts
 
@@ -247,6 +203,22 @@ All items must be of the type: `object` with following properties:
 - type: `string`
 
 ##### title Type
+
+`string`
+
+## coverPicture
+
+### Company Cover
+
+Brand Cover Square (2000x5000) transparent TBD
+
+`coverPicture`
+
+- is optional
+- type: `string`
+- defined in this schema
+
+### coverPicture Type
 
 `string`
 
@@ -341,37 +313,57 @@ URL
 
 `string`
 
-## inAppHTML
+## logoHeader
 
-### in App HTML
+### Company Logo Header
 
-`inAppHTML`
+Logo Header (1000x1000) transparent TBD
+
+`logoHeader`
 
 - is optional
 - type: `string`
 - defined in this schema
 
-### inAppHTML Type
+### logoHeader Type
 
 `string`
 
-## mother_company
+## logoSquare
 
-### Mother Company
+### Company Logo Square
 
-`mother_company`
+Logo Square (1000x1000) transparent TBD
+
+`logoSquare`
 
 - is optional
 - type: `string`
 - defined in this schema
 
-### mother_company Type
+### logoSquare Type
+
+`string`
+
+## motherCompany
+
+### Mother Company
+
+`motherCompany`
+
+- is optional
+- type: `string`
+- defined in this schema
+
+### motherCompany Type
 
 `string`
 
 ## name
 
-### Name
+### Company Name
+
+Name of the company
 
 `name`
 
@@ -383,6 +375,22 @@ URL
 
 `string`
 
+## rpcEndpoint
+
+### RPC Endpoint
+
+Certificate Management Platform RPC URL
+
+`rpcEndpoint`
+
+- is optional
+- type: `string`
+- defined in this schema
+
+### rpcEndpoint Type
+
+`string`
+
 ## socialmedia
 
 ### Social Media
@@ -390,76 +398,51 @@ URL
 `socialmedia`
 
 - is optional
-- type: `object`
+- type: `object[]`
 - defined in this schema
 
 ### socialmedia Type
 
-`object` with following properties:
+Array type: `object[]`
 
-| Property    | Type   | Required |
-| ----------- | ------ | -------- |
-| `facebook`  | string | Optional |
-| `instagram` | string | Optional |
-| `twitter`   | string | Optional |
+All items must be of the type: `object` with following properties:
 
-#### facebook
+| Property | Type   | Required |
+| -------- | ------ | -------- |
+| `type`   | string | Optional |
+| `value`  | string | Optional |
 
-##### Facebook
+#### type
 
-Facebook Page Id
+##### Type
 
-`facebook`
-
-- is optional
-- type: `string`
-
-##### facebook Type
-
-`string`
-
-- minimum length: 2 characters
-- maximum length: 80 characters
-
-#### instagram
-
-##### Instagram
-
-account
-
-`instagram`
+`type`
 
 - is optional
 - type: `string`
 
-##### instagram Type
+##### type Type
 
 `string`
 
-- minimum length: 2 characters
-- maximum length: 80 characters
+#### value
 
-#### twitter
+##### Value
 
-##### Twitter
-
-account
-
-`twitter`
+`value`
 
 - is optional
 - type: `string`
 
-##### twitter Type
+##### value Type
 
 `string`
-
-- minimum length: 2 characters
-- maximum length: 80 characters
 
 ## website
 
 ### Website
+
+Company Website
 
 `website`
 

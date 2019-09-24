@@ -1,3 +1,8 @@
+Deploy : 
+GIT_USER=gnarco   CURRENT_BRANCH=master   USE_SSH=true   npm run publish-gh-pages
+
+
+
 This website was created with [Docusaurus](https://docusaurus.io/).
 
 # What's In This Document

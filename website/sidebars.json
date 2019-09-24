@@ -5,7 +5,7 @@
 
     "SDK": ["livedemo","ArianeeJS"],
 
-    "Standards": ["introstd","ArianeeAsset", "ArianeeIdentity", "ArianeeEvent", "ArianeeMessage"],
+    "Standards": ["introstd","ArianeeAsset-i18n", "ArianeeIdentity-i18n", "ArianeeEvent-i18n", "ArianeeMessage-i18n"],
 
     "Smart Contracts": ["testnet","mainnet"]
 

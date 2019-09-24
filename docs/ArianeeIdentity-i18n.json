@@ -1,0 +1,200 @@
+{
+    "$id": "https://cert.arianee.org/version1/ArianeeIdentity-18n.json",
+    "$schema": "https://cert.arianee.org/version1/ArianeeIdentity-18n.json",
+    "title": "Arianee Identity",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "title": "$schema",
+            "type": "string",
+            "default": "https://cert.arianee.org/version1/ArianeeIdentity.json",
+            "widget": "hidden"
+        },
+        "name": {
+            "type": "string",
+            "title": "Company Name",
+            "description": "Name of the company"
+        },
+        "website": {
+            "type": "string",
+            "title": "Website",
+            "description": "Company Website"
+        },
+        "motherCompany": {
+            "type": "string",
+            "title": "Mother Company"
+        },
+        "rpcEndpoint": {
+            "type": "string",
+            "title": "RPC Endpoint",
+            "description": "Certificate Management Platform RPC URL"
+        },
+        "arianeeMember": {
+            "type": "boolean",
+            "title": "Arianee Member",
+            "description": "Company is part of Arianee Association"
+        },
+        "address": {
+            "type": "object",
+            "title": "Address",
+            "properties": {
+                "street_address": {
+                    "type": "string",
+                    "title": "Street Address"
+                },
+                "zipcode": {
+                    "type": "string",
+                    "title": "Zip Code"
+                },
+                "city": {
+                    "type": "string",
+                    "title": "City"
+                },
+                "state": {
+                    "type": "string",
+                    "title": "State"
+                },
+                "country": {
+                    "type": "string",
+                    "title": "Country"
+                }
+            },
+            "required": [
+                "street_address",
+                "city",
+                "state",
+                "country",
+                "zipcode"
+            ]
+        },
+        "contacts": {
+            "type": "array",
+            "title": "Contacts",
+            "items": {
+                "title": "Contacts",
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "title": "Name",
+                        "type": "string"
+                    },
+                    "email": {
+                        "title": "Email",
+                        "type": "string"
+                    },
+                    "title": {
+                        "title": "Title",
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "logoHeader": {
+            "type": "string",
+            "title": "Company Logo Header",
+            "description": "Logo Header (1000x1000) transparent TBD"
+        },
+        "logoSquare": {
+            "type": "string",
+            "title": "Company Logo Square",
+            "description": "Logo Square (1000x1000) transparent TBD"
+        },
+        "coverPicture": {
+            "type": "string",
+            "title": "Company Cover",
+            "description": "Brand Cover Square (2000x5000) transparent TBD"
+        },
+        "socialmedia": {
+            "type": "array",
+            "title": "Social Media",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "title": "Type",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "description": "Facebook Page Id",
+                                "enum": [
+                                    "facebook"
+                                ]
+                            },
+                            {
+                                "description": "Instagram account",
+                                "enum": [
+                                    "instagram"
+                                ]
+                            },
+                            {
+                                "description": "Twitter Account",
+                                "enum": [
+                                    "twitter"
+                                ]
+                            }
+                        ]
+                    },
+                    "value": {
+                        "type": "string",
+                        "title": "Value",
+                        "widget": {
+                            "id": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "externalContents": {
+            "type": "array",
+            "title": "External Contents",
+            "items": {
+                "type": "object",
+                "title": "External Contents",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "title": "Title",
+                        "widget": {
+                            "id": "string"
+                        }
+                    },
+                    "url": {
+                        "type": "string",
+                        "title": "Url",
+                        "widget": {
+                            "id": "string"
+                        }
+                    },
+                    "backgroundColor": {
+                        "type": "string",
+                        "title": "Background Color",
+                        "widget": {
+                            "id": "color"
+                        }
+                    },
+                    "color": {
+                        "type": "string",
+                        "title": "Color",
+                        "widget": {
+                            "id": "color"
+                        }
+                    },
+                    "icon": {
+                        "type": "string",
+                        "title": "Icon",
+                        "description": "URL",
+                        "widget": {
+                            "id": "string"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "required": [
+        "$schema"
+    ]
+}

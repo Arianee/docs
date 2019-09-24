@@ -1,34 +1,35 @@
 # Arianee Certificate Schema
 
 ```
-https://cert.arianee.org/version1/ArianeeAsset.json
+https://cert.arianee.org/version1/ArianeeAsseti18n.json
 ```
 
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                             |
-| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | -------------------------------------- |
-| Can be instantiated | No         | Experimental | No           | Forbidden         | Permitted             | [ArianeeAsset.json](ArianeeAsset.json) |
+| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                       |
+| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ------------------------------------------------ |
+| Can be instantiated | No         | Experimental | No           | Forbidden         | Permitted             | [ArianeeAsset-i18n.json](ArianeeAsset-i18n.json) |
 
 # Arianee Certificate Properties
 
-| Property                              | Type       | Required     | Nullable | Default                                                 | Defined by                        |
-| ------------------------------------- | ---------- | ------------ | -------- | ------------------------------------------------------- | --------------------------------- |
-| [\$schema](#schema)                   | `string`   | **Required** | No       | `"https://cert.arianee.org/version1/ArianeeAsset.json"` | Arianee Certificate (this schema) |
-| [attributes](#attributes)             | `object[]` | Optional     | No       |                                                         | Arianee Certificate (this schema) |
-| [brand](#brand)                       | `string`   | Optional     | No       |                                                         | Arianee Certificate (this schema) |
-| [brandLogoHeader](#brandlogoheader)   | `string`   | Optional     | No       |                                                         | Arianee Certificate (this schema) |
-| [description](#description)           | `string`   | Optional     | No       |                                                         | Arianee Certificate (this schema) |
-| [externalContents](#externalcontents) | `object[]` | Optional     | No       |                                                         | Arianee Certificate (this schema) |
-| [jsonSurcharger](#jsonsurcharger)     | `string`   | Optional     | No       |                                                         | Arianee Certificate (this schema) |
-| [model](#model)                       | `string`   | Optional     | No       |                                                         | Arianee Certificate (this schema) |
-| [name](#name)                         | `string`   | Optional     | No       | `""`                                                    | Arianee Certificate (this schema) |
-| [picture](#picture)                   | `string`   | Optional     | No       |                                                         | Arianee Certificate (this schema) |
-| [pictures](#pictures)                 | `object[]` | Optional     | No       |                                                         | Arianee Certificate (this schema) |
-| [serialnumber](#serialnumber)         | `object[]` | Optional     | No       |                                                         | Arianee Certificate (this schema) |
-| [size](#size)                         | `object[]` | Optional     | No       |                                                         | Arianee Certificate (this schema) |
-| [socialmedia](#socialmedia)           | `object`   | Optional     | No       |                                                         | Arianee Certificate (this schema) |
-| [type](#type)                         | `string`   | Optional     | No       | `"SmartAsset"`                                          | Arianee Certificate (this schema) |
-| [v](#v)                               | `string`   | Optional     | No       | `"0.1"`                                                 | Arianee Certificate (this schema) |
-| `*`                                   | any        | Additional   | Yes      | this schema _allows_ additional properties              |
+| Property                              | Type       | Required     | Nullable | Default                                                     | Defined by                        |
+| ------------------------------------- | ---------- | ------------ | -------- | ----------------------------------------------------------- | --------------------------------- |
+| [\$schema](#schema)                   | `string`   | **Required** | No       | `"https://cert.arianee.org/version1/ArianeeAsseti18n.json"` | Arianee Certificate (this schema) |
+| [attributes](#attributes)             | `object[]` | Optional     | No       |                                                             | Arianee Certificate (this schema) |
+| [brand](#brand)                       | `string`   | Optional     | No       |                                                             | Arianee Certificate (this schema) |
+| [brandLogoHeader](#brandlogoheader)   | `string`   | Optional     | No       |                                                             | Arianee Certificate (this schema) |
+| [description](#description)           | `string`   | Optional     | No       |                                                             | Arianee Certificate (this schema) |
+| [descriptioni18n](#descriptioni18n)   | `object[]` | Optional     | No       |                                                             | Arianee Certificate (this schema) |
+| [externalContents](#externalcontents) | `object[]` | Optional     | No       |                                                             | Arianee Certificate (this schema) |
+| [jsonSurcharger](#jsonsurcharger)     | `string`   | Optional     | No       |                                                             | Arianee Certificate (this schema) |
+| [model](#model)                       | `string`   | Optional     | No       |                                                             | Arianee Certificate (this schema) |
+| [name](#name)                         | `string`   | Optional     | No       | `""`                                                        | Arianee Certificate (this schema) |
+| [picture](#picture)                   | `string`   | Optional     | No       |                                                             | Arianee Certificate (this schema) |
+| [pictures](#pictures)                 | `object[]` | Optional     | No       |                                                             | Arianee Certificate (this schema) |
+| [serialnumber](#serialnumber)         | `object[]` | Optional     | No       |                                                             | Arianee Certificate (this schema) |
+| [size](#size)                         | `object[]` | Optional     | No       |                                                             | Arianee Certificate (this schema) |
+| [socialmedia](#socialmedia)           | `object`   | Optional     | No       |                                                             | Arianee Certificate (this schema) |
+| [type](#type)                         | `string`   | Optional     | No       | `"SmartAsset"`                                              | Arianee Certificate (this schema) |
+| [v](#v)                               | `string`   | Optional     | No       | `"0.1"`                                                     | Arianee Certificate (this schema) |
+| `*`                                   | any        | Additional   | Yes      | this schema _allows_ additional properties                  |
 
 ## \$schema
 
@@ -38,14 +39,12 @@ https://cert.arianee.org/version1/ArianeeAsset.json
 
 - is **required**
 - type: `string`
-- default: `"https://cert.arianee.org/version1/ArianeeAsset.json"`
+- default: `"https://cert.arianee.org/version1/ArianeeAsseti18n.json"`
 - defined in this schema
 
 ### \$schema Type
 
 `string`
-
-- format: `uri` – Uniformous Resource Identifier (according to [RFC3986](http://tools.ietf.org/html/rfc3986))
 
 ## attributes
 
@@ -135,6 +134,53 @@ url
 - defined in this schema
 
 ### description Type
+
+`string`
+
+## descriptioni18n
+
+### Description (languages)
+
+`descriptioni18n`
+
+- is optional
+- type: `object[]`
+- defined in this schema
+
+### descriptioni18n Type
+
+Array type: `object[]`
+
+All items must be of the type: `object` with following properties:
+
+| Property   | Type   | Required |
+| ---------- | ------ | -------- |
+| `content`  | string | Optional |
+| `language` | string | Optional |
+
+#### content
+
+##### Content
+
+`content`
+
+- is optional
+- type: `string`
+
+##### content Type
+
+`string`
+
+#### language
+
+##### Language
+
+`language`
+
+- is optional
+- type: `string`
+
+##### language Type
 
 `string`
 
