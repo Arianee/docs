@@ -18,3 +18,26 @@
 
 @media only screen and (min-width: 1500px) {
 }
+
+
+.navPusher{
+    //background-color: #f5f7f9!important;
+    border-right: 1px solid #eaecef;
+}
+
+.toc {
+     border-right: 1px solid #eaecef;   
+}
+
+.container {
+    //background-color: #fff!important;
+
+}
+
+.fixedHeaderContainer {
+        box-shadow: 0 2px 14px rgba(60,59,77,.5);
+}
+
+.fixedHeaderContainer a {
+    height: 32px!important;
+}

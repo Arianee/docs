@@ -4,28 +4,30 @@
 https://cert.arianee.org/version1/ArianeeIdentity-18n.json
 ```
 
+Describing an Arianee Identity such as a company, a third party provider, ...
+
 | Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                             |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ------------------------------------------------------ |
 | Can be instantiated | No         | Experimental | No           | Forbidden         | Permitted             | [ArianeeIdentity-i18n.json](ArianeeIdentity-i18n.json) |
 
 # Arianee Identity Properties
 
-| Property                              | Type       | Required     | Nullable | Default                                                    | Defined by                     |
-| ------------------------------------- | ---------- | ------------ | -------- | ---------------------------------------------------------- | ------------------------------ |
-| [\$schema](#schema)                   | `string`   | **Required** | No       | `"https://cert.arianee.org/version1/ArianeeIdentity.json"` | Arianee Identity (this schema) |
-| [address](#address)                   | `object`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| [arianeeMember](#arianeemember)       | `boolean`  | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| [contacts](#contacts)                 | `object[]` | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| [coverPicture](#coverpicture)         | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| [externalContents](#externalcontents) | `object[]` | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| [logoHeader](#logoheader)             | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| [logoSquare](#logosquare)             | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| [motherCompany](#mothercompany)       | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| [name](#name)                         | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| [rpcEndpoint](#rpcendpoint)           | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| [socialmedia](#socialmedia)           | `object[]` | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| [website](#website)                   | `string`   | Optional     | No       |                                                            | Arianee Identity (this schema) |
-| `*`                                   | any        | Additional   | Yes      | this schema _allows_ additional properties                 |
+| Property                              | Type       | Required     | Nullable | Default                                                        | Defined by                     |
+| ------------------------------------- | ---------- | ------------ | -------- | -------------------------------------------------------------- | ------------------------------ |
+| [\$schema](#schema)                   | `string`   | **Required** | No       | `"https://cert.arianee.org/version1/ArianeeIdentity-18n.json"` | Arianee Identity (this schema) |
+| [address](#address)                   | `object`   | Optional     | No       |                                                                | Arianee Identity (this schema) |
+| [arianeeMember](#arianeemember)       | `boolean`  | Optional     | No       |                                                                | Arianee Identity (this schema) |
+| [contacts](#contacts)                 | `object[]` | Optional     | No       |                                                                | Arianee Identity (this schema) |
+| [coverPicture](#coverpicture)         | `string`   | Optional     | No       |                                                                | Arianee Identity (this schema) |
+| [externalContents](#externalcontents) | `object[]` | Optional     | No       |                                                                | Arianee Identity (this schema) |
+| [logoHeader](#logoheader)             | `string`   | Optional     | No       |                                                                | Arianee Identity (this schema) |
+| [logoSquare](#logosquare)             | `string`   | Optional     | No       |                                                                | Arianee Identity (this schema) |
+| [name](#name)                         | `string`   | Optional     | No       |                                                                | Arianee Identity (this schema) |
+| [parentCompany](#parentcompany)       | `string`   | Optional     | No       |                                                                | Arianee Identity (this schema) |
+| [rpcEndpoint](#rpcendpoint)           | `string`   | Optional     | No       |                                                                | Arianee Identity (this schema) |
+| [socialmedia](#socialmedia)           | `object[]` | Optional     | No       |                                                                | Arianee Identity (this schema) |
+| [website](#website)                   | `string`   | Optional     | No       |                                                                | Arianee Identity (this schema) |
+| `*`                                   | any        | Additional   | Yes      | this schema _allows_ additional properties                     |
 
 ## \$schema
 
@@ -35,7 +37,7 @@ https://cert.arianee.org/version1/ArianeeIdentity-18n.json
 
 - is **required**
 - type: `string`
-- default: `"https://cert.arianee.org/version1/ArianeeIdentity.json"`
+- default: `"https://cert.arianee.org/version1/ArianeeIdentity-18n.json"`
 - defined in this schema
 
 ### \$schema Type
@@ -45,6 +47,8 @@ https://cert.arianee.org/version1/ArianeeIdentity-18n.json
 ## address
 
 ### Address
+
+Company address
 
 `address`
 
@@ -149,6 +153,8 @@ Company is part of Arianee Association
 
 ### Contacts
 
+List of company contact
+
 `contacts`
 
 - is optional
@@ -208,7 +214,7 @@ All items must be of the type: `object` with following properties:
 
 ## coverPicture
 
-### Company Cover
+### Company Cover Picture
 
 Brand Cover Square (2000x5000) transparent TBD
 
@@ -225,6 +231,8 @@ Brand Cover Square (2000x5000) transparent TBD
 ## externalContents
 
 ### External Contents
+
+List of External Contents such as website / documentation
 
 `externalContents`
 
@@ -345,20 +353,6 @@ Logo Square (1000x1000) transparent TBD
 
 `string`
 
-## motherCompany
-
-### Mother Company
-
-`motherCompany`
-
-- is optional
-- type: `string`
-- defined in this schema
-
-### motherCompany Type
-
-`string`
-
 ## name
 
 ### Company Name
@@ -372,6 +366,22 @@ Name of the company
 - defined in this schema
 
 ### name Type
+
+`string`
+
+## parentCompany
+
+### Parent Company
+
+Name of parent company
+
+`parentCompany`
+
+- is optional
+- type: `string`
+- defined in this schema
+
+### parentCompany Type
 
 `string`
 
@@ -394,6 +404,8 @@ Certificate Management Platform RPC URL
 ## socialmedia
 
 ### Social Media
+
+List of Social Media
 
 `socialmedia`
 

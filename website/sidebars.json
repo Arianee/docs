@@ -5,9 +5,28 @@
 
     "SDK": ["livedemo","ArianeeJS"],
 
-    "Standards": ["introstd","ArianeeAsset-i18n", "ArianeeIdentity-i18n", "ArianeeEvent-i18n", "ArianeeMessage-i18n"],
+    "JSON Standards": ["introstd","ArianeeAsset-i18n", "ArianeeIdentity-i18n", "ArianeeEvent-i18n", "ArianeeMessage-i18n"],
 
     "Smart Contracts": ["testnet","mainnet"]
 
+  },
+  "arianeeJS" : {
+        "API": ["arianeeJS/README","arianeeJS/globals"],
+        "Classes":["arianeeJS/classes/arianeecontract",
+                  "arianeeJS/classes/arianeecontractbuilder",
+                  "arianeeJS/classes/arianeecontractconnector",
+                  "arianeeJS/classes/arianeerpc",
+                  "arianeeJS/classes/arianeestate",
+                  "arianeeJS/classes/arianeestatebuilder",
+                  "arianeeJS/classes/arianeewallet",
+                  "arianeeJS/classes/arianeewalletbuilder",
+                  "arianeeJS/classes/certificatesummarybuilder",
+                  "arianeeJS/classes/enrichedwallet",
+                  "arianeeJS/classes/observable",
+                  "arianeeJS/classes/protocolconfigurationsetter",
+                  "arianeeJS/classes/utils"
+                  ]
+
   }
+
 }

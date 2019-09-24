@@ -1,13 +1,14 @@
 {
-    "$id": "https://cert.arianee.org/version1/ArianeeEventi18n.json",
-    "$schema": "https://cert.arianee.org/version1/ArianeeEventi18n.json",
-    "title": "Event default template",
+    "$id": "https://cert.arianee.org/version1/ArianeeEvent-i18n.json",
+    "$schema": "https://cert.arianee.org/version1/ArianeeEvent-i18n.json",
+    "title": "Arianee Event",
+    "description": "Describing an Arianee Event such as servicing, auction, special event ...",
     "type": "object",
     "properties": {
         "$schema": {
             "title": "$schema",
             "type": "string",
-            "default": "https://cert.arianee.org/version1/ArianeeEventi18n.json",
+            "default": "https://cert.arianee.org/version1/ArianeeEvent-18n.json",
             "widget": "hidden"
         },
         "title": {

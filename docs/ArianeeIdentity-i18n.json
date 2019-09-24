@@ -2,12 +2,13 @@
     "$id": "https://cert.arianee.org/version1/ArianeeIdentity-18n.json",
     "$schema": "https://cert.arianee.org/version1/ArianeeIdentity-18n.json",
     "title": "Arianee Identity",
+    "description": "Describing an Arianee Identity such as a company, a third party provider, ...",
     "type": "object",
     "properties": {
         "$schema": {
             "title": "$schema",
             "type": "string",
-            "default": "https://cert.arianee.org/version1/ArianeeIdentity.json",
+            "default": "https://cert.arianee.org/version1/ArianeeIdentity-18n.json",
             "widget": "hidden"
         },
         "name": {
@@ -20,9 +21,10 @@
             "title": "Website",
             "description": "Company Website"
         },
-        "motherCompany": {
+        "parentCompany": {
             "type": "string",
-            "title": "Mother Company"
+            "title": "Parent Company",
+            "description": "Name of parent company"
         },
         "rpcEndpoint": {
             "type": "string",
@@ -37,6 +39,7 @@
         "address": {
             "type": "object",
             "title": "Address",
+            "description": "Company address",
             "properties": {
                 "street_address": {
                     "type": "string",
@@ -68,6 +71,7 @@
             ]
         },
         "contacts": {
+            "description": "List of company contact",
             "type": "array",
             "title": "Contacts",
             "items": {
@@ -101,12 +105,13 @@
         },
         "coverPicture": {
             "type": "string",
-            "title": "Company Cover",
+            "title": "Company Cover Picture",
             "description": "Brand Cover Square (2000x5000) transparent TBD"
         },
         "socialmedia": {
             "type": "array",
             "title": "Social Media",
+            "description": "List of Social Media",
             "items": {
                 "type": "object",
                 "properties": {
@@ -150,6 +155,7 @@
         "externalContents": {
             "type": "array",
             "title": "External Contents",
+            "description": "List of External Contents such as website / documentation",
             "items": {
                 "type": "object",
                 "title": "External Contents",
