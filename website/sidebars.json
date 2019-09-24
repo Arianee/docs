@@ -11,7 +11,7 @@
 
   },
   "arianeeJS" : {
-        "API": ["arianeeJS-SDK/README","arianeeJS/globals"],
+        "API": ["arianeeJS-SDK/README","arianeeJS-SDK/globals"],
         "Classes":["arianeeJS-SDK/classes/arianeecontract",
                   "arianeeJS-SDK/classes/arianeecontractbuilder",
                   "arianeeJS-SDK/classes/arianeecontractconnector",

@@ -6,7 +6,7 @@ sidebar_label: ArianeeJS
 
 ArianeeJS is the first official SDK to interact with the Arianee Protocol
 
-[Check full ArianeeJS documentation](arianeeJS/README)
+[Check full ArianeeJS documentation](arianeeJS-SDK/README)
 
 ## Requirements
 
