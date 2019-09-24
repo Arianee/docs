@@ -11,20 +11,20 @@
 
   },
   "arianeeJS" : {
-        "API": ["arianeeJS/README","arianeeJS/globals"],
-        "Classes":["arianeeJS/classes/arianeecontract",
-                  "arianeeJS/classes/arianeecontractbuilder",
-                  "arianeeJS/classes/arianeecontractconnector",
-                  "arianeeJS/classes/arianeerpc",
-                  "arianeeJS/classes/arianeestate",
-                  "arianeeJS/classes/arianeestatebuilder",
-                  "arianeeJS/classes/arianeewallet",
-                  "arianeeJS/classes/arianeewalletbuilder",
-                  "arianeeJS/classes/certificatesummarybuilder",
-                  "arianeeJS/classes/enrichedwallet",
-                  "arianeeJS/classes/observable",
-                  "arianeeJS/classes/protocolconfigurationsetter",
-                  "arianeeJS/classes/utils"
+        "API": ["arianeeJS-SDK/README","arianeeJS/globals"],
+        "Classes":["arianeeJS-SDK/classes/arianeecontract",
+                  "arianeeJS-SDK/classes/arianeecontractbuilder",
+                  "arianeeJS-SDK/classes/arianeecontractconnector",
+                  "arianeeJS-SDK/classes/arianeerpc",
+                  "arianeeJS-SDK/classes/arianeestate",
+                  "arianeeJS-SDK/classes/arianeestatebuilder",
+                  "arianeeJS-SDK/classes/arianeewallet",
+                  "arianeeJS-SDK/classes/arianeewalletbuilder",
+                  "arianeeJS-SDK/classes/certificatesummarybuilder",
+                  "arianeeJS-SDK/classes/enrichedwallet",
+                  "arianeeJS-SDK/classes/observable",
+                  "arianeeJS-SDK/classes/protocolconfigurationsetter",
+                  "arianeeJS-SDK/classes/utils"
                   ]
 
   }
