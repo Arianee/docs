@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>arianeeJS/globals · Arianee Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="[@arianee/arianeejs](/docs/arianeeJS/README) › [Globals](/docs/arianeeJS/globals)"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="arianeeJS/globals · Arianee Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://arianee.github.io/"/><meta property="og:description" content="[@arianee/arianeejs](/docs/arianeeJS/README) › [Globals](/docs/arianeeJS/globals)"/><meta property="og:image" content="https://arianee.github.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://arianee.github.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-112469684-3', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon.png" alt="Arianee Docs"/><h2 class="headerTitleWithLogo">Arianee Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="https://arianee.org" target="_self">Arianee Home</a></li><li class=""><a href="https://github.com/arianee" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">API</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/arianeeJS/README">arianeeJS/README</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/arianeeJS/globals">arianeeJS/globals</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Classes</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/arianeeJS/classes/arianeecontract">arianeeJS/classes/arianeecontract</a></li><li class="navListItem"><a class="navItem" href="/docs/arianeeJS/classes/arianeecontractbuilder">arianeeJS/classes/arianeecontractbuilder</a></li><li class="navListItem"><a class="navItem" href="/docs/arianeeJS/classes/arianeecontractconnector">arianeeJS/classes/arianeecontractconnector</a></li><li class="navListItem"><a class="navItem" href="/docs/arianeeJS/classes/arianeerpc">arianeeJS/classes/arianeerpc</a></li><li class="navListItem"><a class="navItem" href="/docs/arianeeJS/classes/arianeestate">arianeeJS/classes/arianeestate</a></li><li class="navListItem"><a class="navItem" href="/docs/arianeeJS/classes/arianeestatebuilder">arianeeJS/classes/arianeestatebuilder</a></li><li class="navListItem"><a class="navItem" href="/docs/arianeeJS/classes/arianeewallet">arianeeJS/classes/arianeewallet</a></li><li class="navListItem"><a class="navItem" href="/docs/arianeeJS/classes/arianeewalletbuilder">arianeeJS/classes/arianeewalletbuilder</a></li><li class="navListItem"><a class="navItem" href="/docs/arianeeJS/classes/certificatesummarybuilder">arianeeJS/classes/certificatesummarybuilder</a></li><li class="navListItem"><a class="navItem" href="/docs/arianeeJS/classes/enrichedwallet">arianeeJS/classes/enrichedwallet</a></li><li class="navListItem"><a class="navItem" href="/docs/arianeeJS/classes/observable">arianeeJS/classes/observable</a></li><li class="navListItem"><a class="navItem" href="/docs/arianeeJS/classes/protocolconfigurationsetter">arianeeJS/classes/protocolconfigurationsetter</a></li><li class="navListItem"><a class="navItem" href="/docs/arianeeJS/classes/utils">arianeeJS/classes/utils</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">arianeeJS/globals</h1></header><article><div><span><p><a href="/docs/arianeeJS/README">@arianee/arianeejs</a> › <a href="/docs/arianeeJS/globals">Globals</a></p>
+<h1><a class="anchor" aria-hidden="true" id="arianee-arianeejs"></a><a href="#arianee-arianeejs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>@arianee/arianeejs</h1>
+<h2><a class="anchor" aria-hidden="true" id="index"></a><a href="#index" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Index</h2>
+<h3><a class="anchor" aria-hidden="true" id="enumerations"></a><a href="#enumerations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enumerations</h3>
+<ul>
+<li><a href="/docs/arianeeJS/enums/web3providertypes">web3ProviderTypes</a></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="classes"></a><a href="#classes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Classes</h3>
+<ul>
+<li><a href="/docs/arianeeJS/classes/arianeecontract">ArianeeContract</a></li>
+<li><a href="/docs/arianeeJS/classes/arianeecontractbuilder">ArianeeContractBuilder</a></li>
+<li><a href="/docs/arianeeJS/classes/arianeecontractconnector">ArianeeContractConnector</a></li>
+<li><a href="/docs/arianeeJS/classes/arianeerpc">ArianeeRPC</a></li>
+<li><a href="/docs/arianeeJS/classes/arianeestate">ArianeeState</a></li>
+<li><a href="/docs/arianeeJS/classes/arianeestatebuilder">ArianeeStateBuilder</a></li>
+<li><a href="/docs/arianeeJS/classes/arianeewallet">ArianeeWallet</a></li>
+<li><a href="/docs/arianeeJS/classes/arianeewalletbuilder">ArianeeWalletBuilder</a></li>
+<li><a href="/docs/arianeeJS/classes/certificatesummarybuilder">CertificateSummaryBuilder</a></li>
+<li><a href="/docs/arianeeJS/classes/enrichedwallet">EnrichedWallet</a></li>
+<li><a href="/docs/arianeeJS/classes/observable">Observable</a></li>
+<li><a href="/docs/arianeeJS/classes/protocolconfigurationsetter">ProtocolConfigurationSetter</a></li>
+<li><a href="/docs/arianeeJS/classes/utils">Utils</a></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="interfaces"></a><a href="#interfaces" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Interfaces</h3>
+<ul>
+<li><a href="/docs/arianeeJS/interfaces/arianeeconfig">ArianeeConfig</a></li>
+<li><a href="/docs/arianeeJS/interfaces/arianeeprotocoli">ArianeeProtocolI</a></li>
+<li><a href="/docs/arianeeJS/interfaces/certificatecontent">CertificateContent</a></li>
+<li><a href="/docs/arianeeJS/interfaces/certificatesummary">CertificateSummary</a></li>
+<li><a href="/docs/arianeeJS/interfaces/contract">Contract</a></li>
+<li><a href="/docs/arianeeJS/interfaces/externalcontent">ExternalContent</a></li>
+<li><a href="/docs/arianeeJS/interfaces/httpclient">HttpClient</a></li>
+<li><a href="/docs/arianeeJS/interfaces/picture">Picture</a></li>
+<li><a href="/docs/arianeeJS/interfaces/serialnumber">Serialnumber</a></li>
+<li><a href="/docs/arianeeJS/interfaces/socialmedia">Socialmedia</a></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="variables"></a><a href="#variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variables</h3>
+<ul>
+<li><a href="/docs/arianeeJS/globals#const-web3">Web3</a></li>
+<li><a href="/docs/arianeeJS/globals#fetch">fetch</a></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="functions"></a><a href="#functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Functions</h3>
+<ul>
+<li><a href="/docs/arianeeJS/globals#const-arianee">Arianee</a></li>
+<li><a href="/docs/arianeeJS/globals#createwalletwithpoaandaria">CreateWalletWithPOAAndAria</a></li>
+<li><a href="/docs/arianeeJS/globals#const-enabledev">enableDev</a></li>
+<li><a href="/docs/arianeeJS/globals#flatpromise">flatPromise</a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="variables-1"></a><a href="#variables-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Variables</h2>
+<h3><a class="anchor" aria-hidden="true" id="const-web3"></a><a href="#const-web3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Const</code> Web3</h3>
+<p>• <strong>Web3</strong>: <em>any</em> =  require(&quot;web3&quot;)</p>
+<p><em>Defined in <a href="https://github.com/stefdelec/arianeeJS/blob/07076e4/src/core/arianee-state/arianee-contract-builder.ts#L3" target="_blank" rel="nofollow noreferrer noopener">core/arianee-state/arianee-contract-builder.ts:3</a></em></p>
+<p><em>Defined in <a href="https://github.com/stefdelec/arianeeJS/blob/07076e4/src/core/arianee-connector.ts#L6" target="_blank" rel="nofollow noreferrer noopener">core/arianee-connector.ts:6</a></em></p>
+<p><em>Defined in <a href="https://github.com/stefdelec/arianeeJS/blob/07076e4/src/core/wallet-maker/arianee-wallet-builder.ts#L7" target="_blank" rel="nofollow noreferrer noopener">core/wallet-maker/arianee-wallet-builder.ts:7</a></em></p>
+<p><em>Defined in <a href="https://github.com/stefdelec/arianeeJS/blob/07076e4/src/core/arianee-state/arianee-state.test.ts#L3" target="_blank" rel="nofollow noreferrer noopener">core/arianee-state/arianee-state.test.ts:3</a></em></p>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="fetch"></a><a href="#fetch" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>fetch</h3>
+<p>• <strong>fetch</strong>: <em>any</em> =  require('node-fetch-polyfill')</p>
+<p><em>Defined in <a href="https://github.com/stefdelec/arianeeJS/blob/07076e4/src/core/arianee-state/rpc.service.ts#L2" target="_blank" rel="nofollow noreferrer noopener">core/arianee-state/rpc.service.ts:2</a></em></p>
+<p><em>Defined in <a href="https://github.com/stefdelec/arianeeJS/blob/07076e4/src/core/arianee-state/arianee-state.ts#L5" target="_blank" rel="nofollow noreferrer noopener">core/arianee-state/arianee-state.ts:5</a></em></p>
+<h2><a class="anchor" aria-hidden="true" id="functions-1"></a><a href="#functions-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Functions</h2>
+<h3><a class="anchor" aria-hidden="true" id="const-arianee"></a><a href="#const-arianee" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Const</code> Arianee</h3>
+<p>▸ <strong>Arianee</strong>(<code>confOverride?</code>: any): <em><a href="/docs/arianeeJS/classes/arianeewalletbuilder">ArianeeWalletBuilder</a></em></p>
+<p><em>Defined in <a href="https://github.com/stefdelec/arianeeJS/blob/07076e4/src/core/arianee-factory/arianee-factory.ts#L6" target="_blank" rel="nofollow noreferrer noopener">core/arianee-factory/arianee-factory.ts:6</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th></tr>
+</thead>
+<tbody>
+<tr><td><code>confOverride?</code></td><td>any</td></tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em><a href="/docs/arianeeJS/classes/arianeewalletbuilder">ArianeeWalletBuilder</a></em></p>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="createwalletwithpoaandaria"></a><a href="#createwalletwithpoaandaria" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CreateWalletWithPOAAndAria</h3>
+<p>▸ <strong>CreateWalletWithPOAAndAria</strong>(<code>fromPrivateKey?</code>: string, <code>force</code>: boolean): <em>Promise‹<a href="/docs/arianeeJS/classes/arianeewallet">ArianeeWallet</a>›</em></p>
+<p><em>Defined in <a href="https://github.com/stefdelec/arianeeJS/blob/07076e4/src/e2e/utils/create-wallet.ts#L6" target="_blank" rel="nofollow noreferrer noopener">e2e/utils/create-wallet.ts:6</a></em></p>
+<p><strong>Parameters:</strong></p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Default</th></tr>
+</thead>
+<tbody>
+<tr><td><code>fromPrivateKey?</code></td><td>string</td><td>-</td></tr>
+<tr><td><code>force</code></td><td>boolean</td><td>false</td></tr>
+</tbody>
+</table>
+<p><strong>Returns:</strong> <em>Promise‹<a href="/docs/arianeeJS/classes/arianeewallet">ArianeeWallet</a>›</em></p>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="const-enabledev"></a><a href="#const-enabledev" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Const</code> enableDev</h3>
+<p>▸ <strong>enableDev</strong>(): <em>&quot;/Users/alexandre/projects/arianeeJS/src/arianee-configuration/dev/index&quot;</em></p>
+<p><em>Defined in <a href="https://github.com/stefdelec/arianeeJS/blob/07076e4/src/core/arianee-factory/enable-dev-mode.ts#L3" target="_blank" rel="nofollow noreferrer noopener">core/arianee-factory/enable-dev-mode.ts:3</a></em></p>
+<p><strong>Returns:</strong> <em>&quot;/Users/alexandre/projects/arianeeJS/src/arianee-configuration/dev/index&quot;</em></p>
+<hr>
+<h3><a class="anchor" aria-hidden="true" id="flatpromise"></a><a href="#flatpromise" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>flatPromise</h3>
+<p>▸ <strong>flatPromise</strong>(): <em>object</em></p>
+<p><em>Defined in <a href="https://github.com/stefdelec/arianeeJS/blob/07076e4/src/core/libs/flat-promise.ts#L1" target="_blank" rel="nofollow noreferrer noopener">core/libs/flat-promise.ts:1</a></em></p>
+<p><strong>Returns:</strong> <em>object</em></p>
+<ul>
+<li><p><strong>promise</strong>: <em>Promise‹Object›</em></p></li>
+<li><p><strong>reject</strong>: <em>any</em></p></li>
+<li><p><strong>resolve</strong>: <em>any</em></p></li>
+</ul>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-9-24</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/arianeeJS/README"><span class="arrow-prev">← </span><span class="function-name-prevnext">arianeeJS/README</span></a><a class="docs-next button" href="/docs/arianeeJS/classes/arianeecontract"><span class="function-name-prevnext">arianeeJS/classes/arianeecontract</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#index">Index</a><ul class="toc-headings"><li><a href="#enumerations">Enumerations</a></li><li><a href="#classes">Classes</a></li><li><a href="#interfaces">Interfaces</a></li><li><a href="#variables">Variables</a></li><li><a href="#functions">Functions</a></li></ul></li><li><a href="#variables-1">Variables</a><ul class="toc-headings"><li><a href="#const-web3"><code>Const</code> Web3</a></li><li><a href="#fetch">fetch</a></li></ul></li><li><a href="#functions-1">Functions</a><ul class="toc-headings"><li><a href="#const-arianee"><code>Const</code> Arianee</a></li><li><a href="#createwalletwithpoaandaria">CreateWalletWithPOAAndAria</a></li><li><a href="#const-enabledev"><code>Const</code> enableDev</a></li><li><a href="#flatpromise">flatPromise</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Docs</h5><a href="/docs/intro">Overview</a><a href="/docs/howToProceed">Getting started</a><a href="/docs/ArianeeJS">ArianeeJS SDK Reference</a></div><div><h5>Community</h5><a href="https://t.me/arianeeproject" target="_blank">Telegram</a><div class="social"><a href="https://twitter.com/ArianeeProject" class="twitter-follow-button">Follow @ArianeeProject</a></div></div><div><h5>More</h5><a href="https://github.com/Arianee">GitHub</a><a class="github-button" href="https://github.com/Arianee/ArianeeMaster" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 Arianee</section></footer></div><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script></body></html>
