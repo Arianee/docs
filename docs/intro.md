@@ -6,7 +6,7 @@ sidebar_label: Arianee Project
 
 
 
-
+![alt_text](../img/cover.png "image_tooltip")
 
 The **Arianee project** is an independent & participative association that promotes & provides guidelines and tools to set a **global standard for the digital certification of valuable products**. These guidelines and tools are bundled under the name of the **Arianee protocol**.
 

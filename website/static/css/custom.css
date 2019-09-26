@@ -4,7 +4,16 @@
     display: none;
 }
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+
+
+@media only screen and (max-width: 1024px) {
+    .navPusher {
+        padding-top: 82px;
+    }
+
+    .headerTitleWithLogo {
+        display: block !important;
+    }    
 }
 
 @media only screen and (min-width: 1024px) {
@@ -41,3 +50,5 @@
 .fixedHeaderContainer a {
     height: 32px!important;
 }
+
+

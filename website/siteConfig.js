@@ -27,7 +27,7 @@ const users = [];
 const siteConfig = {
   title: 'Arianee Docs', // Title for your website.
   tagline: 'Documentation for Arianee Protocol',
-  url: 'https://arianee.github.io', // Your website URL
+  url: 'https://docs.arianee.org', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
@@ -44,6 +44,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
+    { search: true },
     {href: 'https://arianee.org', label: 'Arianee Home', target:'_blank'},
     {href: 'https://github.com/arianee', label: 'GitHub', target:'_blank'},    
 
@@ -101,7 +102,11 @@ const siteConfig = {
 
   gaTrackingId: 'UA-112469684-3',
 
-  
+  algolia: {
+    apiKey: 'e73e0f88578cab4470c13f065abb38bb',
+    indexName: 'arianee',
+    algoliaOptions: {} // Optional, if provided by Algolia
+  },  
 
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.
