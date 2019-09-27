@@ -1,7 +1,7 @@
 ---
 id: ArianeeDecentralized
-title:  Arianee decentralized platform
-sidebar_label:  Arianee decentralized platform
+title:  Arianee Decentralized Platform
+sidebar_label:  Arianee Decentralized Platform
 ---
 
 

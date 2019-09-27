@@ -1,6 +1,6 @@
 {
   "docs": {
-    "Overview": ["intro","AriaEconomy", "ArianeeDecentralized"],
+    "Overview": ["intro","arianeeproject","AriaEconomy", "ArianeeDecentralized"],
     "Getting Started": ["howToProceed", "Requirements"],
 
     "SDK": ["livedemo","ArianeeJS"],
