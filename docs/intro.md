@@ -20,7 +20,7 @@ The **Arianee project** is an independent & participative association that promo
 <b>Discover</b><br/><br/>
 Discover Arianee Platform philosophy and understand key concepts
 <br/><br/>
-<a href="arianeeproject">Read more</a>
+<b><a href="arianeeproject">Read more</a></b>
 </div>
 </div>
 
@@ -30,7 +30,7 @@ Discover Arianee Platform philosophy and understand key concepts
 <b>How to proceed</b><br/>
 <br>Very concrete step-by-step process, with live demo included 
 <br/><br/>
-<a href="howToProceed">Read more</a>
+<b><a href="howToProceed">Read more</a></b>
 </div>
 </div>
 
@@ -42,7 +42,7 @@ Dig deeper
 </b><br/><br/>
 Learn in detail about our API, standards and smart contracts
 <br/><br/>
-<a href="ArianeeJS">Read more</a>
+<b><a href="ArianeeJS">Read more</a></b>
 
 </div>
 </div>
@@ -76,4 +76,23 @@ _If you are a developer, reading this documentation and going through the demo s
         table-layout: fixed;
         overflow-wrap: break-word;
     }
+    .mainContainer .wrapper {
+        width: 80%;
+    }
+    @media only screen and (max-width: 1024px) {
+    .tiers {
+        width: 100%;
+        float: none;
+        text-align:center;
+        margin-bottom: 30px;
+    }
+    .mainContainer .wrapper {
+        width: 100%;
+    }  
+    .tiers_inside {
+        width: 100%;
+        text-align:left;
+        margin:auto;
+    }      
+}
 </style>
