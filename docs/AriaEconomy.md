@@ -10,19 +10,20 @@ sidebar_label: Arianee Economy
 The Aria token (Aria) is the currency of the Arianee protocol. It is a fungible token compliant with the[ Ethereum's ERC-20 standard](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md). Each Aria token shares the same value as any other of its kind which makes them optimal to serve as a monetary value token.
 
 
-_The Aria token is scheduled to be available on public exchanges from January 2020._ _Until that date, Aria tokens can be bought by contacting the Arianee project team._
+_The Aria token is scheduled to be available on public exchanges from January 2020._ _Until that date, Aria tokens can be bought by contacting the Arianee project team (hello@arianee.org)._
 
-Aria token is released on [Ethereum mainnet](https://etherscan.io/token/0xedf6568618a00c6f0908bf7758a16f76b6e04af9).
+The Aria token is released on [Ethereum mainnet](https://etherscan.io/token/0xedf6568618a00c6f0908bf7758a16f76b6e04af9).
 
 
-## **What is it for?**
+## **What is it for ?**
 
-Each premium feature of the Arianee protocol has a stable price in fiat currency (USD) payable only in Aria. _As of September 2019_, the following features are charged to Brands:
+Each premium feature of the Arianee protocol has a stable price in fiat currency (USD) payable only in Aria. The following features are charged to Brands:
 
 
 
 *   **Creation** of Certificates.
 *   **Message(s)** to a certificate the Brand created.
+*   **Event(s)** to enrich a certificate.
 
 To maintain a stable price in USD of features, their price in Aria is adjusted every day by Oracles based on the Day-1 _8:00pm CEST_ Aria/USD exchange rate.
 

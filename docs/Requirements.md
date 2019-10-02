@@ -3,26 +3,22 @@ id: Requirements
 title: Requirements
 ---
 
-Few steps are required to interact with the Arianee Protocol.
+To use the Arianee protocol the proper way the following is required:
 
-In order to use paid features, you need Aria Token.
+- Interfaces to interact with the Arianee protocol
+- Some Aria (the currency of the Arianee protocol) to pay for premium features if you are a Brand or a third party
+- A verified identity and staking to issue authentic features if you are a Brand or a third party
 
-In order to be a registred identity, you need to validate the identity registration process.
+## **Build interfaces**
 
-## **Aria Token buying process**
+To build interfaces and expose the Arianee protocol in all its beauty, multiple options are introduced in the [How to Proceed](howToProceed) chapter.
 
-The Aria token, fuel of the Arianee Protocol, is needed to interact with the Arianee Protocol.
+## **Buying Aria**
 
-Currently, you can buy Aria token directly from Arianee (hello@arianee.org)
+The Aria token is scheduled to be available on public exchanges from January 2020. Until that date, Aria tokens can be bought by contacting the Arianee project team (hello@arianee.org).
 
-## **Identity registration process**
+To learn more about the Aria token, please refer to the [Arianee Economy](AriaEconomy) chapter.
 
-In order to be a registered identity, you need to validate Arianee KYB process. (link)
+## **Verifying a Brand identity**
 
-
-**Required documents**
-
-**Stake Aria based on your profile**
-
-
-**Stake condition + dashboard**
+To learn more please refer to the *Know Your Business (KYB) process chapter (Work in progress)*.

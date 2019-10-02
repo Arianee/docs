@@ -10,8 +10,7 @@ sidebar_label:  Arianee Decentralized Platform
 
 ## **What is a decentralized platform?**
 
-
-In the Blockchain context a decentralized platform means that there is no centralized data storage mechanism. The information is available with all the participants in the network. From a system design perspective, you will have nodes instead of a client server.
+In the Blockchain context, a decentralized platform means that there is no centralized data storage mechanism. The information is available with all the participants in the network. From a system design perspective, you will have nodes instead of a client server.
 
 
 ## **About the POA Network blockchain**
@@ -52,7 +51,7 @@ Here is an overview of the Arianee protocol smart contracts:
 ![alt_text](../img/arianeesmartcontract.png "image_tooltip")
 
 
-To favor interoperability and adoption the Arianee protocol designed a crypto currency (the ARIA token) compliant with the[ ERC-20 Token Standard](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md) and certificates compliant (The Arianee Smart Assets) with the[ ERC-721 Token Standard](https://github.com/ethereum/eips/issues/721).
+To favor interoperability and adoption the Arianee protocol designed a crypto currency (the ARIA token) compliant with the[ ERC-20 Token Standard](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md) and certificates (the Arianee Smart Assets) compliant with the[ ERC-721 Token Standard](https://github.com/ethereum/eips/issues/721).
 
 
 ## **About data storage**
@@ -69,7 +68,7 @@ Information and content of certificates remain available to stakeholders with th
 
 
 
-*   The stakeholder has access to the Blockchain **OR **the stakeholder can provide the secret keys provided by the Owner or the Arianee tag on the product to unlock access to the information and content of the related certificate.
+*   The stakeholder has access to the Blockchain **OR ** the stakeholder can provide the secret keys provided by the Owner or the Arianee tag on the product to unlock access to the information and content of the related certificate.
 *   The links within the certificates still point to active content.
 
 ## **About data recovery**
@@ -100,7 +99,7 @@ Data stored by the Wallet provider can be recovered according to the Wallet prov
 
 
 *   Recovery of the owner’s wallet depends on the Wallet provider ability to safely save the owner’s private keys or to give him/her a way, such as mnemonic words, to recover their private keys in case of the loss of the wallet.
-*   Wallet breach may lead to the hack of the owner private keys, leading to the misuse of his certificates.
+*   Wallet breach may lead to the hack of the owner private keys, leading to the misuse of his/her certificates.
 
 
 ![alt_text](../img/arianeewallet.png "image_tooltip")
@@ -123,7 +122,7 @@ The Arianee protocol provides the tools to verify the authenticity of a certific
 *   The certificate is authentic. That means the content of the certificate has not changed since the certificate issuance.
 
 
-Arianee use the certification process designed by [0xCert](https://0xcert.org/). 
+The Arianee protocol uses the certification process designed by [0xCert](https://0xcert.org/). 
 
 ## **Compatible applications**
 
@@ -138,9 +137,10 @@ Such world does not exist (yet!), so Arianee SAS developed a suite of applicatio
 
 
 
-*   The **Brand Data Hub**: A web Certificate Management Platform for Brands to create and manage certificates. Each Brand Data Hub is dedicated to one Brand only.
-*   The **Arianee .Wallet application** is a mobile application available on the App Store and Google Play for owners to claim and manage their certificates. The application let the owner import or use a newly created POA Network address to manage his/her certificates.
+*   The **Brand Data Hub**: a web Certificate Management Platform for Brands to create and manage certificates. Each Brand Data Hub is dedicated to one Brand only.
+*   The **.Wallet application by Arianee** is a mobile application available on the App Store and Google Play for owners to claim and manage their certificates. The application let the owner import or use a newly created POA Network address to manage his/her certificates.
 
      
+
 <a href="https://apps.apple.com/ch/app/arianee-wallet/id1435782507" target="_blank"><img src="../img/appstore.svg" alt="drawing" width="200"/></a>
 <a href="https://play.google.com/store/apps/details?id=com.arianee.wallet&hl=ln" target="_blank"><img src="../img/googleplay.svg" alt="drawing" width="200"/></a>

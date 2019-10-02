@@ -10,25 +10,24 @@ sidebar_label: Introduction
 
 The **Arianee project** is an independent & participative association that promotes & provides guidelines and tools to set a **global standard for the digital certification of valuable products**. These guidelines and tools are bundled under the name of the **Arianee protocol**.
 
- 
 <br/>
-
 
 <div>
 <div class="tiers">
 <div class="tiers_inside">
 <b>Discover</b><br/><br/>
-Discover Arianee Platform philosophy and understand key concepts
+Arianee project overview and key concepts
 <br/><br/>
 <b><a href="arianeeproject">Read more</a></b>
 </div>
 </div>
 
 
+
 <div class="tiers">
 <div class="tiers_inside">
 <b>How to proceed</b><br/>
-<br>Very concrete step-by-step process, with live demo included 
+<br>Step-by-step process and live demo 
 <br/><br/>
 <b><a href="howToProceed">Read more</a></b>
 </div>
@@ -40,7 +39,7 @@ Discover Arianee Platform philosophy and understand key concepts
 <b> 
 Dig deeper
 </b><br/><br/>
-Learn in detail about our API, standards and smart contracts
+Details about our API, standards and smart contracts
 <br/><br/>
 <b><a href="ArianeeJS">Read more</a></b>
 
@@ -48,7 +47,6 @@ Learn in detail about our API, standards and smart contracts
 </div>
 </div>
 <hr style="clear: both; border-width:0!important; width:100%"/>
-
 
 <br/>
 _If you are a developer, reading this documentation and going through the demo should take a couple of hours. No previous knowledge of Blockchain is required. Once you are done, you will know how to manage a certificate on a Blockchain using the Arianee protocol._

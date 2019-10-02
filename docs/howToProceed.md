@@ -3,47 +3,49 @@ id: howToProceed
 title: How to proceed
 ---
 
-You can use Arianee Protocol in different ways, depending on your needs and your profile
 
-## Through Arianee Suite
 
-Arianee is a protocol, tomorrow your consumers will have a native wallet on their phones to welcome the digital trusted certificate you will have created for them using softwares that will simply integrate the protocol. 
+To build interfaces and expose the Arianee protocol in all its beauty, multiple options are introduced here below to answer the needs and the technical level of each stakeholder.
 
-But tomorrow is not today! So we have developed a wallet app for your clients and a web interface for your clients. Hence, we can start creating and distributing certificates immediately!  
+## Ready to use tools with the Arianee Suite (easy)
 
-# Wallet
+The Arianee project embraces a world where developers, startups, integrators or even Brands build their own applications, integrations or connectors to leverage the Arianee protocol.
 
-![alt_text](../img/arianeewallet-hand.png "image_tooltip")
+Such world does not exist (yet!), so Arianee SAS developed a suite of applications to support pilot projects and the adoption of the Arianee protocol:
 
-With The Arianee wallet you can use digital passports on your Phone to verify and prove the authenticity of your most precious items. Digital passports include the item’s essential information, its origin and its history enabling you to follow your item all along its lifetime. Tomorrow, these passports will allow you to access digital services and interact online and IRL with your favorite brands while preserving your personal privacy. 
-
-# Brand Data Hub
+- The **Brand Data Hub** is a web application for Brands to create and manage certificates (Certificate Management Platform). Each Brand Data Hub is dedicated to one Brand only.
 
 ![alt_text](../img/brand-data-hub.png "image_tooltip")
 
-The Brand Data Hub is the control center for brands issuing digital passports for their products. This webapp enables brands to issue digital passports, distribute them and send messages to the current owner of the product. The Brand Data Hub comes with a dashboard to identify key events throughout the product's lifetime and measure the reach of messages.
-
-Please contact us direclty (hello@arianee.org)
 
 
-## Through an Arianee Integrator
+- The **.Wallet application by Arianee** is a mobile application available on the App Store and Google Play for owners to claim and manage their certificates. The application let the owner import or use a newly created POA Network address to manage his/her certificates.
 
-If you have very specific needs, and want to connect Arianee protocol to your current information system, or ERP.
-
-Please contact us directly (hello@arianee.org), we will route you to best suited integrator.
+![alt_text](../img/arianeewallet-hand.png "image_tooltip")
 
 
-## **Using ArianeeJS library**
 
-The first Arianee compatible library is ArianeeJS.
-
-If you want to build tools for the ecosystem, or a compatible application for your specific needs and have technical skills, you can interact directly with Arianee at the API level.
-
-You can test it using our [live demo](livedemo) or dig directly into [ArianeeJS Documentation](ArianeeJS) 
+To learn more about the Arianee suite, please contact us (hello@arianee.org).
 
 
-## **For blockchain technical people**
+## **API integration with ArianeeJS library (medium)**
 
-If you are a blockchain developer, you can interact with Arianee Protocol at the smart contract level.
+The Arianee project designed the ArianeeJS library to interact directly with the Arianee protocol at the API level. The ArianeeJS library can be used to build :
 
-Please check Smart Contract section
+- Custom tools for the Arianee protocol ecosystem 
+- Integrations with tools used by companies such as ERP or CRM 
+
+To learn more about the ArianeeJS library, we recommend you to start with [the live demo](livedemo) and then dig deeper into [the ArianeeJS Documentation](ArianeeJS).
+
+
+## **Blockchain integration with smart contracts (advanced)**
+
+Blockchain developers can interact with the Arianee protocol directly at the level of smart contracts.
+
+To learn more about the smart contracts, please refer to the [testnet smart contracts](testnet) and [mainnet smart contracts](mainnet).
+
+## Custom integration
+
+Some companies have specific needs when it comes to connect the Arianee protocol to their current tools such as ERP or CRM.
+
+To find the best integrator, you may contact us (hello@arianee.org).
