@@ -114,7 +114,7 @@ The Arianee protocol provides the tools to verify the authenticity of a certific
 
 
 
-*   The Brand identity is verified. That means the Brand went through a _Know Your Business_ (KYB) process and was registered by the Arianee project as a verified Brand.
+*   The Brand identity is verified. That means the Brand went through a [Know your business (KYB) process](KYBprocess) and was registered by the Arianee project as a verified Brand.
 
      
 

@@ -21,4 +21,4 @@ To learn more about the Aria token, please refer to the [Arianee Economy](AriaEc
 
 ## **Verifying a Brand identity**
 
-To learn more please refer to the *Know Your Business (KYB) process chapter (Work in progress)*.
+To learn more please refer to the [Know your business (KYB) process](KYBprocess) chapter.

@@ -1,7 +1,7 @@
 ---
 id: ArianeeJS
-title: ArianeeJS
-sidebar_label: ArianeeJS
+title: ArianeeJS library
+sidebar_label: ArianeeJS library
 ---
 
 ArianeeJS is the first official SDK to interact with the Arianee Protocol

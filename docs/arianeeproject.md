@@ -65,17 +65,22 @@ The necessary ecosystem for the Arianee protocol to run includes six stakeholder
 
 
 
-*   **Brands** are the source of each certificate. For their certificates to be classified as authentic, Brands need to meet a specific set of criteria. To learn more please refer to the _Know Your Business  (KYB), process (Work in progress)_ .
-*   **Owners** are end users of the certificates.
-*   **The Arianee project** promotes and develops the Arianee protocol.
-*   **Certificate Management Platform providers** own the module used by Brands to create and manage certificates on the Blockchain.
-*   **Wallet providers** own the mobile or web application giving owners access to their certificates and data stored by the brands. The wallet application let the owner import or use a newly created Blockchain address to manage his/her certificates.
-*   **Nodes** validate transactions related to the Arianee protocol on the Blockchain. 
+* **Brands** are the source of each certificate. For their certificates to be classified as authentic, Brands need to meet a specific set of criteria. To learn more please refer to the [Know your business (KYB) process](KYBprocess).
 
- 
+* **Owners** are end users of the certificates.
 
+* **The Arianee project** promotes and develops the Arianee protocol.
 
-![alt_text](../img/arianeenetwork.png "image_tooltip")
+* **Certificate Management Platform providers** own the module used by Brands to create and manage certificates on the Blockchain.
+
+* **Wallet providers** own the mobile or web application giving owners access to their certificates and data stored by the brands. The wallet application let the owner import or use a newly created Blockchain address to manage his/her certificates.
+
+* **Nodes** validate transactions related to the Arianee protocol on the Blockchain. 
+
+  
+
+<img src="../img/arianeenetwork.png" alt="Ecosystem"
+	title="Ecosystem core" width="600" height="380" />
 
 
 Additional stakeholders have or will have a part to play in the ecosystem:
