@@ -4,26 +4,24 @@ title: Introduction
 sidebar_label: Introduction
 ---
 
+According to the European Committe for Standardization a standard is a technical document designed to be used as a rule, guideline or definition. It is a consensus-built, repeatable way of doing something. 
 
-In order to have interoperable content between software, we need to define standards to structure information.
+With one more thing in mind, interoperability across software solutions, the Arianee project chose to share its standards using JSON schema to support multi-language and to be extensible. These JSON schema describe the structure and content expected when using the Arianee Protocol. 
 
-These JSON Schemas describe JSON contents to use inside Arianee Protocol.
+The Arianee project standards relate to the Arianee protocol features and are built / updated by bringing together all interested parties.
 
-These schema are designed to support multi languages and to be extensible.
+### Supported JSON schema
 
-### Current supported schema
+[Arianee Identity i18n](ArianeeIdentity-i18n) describes the identity of a company (Brand or third party)
 
-[Arianee Identity i18n](ArianeeIdentity-i18n) describes an identity of a company 
+[Arianee Asset i18n](ArianeeAsset-i18n) describes the identity of a certificate for a digital or real-life product (watch, sneaker, etc.)
 
-[Arianee Asset i18n](ArianeeAsset-i18n) describes a certificate, like a watch, a sneaker, ...
+[Arianee Event i18n](ArianeeEvent-i18n) describes the identity of an event (service, auction, etc.)
 
-[Arianee Event i18n](ArianeeEvent-i18n) describes an event such as a service, auction ...
-
-Arianee Message describe a message (coming soon)
+Arianee Message i18n describes the identity of a message (coming soon)
 
 
-### _deprecated json schema_
+### _Deprecated schema_
 
-If you want to support older schema, you need to support :
-[Arianee Asset](ArianeeAsset)
+If you want to support the older schema for certificates, please refer to [Arianee Asset](ArianeeAsset)
 
