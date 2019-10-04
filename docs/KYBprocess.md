@@ -15,8 +15,8 @@ This chapter describes the *Know Your Business* (KYB) process a Brand should fol
 The *Know Your Business* (KYB) process describes the different steps a Brand must follow to be verified. The three major steps are:
 
 - Administrative verification
-- Brand ID verification
 - Staking verification
+- Brand ID verification
 
 ![img](../img/kybprocess.png)
 
@@ -43,22 +43,24 @@ The KYB process starts by the Brand filling the form below to collect the admini
 - FR : https://forms.monday.com/forms/2e69ff966a5fc539a12134b305791cc4
 - EN : https://forms.monday.com/forms/9511074102dce79ec415c35416376862 
 
-Filling the form initiates the review of its content by the Onboarding team from the Arianee project. 
+Filling the form initiates the review of its content by the Onboarding team from the Arianee project. Once the information is reviewed and verified, two cases arise:
 
-Once the information is reviewed and verified, two cases arise:
-
-- The Brand decided to use the Brand Data Hub as its Certificate Management Platform: the Arianee SAS team builds it and provides the Blockchain address of the Brand main wallet for the next step.
-- The Brand decided **not** to use the Brand Data Hub as its Certificate Management Platform: the Brand must provide the Blockchain address of its main wallet for the next step.
-
-Last, the Blockchain address of the Brand main wallet is approved on the Blockchain by the Arianee Identity Multisig team from the Arianee Project. 
-
-At this point the Brand ID verification starts.
+- The Brand decided to use the Brand Data Hub as its Certificate Management Platform: the Arianee SAS team builds it and then the staking verification starts.
+- The Brand decided **not** to use the Brand Data Hub as its Certificate Management Platform: the staking verification starts right away.
 
 **Notes:** 
 
-- Arianee project members skip the administrative verification and start there KYB process with the Brand ID verification.
-- Legal entities that wish to register a new Brand or update a registered Brand skip the administrative verification and start the KYB process with the Brand verification.
+- Arianee project members skip the administrative verification and start there KYB process with the staking verification.
+- Legal entities that wish to register a new Brand or update a registered Brand skip the administrative verification and start the KYB process with the staking verification.
 - The administrative information provided by a Brand is stored by the Arianee project. It remains internal and it is not shared outside of the Arianee project.
+
+## **Staking verification**
+
+The second step of the KYB process starts with the staking leader from the Arianee project requesting the Brand to stake by email. To learn more about the structure and amount of staking please refer to the staking policy (work in progress).
+
+Next, the Blockchain address of the Brand main wallet is approved on the Blockchain by the Arianee Identity Multisig team from the Arianee Project. 
+
+At this point the Brand ID verification starts.
 
 ## **Brand ID  verification**
 
@@ -68,13 +70,9 @@ The second step of the KYB process starts by the Brand filling the form below to
 - EN : https://forms.monday.com/forms/1c10c89c870cfea04c0d32f78b4652eb 
 
 Filling the form initiates the review of its content by the Onboarding team from the Arianee project. 
-Once the information is reviewed and verified, the staking verification starts. 
 
-## **Staking verification**
+Once the information is reviewed and verified, the Blockchain address of the Brand main wallet is set as verified on the Blockchain by the Arianee Identity Multisig team from the Arianee Project. 
 
-The last step of the KYB process starts with the staking leader from the Arianee project requesting the Brand to stake by email. To learn more about the structure and amount of staking please refer to the staking policy (work in progress).
-
-Once the stake is reviewed and verified, the Blockchain address of the Brand main wallet is set as verified on the Blockchain by the Arianee Identity Multisig team from the Arianee Project. 
 **At this point the Brand is verified and can start issuing authentic certificates.**
 
 ## **About interfaces**
