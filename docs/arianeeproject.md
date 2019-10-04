@@ -112,7 +112,7 @@ The Arianee protocol enables an effective and multi-function library for managin
 
 Premium features such as Creation of certificates, Messages and Events must be paid with the Aria token, the currency of the Arianee protocol. The Ordinary General Meeting (including all members of the Arianee project) has sole authority to set the price of the features related to the Arianee protocol. To learn more about the Arianee economy please refer to its dedicated chapter.
 
-To learn more about the Arianee protocol features please refer to the ArianeeJS chapter.
+To learn more about the Arianee protocol features please refer to the [ArianeeJS library](ArianeeJS)chapter.
 
 
 ## **Use case examples**
