@@ -1,7 +1,8 @@
 {
   "docs": {
     "Overview": ["intro","arianeeproject","AriaEconomy", "ArianeeDecentralized"],
-    "Getting Started": ["howToProceed", "Requirements","KYBprocess"],
+
+    "Getting Started": ["howToProceed", "Requirements","KYBprocess","StakingPolicy"],
 
     "SDK / API": ["livedemo","ArianeeJS"],
 
