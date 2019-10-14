@@ -5,7 +5,7 @@ sidebar_label: Arianee Economy
 ---
 
 
-### **The Aria token**
+## **The Aria token**
 
 The Aria token (Aria) is the currency of the Arianee protocol. It is a fungible token compliant with the[ Ethereum's ERC-20 standard](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md). Each Aria token shares the same value as any other of its kind which makes them optimal to serve as a monetary value token.
 
