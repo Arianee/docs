@@ -43,7 +43,7 @@ Certificates as designed by the Arianee project **drastically limit counterfeiti
 
  
 
-Certificates as designed by the Arianee protocol provide a **private and safe communication channel between brands and their customers through messages**. This is no small thing either: Brands lose track of their products and cannot communicate with their customers for legal reasons such as GRPD, product’s lifecycle reasons such as secondhand resale or because of the distribution channels used such as third-party resellers.
+Certificates as designed by the Arianee protocol provide a **private and safe communication channel between brands and their customers through messages**. This is no small thing either: Brands lose track of their products and cannot communicate with their customers for legal reasons such as GDPR, product’s lifecycle reasons such as secondhand resale or because of the distribution channels used such as third-party resellers.
 
  
 
@@ -110,7 +110,7 @@ The Arianee protocol enables an effective and multi-function library for managin
 *   **Events.** The event feature enables Brands and third parties to enrich a certificate. Technically speaking, a service is an immutable event on a certificate.
 *   **Certificate history.** All dates and types of events related to a certificate are recorded and available on the Blockchain.
 
-Premium features such as Creation of certificates, Messages and Events must be paid with the Aria token, the currency of the Arianee protocol. The Ordinary General Meeting (including all members of the Arianee project) has sole authority to set the price of the features related to the Arianee protocol. To learn more about the Arianee economy please refer to its dedicated chapter.
+Premium features such as Creation of certificates, Messages and Events must be paid with the Aria token, the currency of the Arianee protocol. The Members General Assembly (including all members of the Arianee project) has sole authority to set the price of the features related to the Arianee protocol. To learn more about the Arianee economy please refer to its dedicated chapter.
 
 To learn more about the Arianee protocol features please refer to the [ArianeeJS library](ArianeeJS)chapter.
 
