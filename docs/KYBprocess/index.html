@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Know Your Business process · Arianee Docs</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="**Brands** are the source of each certificate. For their certificates to be classified as authentic when issued: "/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Know Your Business process · Arianee Docs"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.arianee.org/"/><meta property="og:description" content="**Brands** are the source of each certificate. For their certificates to be classified as authentic when issued: "/><meta property="og:image" content="https://docs.arianee.org/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://docs.arianee.org/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-112469684-3', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/favicon.png" alt="Arianee Docs"/><h2 class="headerTitleWithLogo">Arianee Docs</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li><li class=""><a href="https://arianee.org" target="_self">Arianee Home</a></li><li class=""><a href="https://github.com/arianee" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Getting Started</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Overview</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/intro">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/arianeeproject">Arianee Project</a></li><li class="navListItem"><a class="navItem" href="/docs/AriaEconomy">Arianee Economy</a></li><li class="navListItem"><a class="navItem" href="/docs/ArianeeDecentralized">Arianee Decentralized Platform</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Getting Started</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/howToProceed">How to proceed</a></li><li class="navListItem"><a class="navItem" href="/docs/Requirements">Requirements</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/KYBprocess">KYB Process</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">SDK / API</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/ArianeeJS">ArianeeJS library</a></li><li class="navListItem"><a class="navItem" href="/docs/livedemo">Live Demo</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">JSON Standards</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/introstd">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/ArianeeAsset-i18n">ArianeeAsset-i18n</a></li><li class="navListItem"><a class="navItem" href="/docs/ArianeeIdentity-i18n">ArianeeIdentity-i18n</a></li><li class="navListItem"><a class="navItem" href="/docs/ArianeeEvent-i18n">ArianeeEvent-i18n</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Smart Contracts</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/testnet">Arianee Testnet</a></li><li class="navListItem"><a class="navItem" href="/docs/mainnet">Arianee Mainnet</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Know Your Business process</h1></header><article><div><span><p><strong>Brands</strong> are the source of each certificate. For their certificates to be classified as authentic when issued:</p>
+<ul>
+<li>The <strong>Brand identity (Brand ID) must be verified.</strong> That means the Brand went through a <em>Know Your Business</em> (KYB) process, described in this paper.</li>
+<li>The <strong>Brand identity (Brand ID) must be authentic.</strong> That means the Brand ID used to issue the certificate is the same than the one verified.</li>
+</ul>
+<p>This chapter describes the <em>Know Your Business</em> (KYB) process a Brand should follow to be verified.</p>
+<h2><a class="anchor" aria-hidden="true" id="what-is-the-kyb-process"></a><a href="#what-is-the-kyb-process" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>What is the KYB Process ?</strong></h2>
+<p>The <em>Know Your Business</em> (KYB) process describes the different steps a Brand must follow to be verified. The three major steps are:</p>
+<ul>
+<li>Administrative verification</li>
+<li>Staking verification</li>
+<li>Brand ID verification</li>
+</ul>
+<p><img src="../img/kybprocess.png" alt="img"></p>
+<h2><a class="anchor" aria-hidden="true" id="who-are-the-kyb-stakeholders"></a><a href="#who-are-the-kyb-stakeholders" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Who are the KYB stakeholders ?</strong></h2>
+<p>The information provided by a Brand is verified by the Onboarding team of the Arianee project.</p>
+<p>The Brand may choose to use a Certificate Management Platform designed by Arianee SAS: a Brand Data Hub.</p>
+<p>The Blockchain address of the Brand main wallet is approved and set as verified on the Blockchain by the Arianee Identity Multisig team from the Arianee Project &amp; Arianee SAS.</p>
+<h2><a class="anchor" aria-hidden="true" id="kyb-fees"></a><a href="#kyb-fees" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>KYB fees</strong></h2>
+<p>Initiating the KYB process and going through the whole process is free for Brands. All the administrative costs are supported by the Arianee project.</p>
+<p>If the Brand decides to use the Brand Data Hub as its Certificate Management Platform, relating costs are to be discussed either with the Arianee project team or the Arianee SAS team.</p>
+<h2><a class="anchor" aria-hidden="true" id="administrative-verification"></a><a href="#administrative-verification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Administrative verification</strong></h2>
+<p>The KYB process starts by the Brand filling the form below to collect the administrative information required (for more details on the information required please refer to the dedicated section).</p>
+<ul>
+<li>FR : <a href="https://forms.monday.com/forms/2e69ff966a5fc539a12134b305791cc4" target="_blank" rel="nofollow noreferrer noopener">https://forms.monday.com/forms/2e69ff966a5fc539a12134b305791cc4</a></li>
+<li>EN : <a href="https://forms.monday.com/forms/9511074102dce79ec415c35416376862" target="_blank" rel="nofollow noreferrer noopener">https://forms.monday.com/forms/9511074102dce79ec415c35416376862</a></li>
+</ul>
+<p>Filling the form initiates the review of its content by the Onboarding team from the Arianee project. Once the information is reviewed and verified, two cases arise:</p>
+<ul>
+<li>The Brand decided to use the Brand Data Hub as its Certificate Management Platform: the Arianee SAS team builds it and then the staking verification starts.</li>
+<li>The Brand decided <strong>not</strong> to use the Brand Data Hub as its Certificate Management Platform: the staking verification starts right away.</li>
+</ul>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Arianee project members skip the administrative verification and start there KYB process with the staking verification.</li>
+<li>Legal entities that wish to register a new Brand or update a registered Brand skip the administrative verification and start the KYB process with the staking verification.</li>
+<li>The administrative information provided by a Brand is stored by the Arianee project. It remains internal and it is not shared outside of the Arianee project.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="staking-verification"></a><a href="#staking-verification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Staking verification</strong></h2>
+<p>The second step of the KYB process starts with the staking leader from the Arianee project requesting the Brand to stake by email. To learn more about the structure and amount of staking please refer to the staking policy (work in progress).</p>
+<p>Next, the Blockchain address of the Brand main wallet is approved on the Blockchain by the Arianee Identity Multisig team from the Arianee Project.</p>
+<p>At this point the Brand ID verification starts.</p>
+<h2><a class="anchor" aria-hidden="true" id="brand-id-verification"></a><a href="#brand-id-verification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Brand ID  verification</strong></h2>
+<p>The second step of the KYB process starts by the Brand filling the form below to collect the Brand ID content. To learn more about the information required please refer to the Brand identity chapter (work in progress).</p>
+<ul>
+<li>FR : <a href="https://forms.monday.com/forms/c39a0b99a52551443c7a23cf51d0e816" target="_blank" rel="nofollow noreferrer noopener">https://forms.monday.com/forms/c39a0b99a52551443c7a23cf51d0e816</a></li>
+<li>EN : <a href="https://forms.monday.com/forms/1c10c89c870cfea04c0d32f78b4652eb" target="_blank" rel="nofollow noreferrer noopener">https://forms.monday.com/forms/1c10c89c870cfea04c0d32f78b4652eb</a></li>
+</ul>
+<p>Filling the form initiates the review of its content by the Onboarding team from the Arianee project.</p>
+<p>Once the information is reviewed and verified, the Blockchain address of the Brand main wallet is set as verified on the Blockchain by the Arianee Identity Multisig team from the Arianee Project.</p>
+<p><strong>At this point the Brand is verified and can start issuing authentic certificates.</strong></p>
+<h2><a class="anchor" aria-hidden="true" id="about-interfaces"></a><a href="#about-interfaces" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>About interfaces</strong></h2>
+<p>No specific interface is necessary for Brands to complete the KYB process, only a web browser to access the Administrative and the Brand ID forms.</p>
+<h2><a class="anchor" aria-hidden="true" id="about-arianee-project-members"></a><a href="#about-arianee-project-members" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>About Arianee project members</strong></h2>
+<p>Arianee project members skip the administrative verification and start there KYB process with the Brand ID verification. Indeed, members already provided the administrative evidence that they are backed by a legal entity.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-10-4</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Requirements"><span class="arrow-prev">← </span><span>Requirements</span></a><a class="docs-next button" href="/docs/ArianeeJS"><span class="function-name-prevnext">ArianeeJS library</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-is-the-kyb-process"><strong>What is the KYB Process ?</strong></a></li><li><a href="#who-are-the-kyb-stakeholders"><strong>Who are the KYB stakeholders ?</strong></a></li><li><a href="#kyb-fees"><strong>KYB fees</strong></a></li><li><a href="#administrative-verification"><strong>Administrative verification</strong></a></li><li><a href="#staking-verification"><strong>Staking verification</strong></a></li><li><a href="#brand-id-verification"><strong>Brand ID  verification</strong></a></li><li><a href="#about-interfaces"><strong>About interfaces</strong></a></li><li><a href="#about-arianee-project-members"><strong>About Arianee project members</strong></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Docs</h5><a href="/docs/intro">Overview</a><a href="/docs/howToProceed">Getting started</a><a href="/docs/ArianeeJS">ArianeeJS SDK Reference</a></div><div><h5>Community</h5><a href="https://t.me/arianeeproject" target="_blank">Telegram</a><div class="social"><a href="https://twitter.com/ArianeeProject" class="twitter-follow-button">Follow @ArianeeProject</a></div></div><div><h5>More</h5><a href="https://github.com/Arianee">GitHub</a><a class="github-button" href="https://github.com/Arianee/ArianeeMaster" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2019 Arianee</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: 'e73e0f88578cab4470c13f065abb38bb',
+                indexName: 'arianee',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
