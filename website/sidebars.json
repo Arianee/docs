@@ -1,9 +1,9 @@
 {
   "docs": {
     "Overview": ["intro","arianeeproject","AriaEconomy", "ArianeeDecentralized"],
-    "Getting Started": ["howToProceed", "Requirements","KYBprocess"],
+    "Getting Started": ["howToProceed", "Requirements","KYBprocess","livedemo"],
 
-    "SDK / API": ["ArianeeJS","livedemo"],
+    "SDK / API": ["ArianeeJS"],
 
     "JSON Standards": ["introstd","ArianeeAsset-i18n", "ArianeeIdentity-i18n", "ArianeeEvent-i18n", "ArianeeMessage-i18n"],
 
