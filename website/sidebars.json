@@ -2,11 +2,12 @@
   "docs": {
     "Overview": ["intro","arianeeproject","AriaEconomy", "ArianeeDecentralized"],
 
-    "Getting Started": ["howToProceed", "Requirements","KYBprocess","StakingPolicy"],
+    "Getting Started": ["howToProceed", "Requirements","KYBprocess","StakingPolicy","livedemo"],
 
-    "SDK / API": ["livedemo","ArianeeJS"],
 
-    "JSON Standards": ["introstd","ArianeeAsset-i18n", "ArianeeIdentity-i18n", "ArianeeEvent-i18n", "ArianeeMessage-i18n"],
+    "SDK": ["ArianeeJS","ArianeeJSWallet","ArianeeJSEconomy","ArianeeJSCertificate"],
+
+    "JSON Standards": ["introstd","ArianeeAsset-i18n", "ArianeeBrandIdentity-i18n", "ArianeeEvent-i18n", "ArianeeMessage-i18n"],
 
     "Smart Contracts": ["testnet","mainnet"]
 

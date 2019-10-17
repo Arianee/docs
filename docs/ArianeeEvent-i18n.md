@@ -12,18 +12,18 @@ Describing an Arianee Event such as servicing, auction, special event ...
 
 # Arianee Event Properties
 
-| Property                              | Type       | Required     | Nullable | Default                                                     | Defined by                  |
-| ------------------------------------- | ---------- | ------------ | -------- | ----------------------------------------------------------- | --------------------------- |
-| [\$schema](#schema)                   | `string`   | **Required** | No       | `"https://cert.arianee.org/version1/ArianeeEvent-18n.json"` | Arianee Event (this schema) |
-| [attributes](#attributes)             | `object[]` | Optional     | No       |                                                             | Arianee Event (this schema) |
-| [description](#description)           | `string`   | Optional     | No       |                                                             | Arianee Event (this schema) |
-| [descriptioni18n](#descriptioni18n)   | `object[]` | Optional     | No       |                                                             | Arianee Event (this schema) |
-| [eventType](#eventtype)               | `string`   | Optional     | No       |                                                             | Arianee Event (this schema) |
-| [externalContents](#externalcontents) | `object[]` | Optional     | No       |                                                             | Arianee Event (this schema) |
-| [location](#location)                 | `string`   | Optional     | No       | `""`                                                        | Arianee Event (this schema) |
-| [title](#title)                       | `string`   | Optional     | No       | `""`                                                        | Arianee Event (this schema) |
-| [titlei18n](#titlei18n)               | `object[]` | Optional     | No       |                                                             | Arianee Event (this schema) |
-| `*`                                   | any        | Additional   | Yes      | this schema _allows_ additional properties                  |
+| Property                              | Type       | Required     | Nullable | Default                                                      | Defined by                  |
+| ------------------------------------- | ---------- | ------------ | -------- | ------------------------------------------------------------ | --------------------------- |
+| [\$schema](#schema)                   | `string`   | **Required** | No       | `"https://cert.arianee.org/version1/ArianeeEvent-i18n.json"` | Arianee Event (this schema) |
+| [attributes](#attributes)             | `object[]` | Optional     | No       |                                                              | Arianee Event (this schema) |
+| [description](#description)           | `string`   | Optional     | No       |                                                              | Arianee Event (this schema) |
+| [descriptioni18n](#descriptioni18n)   | `object[]` | Optional     | No       |                                                              | Arianee Event (this schema) |
+| [eventType](#eventtype)               | `string`   | Optional     | No       |                                                              | Arianee Event (this schema) |
+| [externalContents](#externalcontents) | `object[]` | Optional     | No       |                                                              | Arianee Event (this schema) |
+| [location](#location)                 | `string`   | Optional     | No       | `""`                                                         | Arianee Event (this schema) |
+| [title](#title)                       | `string`   | Optional     | No       | `""`                                                         | Arianee Event (this schema) |
+| [titlei18n](#titlei18n)               | `object[]` | Optional     | No       |                                                              | Arianee Event (this schema) |
+| `*`                                   | any        | Additional   | Yes      | this schema _allows_ additional properties                   |
 
 ## \$schema
 
@@ -33,7 +33,7 @@ Describing an Arianee Event such as servicing, auction, special event ...
 
 - is **required**
 - type: `string`
-- default: `"https://cert.arianee.org/version1/ArianeeEvent-18n.json"`
+- default: `"https://cert.arianee.org/version1/ArianeeEvent-i18n.json"`
 - defined in this schema
 
 ### \$schema Type

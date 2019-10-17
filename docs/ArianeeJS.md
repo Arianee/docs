@@ -6,54 +6,53 @@ sidebar_label: ArianeeJS library
 
 ArianeeJS is the first official SDK to interact with the Arianee Protocol
 
-[Check full ArianeeJS documentation](arianeeJS-SDK/README)
 
-## Requirements
+If you want to play straight away with the library, a **[live demo](livedemo)** is available directly within your browser
 
+## Installation
 
-## Create wallets
+We recommend you employ the certification module as an NPM package in your application.
 
+``` 
+$ npm i --save @arianee/arianeejs 
+```
 
-### From provider
-
-
-### From privatekey
-
-
-### From randomkey
-
-
-### From seed
+To import the package inside you app
+``` 
+import { Arianee } from '@arianee/arianeejs'
+```
 
 
-## Manage certificates
+If you want to use it directly in your browser with javascript, you can include  
+``` 
+<script src="https://unpkg.com/@arianee/arianeejs@latest/browser/bundle.js">
+</script> 
+``` 
+    
+***
+***
 
+## Initialize
 
-### Create certificate
+First you need to instantiate arianeeJS 
+``` 
+new Arianee();
+``` 
 
+``` 
+Arianee.connectToProtocol([networkName]);
+``` 
+#### Parameter
+1. `networkName` - `string`(optional):  The network to use ("mainnet"|"testnet") (Defaults to `"testnet"`)
 
-### Transfer / Request certificate
+#### Result
+`promise` returns `object`: ArianeeWalletBuilder object - The arianee instance with the choosen network
+`
+>*Be careful. connectToProtocol is asynchronous. You need to use await or a promise.*
 
-
-### Prove ownership
-
-
-## Create identity
-
-
-### Ask for identity validation (KYB process)
-
-
-### Publish identity
-
-
-## ArianeeJS API
-
-
-### Friendly Methods
-
-
-### Direct smartContract API
-
- 
+#### Example
+``` 
+const arianeeLib = new Arianee();
+const arianee = await arianeeLib.connectToProtocol("testnet");
+``` 
 

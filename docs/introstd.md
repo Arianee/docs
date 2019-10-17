@@ -12,7 +12,7 @@ The Arianee project standards relate to the Arianee protocol features and are bu
 
 ### Supported JSON schema
 
-[Arianee Identity i18n](ArianeeIdentity-i18n) describes the identity of a company (Brand or third party)
+[Arianee Brand Identity i18n](ArianeeBrandIdentity-i18n) describes the identity of a brand
 
 [Arianee Asset i18n](ArianeeAsset-i18n) describes the identity of a certificate for a digital or real-life product (watch, sneaker, etc.)
 

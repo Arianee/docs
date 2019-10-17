@@ -40,7 +40,7 @@ To learn more about the ArianeeJS library, we recommend you to start with [the l
 
 ## Blockchain integration with smart contracts
 
-Blockchain developers can interact with the Arianee protocol directly at the level of smart contracts.
+Blockchain developers can interact with the Arianee protocol directly at smart contracts level.
 
 To learn more about the smart contracts, please refer to the [testnet smart contracts](testnet) and [mainnet smart contracts](mainnet).
 
