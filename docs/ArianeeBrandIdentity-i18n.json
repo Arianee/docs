@@ -1,0 +1,475 @@
+{
+    "$id": "https://cert.arianee.org/version1/ArianeeBrandIdentity-i18n.json",
+    "$schema": "https://cert.arianee.org/version1/ArianeeBrandIdentity-i18n.json",
+    "title": "Arianee Brand Identity",
+    "description": "Describing an Arianee Brand Identity.",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "title": "$schema",
+            "type": "string",
+            "default": "https://cert.arianee.org/version1/ArianeeBrandIdentity-i18n.json",
+            "widget": "hidden"
+        },
+        "name": {
+            "type": "string",
+            "title": "Brand Name",
+            "description": "Name of the brand"
+        },
+        "companyName": {
+            "type": "string",
+            "title": "Company Name",
+            "description": "Name of the company"
+        },
+        "parentCompanyName": {
+            "type": "string",
+            "title": "Parent Company Name",
+            "description": "Name of parent company"
+        },
+        "description": {
+            "type": "string",
+            "title": "Description",
+            "description": "Brand / Company description in HTML (main language)",
+            "widget": {
+                "id": "textarea"
+            }
+        },
+        "externalContents": {
+            "type": "array",
+            "title": "External Contents",
+            "description": "List of External Contents such as website / documentation",
+            "items": {
+                "type": "object",
+                "title": "External Contents",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "title": "Type",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "enum": [
+                                    "website"
+                                ],
+                                "title": "Website (main)",
+                                "description": "Website (main)"
+                            },
+                            {
+                                "enum": [
+                                    "eshop"
+                                ],
+                                "title": "Eshop",
+                                "description": "Eshop"
+                            },
+                            {
+                                "enum": [
+                                    "other"
+                                ],
+                                "title": "other",
+                                "description": "other"
+                            }
+                        ]
+                    },
+                    "title": {
+                        "type": "string",
+                        "title": "Title",
+                        "widget": {
+                            "id": "string"
+                        }
+                    },
+                    "url": {
+                        "type": "string",
+                        "title": "Url",
+                        "widget": {
+                            "id": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "descriptioni18n": {
+            "type": "array",
+            "title": "Other languages :  description / external contents",
+            "description": "Brand / Company description in HTML & external contents (specific language)",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "language": {
+                        "type": "string",
+                        "title": "Language",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "enum": [
+                                    "fr-FR"
+                                ],
+                                "title": "French",
+                                "description": "French"
+                            },
+                            {
+                                "enum": [
+                                    "en-US"
+                                ],
+                                "title": "English (american)",
+                                "description": "English (american)"
+                            },
+                            {
+                                "enum": [
+                                    "zh-TW"
+                                ],
+                                "title": "Traditional chinese",
+                                "description": "Traditional chinese"
+                            },
+                            {
+                                "enum": [
+                                    "zh-CN"
+                                ],
+                                "title": "Simplified chinese",
+                                "description": "Simplified chinese"
+                            }
+                        ]
+                    },
+                    "description": {
+                        "type": "string",
+                        "title": "Description",
+                        "widget": {
+                            "id": "textarea"
+                        }
+                    },
+                    "externalContents": {
+                        "type": "array",
+                        "title": "External Contents",
+                        "description": "List of External Contents such as website / documentation",
+                        "items": {
+                            "type": "object",
+                            "title": "External Contents",
+                            "properties": {
+                                "type": {
+                                    "type": "string",
+                                    "title": "Type",
+                                    "widget": {
+                                        "id": "select"
+                                    },
+                                    "oneOf": [
+                                        {
+                                            "enum": [
+                                                "website"
+                                            ],
+                                            "title": "Website (main)",
+                                            "description": "Website (main)"
+                                        },
+                                        {
+                                            "enum": [
+                                                "eshop"
+                                            ],
+                                            "title": "Eshop",
+                                            "description": "Eshop"
+                                        },
+                                        {
+                                            "enum": [
+                                                "other"
+                                            ],
+                                            "title": "other",
+                                            "description": "other"
+                                        }
+                                    ]
+                                },
+                                "title": {
+                                    "type": "string",
+                                    "title": "Title",
+                                    "widget": {
+                                        "id": "string"
+                                    }
+                                },
+                                "url": {
+                                    "type": "string",
+                                    "title": "Url",
+                                    "widget": {
+                                        "id": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "arianeeMembership": {
+            "type": "string",
+            "title": "Arianee Member",
+            "description": "Company is part of Arianee Association",
+            "widget": {
+                "id": "select"
+            },
+            "oneOf": [
+                {
+                    "enum": [
+                        "not_member"
+                    ],
+                    "title": "Not member",
+                    "description": "Not member"
+                },
+                {
+                    "enum": [
+                        "associate_member"
+                    ],
+                    "title": "Associate Member",
+                    "description": "Associate Member"
+                },
+                {
+                    "enum": [
+                        "group_member"
+                    ],
+                    "title": "Group member",
+                    "description": "Group member"
+                },
+                {
+                    "enum": [
+                        "maison_member"
+                    ],
+                    "title": "Maison member",
+                    "description": "Maison member"
+                }
+            ]
+        },
+        "address": {
+            "type": "object",
+            "title": "Address",
+            "description": "Company HQ address",
+            "properties": {
+                "street_address": {
+                    "type": "string",
+                    "title": "Street Address"
+                },
+                "street_address2": {
+                    "type": "string",
+                    "title": "Street Address 2"
+                },
+                "zipcode": {
+                    "type": "string",
+                    "title": "Zip Code"
+                },
+                "city": {
+                    "type": "string",
+                    "title": "City"
+                },
+                "state": {
+                    "type": "string",
+                    "title": "State"
+                },
+                "country": {
+                    "type": "string",
+                    "title": "Country"
+                }
+            }
+        },
+        "contacts": {
+            "description": "List of company contacts",
+            "type": "array",
+            "title": "Contacts",
+            "items": {
+                "title": "Contacts",
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "title": "Name",
+                        "type": "string"
+                    },
+                    "email": {
+                        "title": "Email",
+                        "type": "string"
+                    },
+                    "title": {
+                        "title": "Title",
+                        "type": "string"
+                    },
+                    "type": {
+                        "title": "Type",
+                        "type": "string",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "enum": [
+                                    "support"
+                                ],
+                                "title": "Support",
+                                "description": "Support"
+                            },
+                            {
+                                "enum": [
+                                    "sales"
+                                ],
+                                "title": "Sales",
+                                "description": "Sales"
+                            },
+                            {
+                                "enum": [
+                                    "hq"
+                                ],
+                                "title": "Headquarter",
+                                "description": "Headquarter"
+                            },
+                            {
+                                "enum": [
+                                    "other"
+                                ],
+                                "title": "other",
+                                "description": "other"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "pictures": {
+            "type": "array",
+            "title": "Pictures",
+            "description": "List of Pictures",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "title": "Type",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "enum": [
+                                    "brandLogoHeader"
+                                ],
+                                "title": "Brand Logo Header (2000x700) transparent (working with a white background) PNG",
+                                "description": "Brand Logo Header (2000x700) transparent (working with a white background) PNG"
+                            },
+                            {
+                                "enum": [
+                                    "brandLogoHeaderReversed"
+                                ],
+                                "title": "Brand Logo Header (2000x700) transparent (working with a black background) PNG",
+                                "description": "Brand Logo Header (2000x700) transparent (working with a black background) PNG"
+                            },
+                            {
+                                "enum": [
+                                    "brandLogoSquare"
+                                ],
+                                "title": "Brand Logo Square (1000x1000) no transparency",
+                                "description": "Brand Logo Square (1000x1000) no transparency"
+                            },
+                            {
+                                "enum": [
+                                    "brandHomePicture"
+                                ],
+                                "title": "Brand Collection Picture (3200x1900) ratioed",
+                                "description": "Brand Collection Picture (3200x1900) ratioed"
+                            },
+                            {
+                                "enum": [
+                                    "brandItemBackgroundPicture"
+                                ],
+                                "title": "Brand Item Background Picture (3200x1900) ratioed",
+                                "description": "Brand Item Background Picture (3200x1900) ratioed"
+                            },
+                            {
+                                "enum": [
+                                    "brandBackgroundPicture"
+                                ],
+                                "title": "Brand Background picture (1900x3200) preferably dark",
+                                "description": "Brand Background picture (1900x3200) preferably dark"
+                            },
+                            {
+                                "enum": [
+                                    "certificateBackgroundPicture"
+                                ],
+                                "title": "Certificate Background Picture (1900x3200 TBD) preferably dark - with logo on top",
+                                "description": "Certificate Background Picture (1900x3200 TBD) preferably dark - with logo on top"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "type": "string",
+                        "title": "URL",
+                        "widget": {
+                            "id": "string"
+                        }
+                    },
+                    "hash": {
+                        "type": "string",
+                        "title": "Image Hash",
+                        "widget": {
+                            "id": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "socialmedia": {
+            "type": "array",
+            "title": "Social Media",
+            "description": "List of Social Media",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "title": "Type",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "enum": [
+                                    "facebook"
+                                ],
+                                "title": "Facebook",
+                                "description": "Facebook"
+                            },
+                            {
+                                "enum": [
+                                    "instagram"
+                                ],
+                                "title": "Instagram",
+                                "description": "Instagram"
+                            },
+                            {
+                                "enum": [
+                                    "twitter"
+                                ],
+                                "title": "Twitter",
+                                "description": "Twitter"
+                            },
+                            {
+                                "enum": [
+                                    "youtube"
+                                ],
+                                "title": "Youtube",
+                                "description": "Youtube"
+                            }
+                        ]
+                    },
+                    "value": {
+                        "type": "string",
+                        "title": "Value",
+                        "widget": {
+                            "id": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "rpcEndpoint": {
+            "type": "string",
+            "title": "RPC Endpoint",
+            "description": "Certificate Management Platform RPC URL"
+        }
+    },
+    "required": [
+        "$schema"
+    ]
+}

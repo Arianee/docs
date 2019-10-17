@@ -3,9 +3,9 @@
     "Overview": ["intro","arianeeproject","AriaEconomy", "ArianeeDecentralized"],
     "Getting Started": ["howToProceed", "Requirements","KYBprocess","livedemo"],
 
-    "SDK / API": ["ArianeeJS"],
+    "SDK": ["ArianeeJS","ArianeeJSWallet","ArianeeJSEconomy","ArianeeJSCertificate"],
 
-    "JSON Standards": ["introstd","ArianeeAsset-i18n", "ArianeeIdentity-i18n", "ArianeeEvent-i18n", "ArianeeMessage-i18n"],
+    "JSON Standards": ["introstd","ArianeeAsset-i18n", "ArianeeBrandIdentity-i18n", "ArianeeEvent-i18n", "ArianeeMessage-i18n"],
 
     "Smart Contracts": ["testnet","mainnet"]
 

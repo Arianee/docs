@@ -51,4 +51,25 @@
     height: 32px!important;
 }
 
+h1, h2 {
 
+    border-bottom: 1px solid #eaecef;
+}
+
+header h2 {
+    border-bottom: 0;
+
+}
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    /*font-family: Overpass Mono,monospace;*/
+}
+
+code {
+    border-radius: 6px;
+}
