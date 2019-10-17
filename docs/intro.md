@@ -8,7 +8,7 @@ sidebar_label: Introduction
 
 ![alt_text](../img/cover.png "image_tooltip")
 
-The **Arianee project** is an independent & participative association that promotes & provides guidelines and tools to set a **global standard for the digital certification of valuable products**. These guidelines and tools are bundled under the name of the **Arianee protocol**.
+The **Arianee project** is an independent & collaborative association that promotes & provides guidelines and tools to set a **global standard for the digital certification of valuable products**. These guidelines and tools are bundled under the name of the **Arianee protocol**.
 
 <br/>
 
@@ -16,7 +16,7 @@ The **Arianee project** is an independent & participative association that promo
 <div class="tiers">
 <div class="tiers_inside">
 <b>Discover</b><br/><br/>
-Arianee project overview and key concepts
+Arianee project overview <br> and key concepts
 <br/><br/>
 <b><a href="arianeeproject">Read more</a></b>
 </div>
@@ -27,29 +27,27 @@ Arianee project overview and key concepts
 <div class="tiers">
 <div class="tiers_inside">
 <b>How to proceed</b><br/>
-<br>Step-by-step process and live demo 
+<br>Step-by-step process <br> and live demo 
 <br/><br/>
 <b><a href="howToProceed">Read more</a></b>
 </div>
 </div>
-
 
 <div class="tiers">
 <div class="tiers_inside">
 <b> 
 Dig deeper
 </b><br/><br/>
-Details about our API, standards and smart contracts
+Details about our API, SDK, standards and smart contracts
 <br/><br/>
 <b><a href="ArianeeJS">Read more</a></b>
+
 
 </div>
 </div>
 </div>
 <hr style="clear: both; border-width:0!important; width:100%"/>
-
-<br/>
-_If you are a developer, reading this documentation and going through the demo should take a couple of hours. No previous knowledge of Blockchain is required. Once you are done, you will know how to manage a certificate on a Blockchain using the Arianee protocol._
+<br/><i>If you are a developer, reading this documentation and going through the demo should take a couple of hours. No previous knowledge of Blockchain is required. Once you are done, you will know how to manage a certificate on a Blockchain using the Arianee protocol.</i>
 
 
 <style>

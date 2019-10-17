@@ -10,7 +10,7 @@ The Arianee project is an association **governed by its members** and founders. 
 
  
 
-The revenues are dedicated to the Arianee project main purpose: **promoting and developing the Arianee protocol**. There is no shareholder and no possibility for a takeover from a corporate company.
+The revenues are dedicated to the Arianee project main purpose: **promoting and developing the Arianee protocol**. There is no shareholder and no possibility for a takeover from a single corporate company.
 
 To learn more about the Arianee project governance please refer to the[ Constituent by-laws](https://drive.google.com/file/d/1BiLiBNzg6Z9bJ6QoP0naFsIq6L5sRj8Y/view?usp=sharing).
 
