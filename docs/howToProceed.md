@@ -25,22 +25,28 @@ Such world does not exist (yet!), so Arianee SAS developed a suite of applicatio
 <img src="../img/arianeewallet-hand.png" alt="Wallet"
 	title="Wallet display" width="400" height="400" />
 
+<a href="https://apps.apple.com/ch/app/arianee-wallet/id1435782507" target="_blank"><img src="../img/appstore.svg" alt="drawing" width="200"/></a>
+
+<a href="https://play.google.com/store/apps/details?id=com.arianee.wallet&hl=ln" target="_blank"><img src="../img/googleplay.svg" alt="drawing" width="200"/></a>
+
+
+
 To learn more about the Arianee suite, please contact us (hello@arianee.org).
 
 
 ## API integration with ArianeeJS library
 
-The Arianee project designed the ArianeeJS library to interact directly with the Arianee protocol at the API level. The ArianeeJS library can be used to build :
+The Arianee project designed the ArianeeJS library to **interact directly with the Arianee protocol** at the API level. The ArianeeJS library can be used to build :
 
-- Custom tools for the Arianee protocol ecosystem 
-- Integrations with tools used by companies such as ERP or CRM 
+- Custom tools for the Arianee protocol ecosystem. 
+- Integrations with tools used by companies such as ERP or CRM. 
 
 To learn more about the ArianeeJS library, we recommend you to start with [the live demo](livedemo) and then dig deeper into [the ArianeeJS Documentation](ArianeeJS).
 
 
 ## Blockchain integration with smart contracts
 
-Blockchain developers can interact with the Arianee protocol directly at smart contracts level.
+Blockchain developers can interact with the Arianee protocol directly at the level of smart contracts.
 
 To learn more about the smart contracts, please refer to the [testnet smart contracts](testnet) and [mainnet smart contracts](mainnet).
 
