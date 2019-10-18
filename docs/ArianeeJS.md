@@ -9,6 +9,12 @@ ArianeeJS is the first official SDK to interact with the Arianee Protocol
 
 If you want to play straight away with the library, a **[live demo](livedemo)** is available directly within your browser
 
+
+If you want to dig deeper into arianeeJS, please 
+[check ArianeeJS full  documentation](arianeeJS-SDK/README)
+
+
+
 ## Installation
 
 We recommend you employ the certification module as an NPM package in your application.

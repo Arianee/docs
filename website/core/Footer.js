@@ -66,16 +66,7 @@ class Footer extends React.Component {
           <div>
             <h5>More</h5>
             <a href="https://github.com/Arianee">GitHub</a>
-            <a
-              className="github-button"
-              href={this.props.config.repoUrl}
-              data-icon="octicon-star"
-              data-count-href="/facebook/docusaurus/stargazers"
-              data-show-count="true"
-              data-count-aria-label="# stargazers on GitHub"
-              aria-label="Star this project on GitHub">
-              Star
-            </a>
+
             {this.props.config.facebookAppId && (
               <div className="social">
                 <div
@@ -100,3 +91,16 @@ class Footer extends React.Component {
 }
 
 module.exports = Footer;
+
+            /*
+            <a
+              className="github-button"
+              href={this.props.config.repoUrl}
+              data-icon="octicon-star"
+              data-count-href="/facebook/docusaurus/stargazers"
+              data-show-count="true"
+              data-count-aria-label="# stargazers on GitHub"
+              aria-label="Star this project on GitHub">
+              Star
+            </a>
+            */
