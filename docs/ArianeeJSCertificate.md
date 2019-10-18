@@ -13,11 +13,14 @@ In this section, methods related to certificate management are covered
 ```
 ArianeeWallets.methods.createCertificate(data)
 ```
+
+Creates an arianee certificate
+
 #### Parameter
 1. `data` - `object`:  certificate creation data object
      - `uri` - `string`: certificate uri
      - `content` - `object` (optional) : certificate content object (json)
-     - `hash` - `string` (optional): certificate imprint.  (either certificate or hash need to be provided)
+     - `hash` - `string` (optional): certificate imprint.  (either content or hash need to be provided)
      - `certificateId`- `number` (optional): arianee token id. Random if left empty
      - `passphrase` -  `string` (optional): token access passphrase. *should be put in QR Code/NFC*
      - `recoveryTimestamp` -  `number` (optional): timestamp until issuer can recover certificate ownership. Default 90 days from creation date.
@@ -43,7 +46,7 @@ var content = await certificate.json();
 // Create a certificate based on a self hosted json  
 await wallet.methods.createCertificate({
      uri: "https://cert.arianee.org/cert/sampleCert.json",
-     certificate:content})      
+     content:content})      
      .then((i) => {
           console.log("Arianee ID:"+i.certificateId);
           console.log("Passphrase:"+i.passphrase);
@@ -55,12 +58,14 @@ await wallet.methods.createCertificate({
 
 ### Request certificate ownership
 ```
-ArianeeWallets.methods.requestCertificateOwnership([certificateId],[passphrase][,isTest])
+ArianeeWallets.methods.requestCertificateOwnership([certificateId],[passphrase])
 ```
+
+Requests ownership of a given certificate
+
 #### Parameter
 1. `certificateId` - `number`:  arianee certificate id
 2. `passphrase` - `string`:  token request passphrase
-3. `isTest` - `boolean` (optional):  Just test if token is requestable with provided passphrase. Default: false
 
 > This method performs a blockchain transaction. It costs Gas
 
@@ -83,6 +88,9 @@ await wallet.methods.requestCertificateOwnership(3703454,'j2ukmnj6weyz')
 ```
 ArianeeWallets.methods.getCertificate(certificateId[,passphrase[,query]])
 ```
+
+Reads certificate content, checks authenticity, and gather metadata information about a certificate (issuer, transfer history, events, owner,...)
+
 #### Parameter
 1. `certificateId` - `number`:  arianee certificate id
 2. `passphrase` - `string`(optional):  token access passphrase. *If certificate is public (self hosted on a public server), passphrase are not required*
@@ -98,7 +106,7 @@ ArianeeWallets.methods.getCertificate(certificateId[,passphrase[,query]])
 
 
 #### Result
-`promise` returns `object`: The receipt of the blockchain transaction 
+`promise` returns `object`: an arianee certificate object
 
 
 #### Example
@@ -138,32 +146,28 @@ await wallet.methods.getCertificate(3703454,'j2ukmnj6weyz')
 ```
 
 
-### Create a request link (todo)
+***
+
+### Read certificate content and meta data from link
 ```
-ArianeeWallets.methods.getCertificate(certificateId[,passphrase[,query]])
+ArianeeWallets.methods.getCertificateFromLink(link)
 ```
+
+Reads certificate content, checks authenticity, and gather metadata information about a certificate (issuer, transfer history, events, owner,...) from an Arianee link
+
 #### Parameter
-1. `certificateId` - `number`:  arianee certificate id
-2. `passphrase` - `string`(optional):  token access passphrase. *If certificate is public (self hosted on a public server), passphrase are not required*
-3. `query` - `object`(optional) : Default : all blocks are fetched
-     - `isTransferable`: `boolean`: certificate is transferable with provided passphrase
-     - `content`: `boolean`: certificate json content
-     - `issuer`: `boolean`: issuer information
-     - `owner`: `boolean`: owner information
-     - `events`: `boolean`: transfer events list
-     - `arianeeEvents`: `boolean`: arianee events list
-     - `advanced`: `boolean`: token recovery timestamp
+1. `link` - `string`:  and arianee link (requestOwnership, proof, ...)
 
 
 
 #### Result
-`promise` returns `object`: The receipt of the blockchain transaction 
+`promise` returns `object`: an arianee certificate object
 
 
 #### Example
 ```
 // Fetch a certificate   
-await wallet.methods.getCertificate(3703454,'j2ukmnj6weyz')
+await wallet.methods.getCertificateFromLink('https://test.arian.ee/3703454,j2ukmnj6weyz')
      .then((data)=> console.log(data));
 
 > { content:
@@ -196,9 +200,119 @@ await wallet.methods.getCertificate(3703454,'j2ukmnj6weyz')
    CertificateEventsSummary { transfer: [ [Object], [Object] ], arianeeEvents: [] } }
 ```
 
+
+### Create a request ownership link 
+```
+ArianeeWallets.methods.createRequestOwnershipLink(certificateId[,passphrase])
+```
+
+Creates a link to request ownership of a given certificate. Wallet need to be the owner of the certificate 
+
+#### Parameter
+1. `certificateId` - `number`:  arianee certificate id
+2. `passphrase` - `string`(optional):  token request passphrase. 
+
+
+#### Result
+`promise` returns `object`: The receipt of the blockchain transaction 
+
+> This method performs a blockchain transaction. It costs Gas
+
+#### Example
+```
+await wallet.methods.createRequestTransferOwnershipLink(3703454)
+     .then((data)=> console.log(data));
+
+> { certificateId: 3703454,
+  passphrase: 'evo8mrqmuo42',
+  link: 'https://test.arian.ee/3703454,evo8mrqmuo42' }
+```
+
+***
+
     
+### Test if a certificate is requestable
+```
+ArianeeWallets.methods.isCertificateOwnershipRequestable(certificateId,passphrase)
+```
+
+Check if a certificate is requestable given the provided passphrase.
+
+#### Parameter
+1. `certificateId` - `number`:  arianee certificate id
+2. `passphrase` - `string`:  token request passphrase. 
+
+#### Result
+`promise` returns `boolean`: `true` if certificate is requestable, `false` otherwise.
+
+
+#### Example
+```
+await wallet.methods.isCertificateOwnershipRequestable(3703454,'evo8mrqmuo42')
+        .then((data)=> console.log(data))
+
+> true
+```
+
+
+***
     
+### Create a proof link
+```
+ArianeeWallets.methods.createCertificateProofLink(certificateId[,passphrase])
+```
+
+Creates a link to generate a proof of ownership
+
+#### Parameter
+1. `certificateId` - `number`:  arianee certificate id
+2. `passphrase` - `string`(optional):  token proof passphrase. 
+
+#### Result
+`promise` returns `object`: A link object containing certificateId, passphrase, and  method 'proof' and final link
+
+
+> This method performs a blockchain transaction. It costs Gas
+
+#### Example
+```
+await wallet.methods.createCertificateProofLink(3703454)
+     .then((data)=> console.log(data));
+
+> { method: 'proof', 
+  certificateId: 3703454,
+  passphrase: 's4cx5wnr8bol',
+  link: 'https://test.arian.ee/proof/3703454,s4cx5wnr8bol' }
+```
+
+***
     
+### Test a proof
+```
+ArianeeWallets.methods.isCertificateProofValid(certificateId,passphrase)
+```
+
+Check if a proof is valid. A proof is valid, if current owner created the proof within a 300 seconds timeframe.
+
+#### Parameter
+1. `certificateId` - `number`:  arianee certificate id
+2. `passphrase` - `string`:  token proof passphrase. 
+
+#### Result
+`promise` returns `boolean`: `true` if proof is valid, `false` otherwise.
+
+
+#### Example
+```
+await wallet.methods.isCertificateProofValid(3703454,'j2ukmnjd6weyz')
+        .then((data)=> console.log(data))
+
+> true
+```
+
+
+
+
     
 ### Prove ownership
 
@@ -212,9 +326,3 @@ await wallet.methods.getCertificate(3703454,'j2ukmnj6weyz')
 ### Publish identity
 
 ## Manage event
-
-### Full documentation
-
-If you want to dig deeper into arianeeJS, please 
-[check ArianeeJS full  documentation](arianeeJS-SDK/README)
-

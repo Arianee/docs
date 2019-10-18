@@ -15,7 +15,7 @@ The **Arianee project** is an independent & collaborative association that promo
 <div>
 <div class="tiers">
 <div class="tiers_inside">
-<b>Discover</b><br/><br/>
+<h3>Discover</h3><br/>
 Arianee project overview <br> and key concepts
 <br/><br/>
 <b><a href="arianeeproject">Read more</a></b>
@@ -26,7 +26,7 @@ Arianee project overview <br> and key concepts
 
 <div class="tiers">
 <div class="tiers_inside">
-<b>How to proceed</b><br/>
+<h3>How to proceed</h3>
 <br>Step-by-step process <br> and live demo 
 <br/><br/>
 <b><a href="howToProceed">Read more</a></b>
@@ -35,10 +35,8 @@ Arianee project overview <br> and key concepts
 
 <div class="tiers">
 <div class="tiers_inside">
-<b> 
-Dig deeper
-</b><br/><br/>
-Details about our API, SDK, standards and smart contracts
+<h3>Dig deeper</h3><br/>
+Details about our SDK, standards and smart contracts
 <br/><br/>
 <b><a href="ArianeeJS">Read more</a></b>
 
@@ -60,6 +58,10 @@ Details about our API, SDK, standards and smart contracts
         width: 80%;
         text-align:left;
         margin:auto;
+        padding: 10px;
+        border: 1px solid #b79144;
+        border-radius: 10px;
+        background-color: #FAFAFA;
     }
     .onPageNav {
         display: none;
@@ -67,13 +69,16 @@ Details about our API, SDK, standards and smart contracts
     h1 {
         text-align:center;
     }
+    h3 {
+        margin: 0;
+    }
     table{
         width:100%;
         table-layout: fixed;
         overflow-wrap: break-word;
     }
     .mainContainer .wrapper {
-        width: 80%;
+        width: 90%;
     }
     @media only screen and (max-width: 1024px) {
     .tiers {

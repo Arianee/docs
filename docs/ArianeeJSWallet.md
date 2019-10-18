@@ -8,10 +8,11 @@ To interact with the Arianee protocol, you need a wallet. Few options exists
 
 
 ### From privatekey
-If you want to use a plain private key.
 ```
 ArianeeWalletBuilder.fromPrivateKey(privatekey);
 ``` 
+
+Creates a wallet with a plain private key
 
 #### Parameter
 1. `privatekey` - `string`:  a string representing a 64 hex digits prefixed with 0x 
@@ -27,11 +28,11 @@ let wallet = arianee.fromPrivateKey('0x516bd2a1d8fbff19ef39501b17176def4150589d9
 ***
 
 ### From randomkey
-If you want to generate a random wallet
 ```
 ArianeeWalletBuilder.fromRandomKey();
 ``` 
 
+Creates a random wallet 
 
 #### Result
 `object`: ArianeeWallet object - an arianee wallet object
@@ -45,12 +46,13 @@ let wallet = arianee.fromRandomKey();
 
 
 ### From mnemonic 
-If you want to generate a wallet based on a 12 words mnemonic 
 
 
 ```
 ArianeeWalletBuilder.fromMnemonic(mnemonic);
 ``` 
+
+Creates a wallet from a mnemonic (12 words)
 
 #### Parameter
 1. `mnemomonic` - `string`:  a string representing 12 words passphrase. 
@@ -68,7 +70,6 @@ ArianeeWalletBuilder.fromMnemonic(mnemonic);
 ```
 let wallet = arianee.fromMnemonic('path return wheel crime share torch orbit aunt sponsor earth feel prepare');
 ``` 
-*in progress*
 
 
 
@@ -77,10 +78,12 @@ let wallet = arianee.fromMnemonic('path return wheel crime share torch orbit aun
 
 
 ### From random mnemonic 
-Generate a random wallet based on a 12 words mnemonic 
 ```
 ArianeeWalletBuilder.fromRandomMnemonic();
 ``` 
+
+Creates a random wallet based on a 12 words mnemonic 
+
 #### Result
 `object`: ArianeeWallet object - an arianee wallet object
 
@@ -90,6 +93,7 @@ ArianeeWalletBuilder.fromRandomMnemonic();
 ```
 let wallet = arianee.fromRandomMnemonic();
 ``` 
+***
 
 ### public and private keys
 
