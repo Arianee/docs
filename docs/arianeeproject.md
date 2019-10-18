@@ -10,7 +10,7 @@ The Arianee project is an association **governed by its members** and founders. 
 
  
 
-The revenues are dedicated to the Arianee project main purpose: **promoting and developing the Arianee protocol**. There is no shareholder and no possibility for a takeover from a single corporate company.
+The revenues are dedicated to the Arianee project's main purpose: **promoting and developing the Arianee protocol**. There is no shareholder and no possibility for a takeover from a single corporate company.
 
 To learn more about the Arianee project governance please refer to the[ Constituent by-laws](https://drive.google.com/file/d/1BiLiBNzg6Z9bJ6QoP0naFsIq6L5sRj8Y/view?usp=sharing).
 
@@ -25,17 +25,17 @@ The Arianee protocol is a **Blockchain based protocol**. It allows decentralized
 
  
 
-The Arianee protocol is **open source with open access to data streams**. That means:
+The Arianee protocol is **open source with open access to data state**. That means:
 
 
 
-*    The code is fully transparent and auditable.
+*   The code is fully transparent and auditable.
 *   You may contribute to[ the Arianee Github.](https://github.com/Arianee/ArianeeMaster)
 
 ## **What does it solve?**
 
 
-The Ariane protocol **fills the lack of a standardized process to create perpetual, secure and authentic digital certificates for valuable products**.
+The Arianee protocol **fills the lack of a standardized process to create perpetual, secure and authentic digital certificates for valuable products**.
 
  
 
