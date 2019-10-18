@@ -22,7 +22,7 @@ Multiple options are available for this second step, depending on the technical 
 
 - Outsourcing to the Arianee project team ([hello@arianee.org](mailto:hello@arianee.org)) or another third party.
 - Using a compatible software such as the Brand data hub.
-- In-house by developers with  the ArianeeJS library or at the smart contract level.
+- In-house by developers with the ArianeeJS library or at the smart contract level.
 
 ## **Staking amounts**
 
@@ -48,7 +48,7 @@ The amount requested depends on the number of employees of the staking entity:
 
 There is no fee (such as entrance, management, performance or exit fees) implemented on the *Arianee staking* smart contract.
 
-There is no return on Aria staked (such as dividend) implemented on the *Arianee staking* smart contract. However, the value in fiat currency (USD) of Aria staked by a staking entity changes with the evolution of the Aria/USD exchange rate, just like Aria on any other wallet.
+There is no return on Aria staked (such as dividend) implemented on the *Arianee staking* smart contract. However, the value in fiat currency (USD) of Aria staked by a staking entity changes with the evolution of the ARIA/USD exchange rate, just like Aria on any other wallet.
 
 ## **About privacy**
 

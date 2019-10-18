@@ -3,10 +3,10 @@ id: Requirements
 title: Requirements
 ---
 
-To use the Arianee protocol the proper way the following is required:
+To use the Arianee protocol properly the following is required:
 
-- **Interfaces** to interact with the Arianee protocol.
-- **Some Aria** (the currency of the Arianee protocol) to pay for premium features if you are a Brand or a third party.
+- **Interfaces** to interact with the Arianee protocol,
+- **Some ARIA** (the digital currency of the Arianee protocol) to pay for premium features if you are a Brand or a third party.
 - A **verified identity & staking** to issue authentic features if you are a Brand or a third party.
 
 ## **Build interfaces**
