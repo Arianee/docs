@@ -52,7 +52,7 @@ await wallet.getAria()
      .catch(i => console.log('fail'));
 ```     
 
->ARIA Faucet is available only on testnet. You need to buy Aria tokens directly on exchange or through Arianee (hello@arianee.org)
+>ARIA Faucet is available only on testnet. You need to buy Aria tokens directly on exchange or through Arianee (contact hello@arianee.org)
 
 ***
 
@@ -78,7 +78,7 @@ let aria = await wallet.methods.balanceOfAria();
 ## Approve Arianee protocol
 Arianee protocol is using ARIA tokens.
 Because ARIA are yours, we can't take it without your permission.
-To let Arianee Protocol spend your ARIA tokens, your wallet need to approve the arianee protocol.
+To let Arianee Protocol spend your ARIA tokens, your wallet needs to approve the arianee protocol.
 
 #### Example
 ```
