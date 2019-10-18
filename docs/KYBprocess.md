@@ -34,21 +34,21 @@ Initiating the KYB process and going through the whole process is **free** for B
 
 ## **Administrative verification**
 
-The KYB process starts by the Brand filling the **form below to collect the administrative information required**.
+The KYB process starts with the Brand filling the **form below to collect the necessary administrative information**.
 
 - FR : https://forms.monday.com/forms/2e69ff966a5fc539a12134b305791cc4
 - EN : https://forms.monday.com/forms/9511074102dce79ec415c35416376862 
 
-Filling the form initiates the review of its content by the Onboarding team from the Arianee project. Once the information is reviewed and verified, two cases arise:
+Filling the form initiates the review of its content by the Onboarding team at Arianee project. Once the information is reviewed and verified, two cases arise:
 
 - The Brand decided to use the Brand Data Hub as its Certificate Management Platform: the Arianee SAS team builds it and then the staking verification starts.
 - The Brand decided **not** to use the Brand Data Hub as its Certificate Management Platform: the staking verification starts right away.
 
 **Notes:** 
 
-- Arianee project members skip the administrative verification and start there KYB process with the staking verification.
+- Arianee project members skip the administrative verification and start their KYB process with the staking verification.
 - Legal entities that wish to register a new Brand or update a registered Brand skip the administrative verification and start the KYB process with the staking verification.
-- The administrative information provided by a Brand is stored by the Arianee project. It remains internal and it is not shared outside of the Arianee project.
+- The administrative information provided by a Brand is stored by the Arianee project. No information is shared outside of the Arianee project.
 
 ## **Staking verification**
 
