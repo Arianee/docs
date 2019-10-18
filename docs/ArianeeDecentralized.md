@@ -10,14 +10,14 @@ sidebar_label:  Arianee Decentralized Platform
 
 ## **What is a decentralized platform?**
 
-In the Blockchain context, a decentralized platform means that there is **no centralized data storage mechanism**. The information is available with all the participants in the network. 
+In the Blockchain context, a decentralized platform means that there is **no centralized data storage mechanism**. The information is available to all the participants in the network. 
 
 From a system design perspective, there are **nodes instead of a client server**.
 
 
 ## **About the POA Network blockchain**
 
-**Interoperability** is a major asset for a Blockchain standard and the Arianee protocol aims to be as **flexible** as possible when a company have to select the underlying Blockchain it uses.
+**Interoperability** is a major advantage for a Blockchain standard and the Arianee protocol aims to be as **flexible** as possible when it comes to a company selecting the underlying Blockchain it wishes to use.
 
  
 
@@ -25,10 +25,10 @@ For the first deployment of the Arianee protocol, the Arianee project selected t
 
 
 
-*   POA Network is a **sidechain of the Ethereum blockchain** which has the second-biggest market capitalization in the Blockchain world. That means POA Network provides interoperability and facilitate asset transfers between Ethereum-based networks.
-*   POA Network is **based on the Ethereum protocol**, the most mature and spread one to manage smart contracts as we write these lines. To learn more about smart contracts please refer to the dedicated section (just below).
-*   **The price of transactions is cheaper** and more stable on POA Network than the Ethereum main blockchain. This is essentially due to the difference of consensus mechanism between POA Network (Proof of Authonomy) and the Ethereum main blockchain (Proof of Work).
-*   **The time to validate transactions is lower** on POA Network (around 5 seconds) than the Ethereum main blockchain (around 15 seconds).
+*   POA Network is a **sidechain of the Ethereum blockchain** which has the second-biggest market capitalization in the Blockchain world. That means POA Network provides interoperability and facilitates asset transfers between Ethereum-based networks.
+*   POA Network is **based on the Ethereum protocol** and, as we write these lines, the most mature and spread blockchain protocol to manage smart contracts. To learn more about smart contracts please refer to the dedicated section (just below).
+*   **The price of transactions is cheaper** and more stable on POA Network than the Ethereum main blockchain. This is essentially due to the difference of consensus mechanism between POA Network (Proof of Autonomy) and the Ethereum mainnet (Proof of Work).
+*   **The time to validate transactions is lower** on POA Network (around 5 seconds) than the Ethereum mainnet (around 15 seconds).
 
 ## **What is a smart contract?**
 
@@ -53,12 +53,12 @@ Here is an overview of the Arianee protocol smart contracts:
 ![alt_text](../img/arianeesmartcontract.png "image_tooltip")
 
 
-To favor interoperability and adoption the Arianee protocol designed a crypto currency (the ARIA token) compliant with the[ ERC-20 Token Standard](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md) and certificates (the Arianee Smart Assets) compliant with the[ ERC-721 Token Standard](https://github.com/ethereum/eips/issues/721). To learn more abou tthe ARIA token please refer to the [Arianee Economy](ArianeeJS) chapter.
+To favor interoperability and adoption the Arianee protocol designed a crypto currency (the ARIA token) compliant with the[ ERC-20 Token Standard](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md) and certificates (the Arianee Smart Assets) compliant with the[ ERC-721 Token Standard](https://github.com/ethereum/eips/issues/721). To learn more about the ARIA token please refer to the [Arianee Economy](ArianeeJS) chapter.
 
 
 ## **About data storage**
 
-The Arianee protocol when used at its core **<span style="text-decoration:underline;">never</span>** asks, stores or uses personal information about owners but their wallet public key. **Owners are anonymous using the Arianee protocol**.
+The Arianee protocol when used at its core **<span style="text-decoration:underline;">never</span>** asks, stores or uses personal information about owners. Ownership is attached to a wallet public key. **Owners are anonymous when using the Arianee protocol**.
 
 
 
@@ -86,12 +86,12 @@ Data from the Arianee protocol stored on a specific address on a Blockchain can 
 
  
 
-Data stored by the Vault provider can be updated and recovered according to the Vault provider policy. **Brands should be especially cautious when selecting their Vault provider** because:
+Data stored by the Certificate Management Platform provider can be updated and recovered according to the Certificate Management Platform provider policy. **Brands should be especially cautious when selecting their Certificate Management Platform provider** because:
 
 
 
-*   Updates of the data provided by the Vault provider may lead to an authentication failure of certificates.
-*   If the links within the Blockchain certificates do not point to active content anymore, owners will not have access to this content anymore.
+*   Updates of the data provided by the Certificate Management Platform provider may lead to an authentication failure of certificates.
+*   If the links within the Blockchain Certificates do not point to active content anymore, owners will not have access to this content.
 *   Vault breach may lead to the hack of a Brand private keys, leading to the misuse of features available to the Brand.
 
      
