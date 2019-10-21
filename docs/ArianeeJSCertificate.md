@@ -243,7 +243,10 @@ Check if a certificate is requestable given the provided passphrase.
 2. `passphrase` - `string`:  token request passphrase. 
 
 #### Result
-`promise` returns `boolean`: `true` if certificate is requestable, `false` otherwise.
+`promise` returns `ExtendedBoolean`: 
+- `isTrue`:`true` if certificate is requestable, `false` otherwise.
+- `code` return code
+- `message`return message
 
 
 #### Example
@@ -251,7 +254,7 @@ Check if a certificate is requestable given the provided passphrase.
 await wallet.methods.isCertificateOwnershipRequestable(3703454,'evo8mrqmuo42')
         .then((data)=> console.log(data))
 
-> true
+> {isTrue: true, code: 'certicate.requestable', message: 'certificate is requestable'}
 ```
 
 
@@ -299,15 +302,17 @@ Check if a proof is valid. A proof is valid, if current owner created the proof 
 2. `passphrase` - `string`:  token proof passphrase. 
 
 #### Result
-`promise` returns `boolean`: `true` if proof is valid, `false` otherwise.
-
+`promise` returns `ExtendedBoolean`: 
+- `isTrue`:`true` if proof is valid, `false` otherwise.
+- `code` return code
+- `message`return message
 
 #### Example
 ```
 await wallet.methods.isCertificateProofValid(3703454,'j2ukmnjd6weyz')
         .then((data)=> console.log(data))
 
-> true
+> {isTrue:true, code:'proof.token.valid', message: 'proof is valid'}
 ```
 
 
