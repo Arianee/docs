@@ -46,7 +46,7 @@ new Arianee();
 ``` 
 
 ``` 
-Arianee.connectToProtocol([networkName]);
+Arianee.init([networkName]);
 ``` 
 #### Parameter
 1. `networkName` - `string`(optional):  The network to use ("mainnet"|"testnet") (Defaults to `"testnet"`)
@@ -54,11 +54,11 @@ Arianee.connectToProtocol([networkName]);
 #### Result
 `promise` returns `object`: ArianeeWalletBuilder object - The arianee instance with the choosen network
 `
->*Be careful. connectToProtocol is asynchronous. You need to use await or a promise.*
+>*Be careful. init is asynchronous. You need to use await or a promise.*
 
 #### Example
 ``` 
 const arianeeLib = new Arianee();
-const arianee = await arianeeLib.connectToProtocol("testnet");
+const arianee = await arianeeLib.init("testnet");
 ``` 
 
