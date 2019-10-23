@@ -9,7 +9,7 @@ To interact with Arianee Protocol, you need the native cryptotokens (currently P
 ### Request POA
 Ask for POA Faucet and receive 0.05 POA if your wallet is below
 ```
-ArianeeWallet.getFaucet();
+ArianeeWallet.requestPoa();
 ``` 
 
 #### Result
@@ -17,7 +17,7 @@ ArianeeWallet.getFaucet();
 
 #### Example
 ```
-await wallet.getFaucet()
+await wallet.requestPoa()
      .then(i => console.log('success'))
      .catch(i => console.log('fail'));
 ```    
@@ -40,14 +40,14 @@ let gas = wallet.methods.balanceOfGas();
 ### Request ARIA
 Ask for ARIA Faucet and receive some ARIA
 ```
-ArianeeWallet.getAria();
+ArianeeWallet.requestAria();
 ``` 
 #### Result
 `promise` returns `object`: an object representing the receipt from the blockchain transaction
 
 #### Example
 ```
-await wallet.getAria()
+await wallet.requestAria()
      .then(i => console.log('success'))
      .catch(i => console.log('fail'));
 ```     
