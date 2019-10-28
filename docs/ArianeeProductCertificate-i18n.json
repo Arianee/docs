@@ -1,0 +1,846 @@
+{
+    "$id": "https://cert.arianee.org/version1/ArianeeProductCertificate-i18n.json",
+    "$schema": "https://cert.arianee.org/version1/ArianeeProductCertificate-i18n.json",
+    "title": "Arianee Certificate",
+    "type": "object",
+    "properties": {
+        "$schema": {
+            "title": "$schema",
+            "type": "string",
+            "default": "https://cert.arianee.org/version1/ArianeeProductCertificate-i18n.json",
+            "widget": "hidden",
+            "description": "Arianee Certificate i18n"
+        },
+        "name": {
+            "type": "string",
+            "title": "Name",
+            "default": "",
+            "description": "Product Name"
+        },
+        "sku": {
+            "type": "string",
+            "title": "SKU",
+            "default": "",
+            "description": "Product Sku"
+        },
+        "gtin": {
+            "type": "string",
+            "title": "GTIN",
+            "default": "",
+            "description": "Product GTIN"
+        },
+        "brandInternalId": {
+            "type": "string",
+            "title": "Brand Internal ID",
+            "default": "",
+            "description": "Product Internal Brand ID"
+        },
+        "category": {
+            "type": "string",
+            "title": "Category",
+            "widget": {
+                "id": "select"
+            },
+            "oneOf": [
+                {
+                    "description": "Apparel",
+                    "title": "Apparel",
+                    "enum": [
+                        "apparel"
+                    ]
+                },
+                {
+                    "description": "Accessory",
+                    "title": "Accessory",
+                    "enum": [
+                        "accessory"
+                    ]
+                }
+            ]
+        },
+        "subCategory": {
+            "type": "string",
+            "title": "Sub Category",
+            "widget": {
+                "id": "select"
+            },
+            "temp": "Shirt Dress T-shirt Sweater Vest Jacket Denim Pants Skirt Swim",
+            "oneOf": [
+                {
+                    "description": "Shirt",
+                    "title": "Shirt",
+                    "enum": [
+                        "shirt"
+                    ]
+                },
+                {
+                    "description": "Dress",
+                    "title": "Dress",
+                    "enum": [
+                        "dress"
+                    ]
+                }
+            ]
+        },
+        "intended": {
+            "type": "string",
+            "title": "Intended",
+            "widget": {
+                "id": "select"
+            },
+            "temp": "Women's Men's Youth-Girls Youth-Boys Toddler-Girls Todder-Boys Infant-Girls Infant-Boys Adult Gender Neutral/Non-binary",
+            "oneOf": [
+                {
+                    "description": "Women's",
+                    "title": "Women's",
+                    "enum": [
+                        "womens"
+                    ]
+                },
+                {
+                    "description": "Men's",
+                    "title": "Men's",
+                    "enum": [
+                        "mens"
+                    ]
+                },
+                {
+                    "description": "Adult Gender Neutral",
+                    "title": "Adult Gender Neutral",
+                    "enum": [
+                        "neutral"
+                    ]
+                }
+            ]
+        },
+        "serialnumber": {
+            "type": "array",
+            "title": "Serial Number",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "title": "Type",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "description": "Serial Number",
+                                "title": "Serial Number",
+                                "enum": [
+                                    "serialnumber"
+                                ]
+                            },
+                            {
+                                "description": "Case Number",
+                                "title": "Case Number",
+                                "enum": [
+                                    "casenumber"
+                                ]
+                            },
+                            {
+                                "description": "Movement Number",
+                                "title": "Movement Number",
+                                "enum": [
+                                    "movementnumber"
+                                ]
+                            }
+                        ]
+                    },
+                    "value": {
+                        "type": "string",
+                        "title": "Value",
+                        "widget": {
+                            "id": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "subBrand": {
+            "type": "string",
+            "title": "Sub Brand",
+            "description": "Sub Brand"
+        },
+        "model": {
+            "type": "string",
+            "title": "Model",
+            "description": "Product model"
+        },
+        "description": {
+            "type": "string",
+            "title": "Description",
+            "description": "Product Description",
+            "widget": {
+                "id": "textarea"
+            }
+        },
+        "subDescription": {
+            "required": false,
+            "type": "array",
+            "title": "Description (more)",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "title": "Type",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "enum": [
+                                    "service"
+                                ],
+                                "title": "Servicing",
+                                "description": "Servicing"
+                            },
+                            {
+                                "enum": [
+                                    "recycling"
+                                ],
+                                "title": "Recycling",
+                                "description": "Recycling"
+                            },
+                            {
+                                "enum": [
+                                    "other"
+                                ],
+                                "title": "other",
+                                "description": "other"
+                            }
+                        ]
+                    },
+                    "title": {
+                        "type": "string",
+                        "title": "Title",
+                        "widget": {
+                            "id": "string"
+                        }
+                    },
+                    "content": {
+                        "type": "string",
+                        "title": "Content",
+                        "widget": {
+                            "id": "textarea"
+                        }
+                    },
+                    "order": {
+                        "type": "number",
+                        "title": "Order (number)"
+                    }
+                }
+            }
+        },
+        "externalContents": {
+            "required": false,
+            "type": "array",
+            "title": "External Contents",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "title": "Type",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "enum": [
+                                    "website"
+                                ],
+                                "title": "Website (main)",
+                                "description": "Website (main)"
+                            },
+                            {
+                                "enum": [
+                                    "eshop"
+                                ],
+                                "title": "Eshop",
+                                "description": "Eshop"
+                            },
+                            {
+                                "enum": [
+                                    "other"
+                                ],
+                                "title": "other",
+                                "description": "other"
+                            }
+                        ]
+                    },
+                    "title": {
+                        "type": "string",
+                        "title": "Title",
+                        "widget": {
+                            "id": "string"
+                        }
+                    },
+                    "url": {
+                        "type": "string",
+                        "title": "Url",
+                        "widget": {
+                            "id": "string"
+                        }
+                    },
+                    "order": {
+                        "type": "number",
+                        "title": "Order (number)"
+                    }
+                }
+            }
+        },
+        "descriptioni18n": {
+            "type": "array",
+            "title": "Other languages :  description / external contents",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "language": {
+                        "type": "string",
+                        "title": "Language",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "description": "French",
+                                "title": "French",
+                                "enum": [
+                                    "fr-FR"
+                                ]
+                            },
+                            {
+                                "description": "English (US)",
+                                "title": "English (US)",
+                                "enum": [
+                                    "en-US"
+                                ]
+                            },
+                            {
+                                "description": "Chinese (traditional)",
+                                "title": "Chinese (traditional)",
+                                "enum": [
+                                    "zh-TW"
+                                ]
+                            },
+                            {
+                                "description": "Chinese (simplified)",
+                                "title": "Chinese (simplified)",
+                                "enum": [
+                                    "zh-CN"
+                                ]
+                            }
+                        ]
+                    },
+                    "content": {
+                        "type": "string",
+                        "title": "Content",
+                        "widget": {
+                            "id": "textarea"
+                        }
+                    },
+                    "subDescription": {
+                        "required": false,
+                        "type": "array",
+                        "title": "Description (more)",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "type": "string",
+                                    "title": "Type",
+                                    "widget": {
+                                        "id": "select"
+                                    },
+                                    "oneOf": [
+                                        {
+                                            "enum": [
+                                                "service"
+                                            ],
+                                            "title": "Servicing",
+                                            "description": "Servicing"
+                                        },
+                                        {
+                                            "enum": [
+                                                "recycling"
+                                            ],
+                                            "title": "Recycling",
+                                            "description": "Recycling"
+                                        },
+                                        {
+                                            "enum": [
+                                                "other"
+                                            ],
+                                            "title": "other",
+                                            "description": "other"
+                                        }
+                                    ]
+                                },
+                                "title": {
+                                    "type": "string",
+                                    "title": "Title",
+                                    "widget": {
+                                        "id": "string"
+                                    }
+                                },
+                                "content": {
+                                    "type": "string",
+                                    "title": "Content",
+                                    "widget": {
+                                        "id": "textarea"
+                                    }
+                                },
+                                "order": {
+                                    "type": "number",
+                                    "title": "Order (number)"
+                                }
+                            }
+                        }
+                    },
+                    "externalContents": {
+                        "required": false,
+                        "type": "array",
+                        "title": "External Contents",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "type": "string",
+                                    "title": "Type",
+                                    "widget": {
+                                        "id": "select"
+                                    },
+                                    "oneOf": [
+                                        {
+                                            "enum": [
+                                                "website"
+                                            ],
+                                            "title": "Website (main)",
+                                            "description": "Website (main)"
+                                        },
+                                        {
+                                            "enum": [
+                                                "eshop"
+                                            ],
+                                            "title": "Eshop",
+                                            "description": "Eshop"
+                                        },
+                                        {
+                                            "enum": [
+                                                "other"
+                                            ],
+                                            "title": "other",
+                                            "description": "other"
+                                        }
+                                    ]
+                                },
+                                "title": {
+                                    "type": "string",
+                                    "title": "Title",
+                                    "widget": {
+                                        "id": "string"
+                                    }
+                                },
+                                "url": {
+                                    "type": "string",
+                                    "title": "Url",
+                                    "widget": {
+                                        "id": "string"
+                                    }
+                                },
+                                "order": {
+                                    "type": "number",
+                                    "title": "Order (number)"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "msrp": {
+            "type": "array",
+            "title": "Manufacturers suggested retail price",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "msrp": {
+                        "type": "string",
+                        "title": "MSRP",
+                        "default": "",
+                        "description": "Manufacturers suggested retail price (number)"
+                    },
+                    "currency": {
+                        "type": "string",
+                        "title": "Currency",
+                        "default": "",
+                        "description": "Currency",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "title": "US Dollar",
+                                "description": "US Dollar",
+                                "enum": [
+                                    "USD"
+                                ]
+                            },
+                            {
+                                "title": "Euro",
+                                "description": "Euro",
+                                "enum": [
+                                    "EUR"
+                                ]
+                            },
+                            {
+                                "title": "Pound",
+                                "description": "Pound",
+                                "enum": [
+                                    "GBP"
+                                ]
+                            }
+                        ]
+                    },
+                    "msrpCountry": {
+                        "type": "string",
+                        "title": "Country (msrp)",
+                        "default": "",
+                        "description": "Country of Intended Original Sale (ISO 3166 alpha-3)"
+                    }
+                }
+            }
+        },
+        "medias": {
+            "type": "array",
+            "title": "Medias",
+            "description": "List of Medias (picture, video, ...)",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "mediaType": {
+                        "type": "string",
+                        "title": "Media Type",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "enum": [
+                                    "picture"
+                                ],
+                                "title": "Picture (png / jpg)",
+                                "description": "Picture (png / jpg)"
+                            },
+                            {
+                                "enum": [
+                                    "youtube"
+                                ],
+                                "title": "Youtube video",
+                                "description": "Youtube video"
+                            }
+                        ]
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Type",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "enum": [
+                                    "product"
+                                ],
+                                "title": "Product media / picture",
+                                "description": "Product media / picture"
+                            },
+                            {
+                                "enum": [
+                                    "brandItemBackgroundPicture"
+                                ],
+                                "title": "Brand Item Background Picture (3200x1900) ratioed",
+                                "description": "Brand Item Background Picture (3200x1900) ratioed"
+                            },
+                            {
+                                "enum": [
+                                    "certificateBackgroundPicture"
+                                ],
+                                "title": "Certificate Background Picture (1900x3200 TBD) preferably dark - with logo on top",
+                                "description": "Certificate Background Picture (1900x3200 TBD) preferably dark - with logo on top"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "type": "string",
+                        "title": "URL",
+                        "widget": {
+                            "id": "string"
+                        }
+                    },
+                    "hash": {
+                        "type": "string",
+                        "title": "Media Hash",
+                        "widget": {
+                            "id": "string"
+                        }
+                    },
+                    "order": {
+                        "type": "number",
+                        "title": "Media Order (number)"
+                    }
+                }
+            }
+        },
+        "attributes": {
+            "type": "array",
+            "title": "Attributes",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "title": "Type",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "title": "Color",
+                                "description": "Color",
+                                "enum": [
+                                    "color"
+                                ]
+                            },
+                            {
+                                "title": "Material",
+                                "description": "Material",
+                                "enum": [
+                                    "material"
+                                ]
+                            },
+                            {
+                                "title": "Printed",
+                                "description": "Printed",
+                                "enum": [
+                                    "printed"
+                                ]
+                            }
+                        ]
+                    },
+                    "value": {
+                        "type": "string",
+                        "title": "Value",
+                        "widget": {
+                            "id": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "materials": {
+            "type": "array",
+            "title": "Materials",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "material": {
+                        "type": "string",
+                        "title": "Material",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "temp": "Cashmere / Cotton / Denim - Jeans / Exotic leathers / Faux fur / Fur /Leather / Linen / Polyester / Silk / Suede / Synthetic / Tweed / Velvet / Viscose / Wool",
+                        "oneOf": [
+                            {
+                                "title": "Cashmere",
+                                "description": "Cashmere",
+                                "enum": [
+                                    "cashmere"
+                                ]
+                            },
+                            {
+                                "title": "Cotton",
+                                "description": "Cotton",
+                                "enum": [
+                                    "cotton"
+                                ]
+                            },
+                            {
+                                "title": "Denim - Jeans",
+                                "description": "Denim - Jeans",
+                                "enum": [
+                                    "denim-jeans"
+                                ]
+                            }
+                        ]
+                    },
+                    "value": {
+                        "type": "string",
+                        "title": "Value",
+                        "widget": {
+                            "id": "string"
+                        }
+                    },
+                    "pourcentage": {
+                        "type": "string",
+                        "title": "Pourcentage",
+                        "description": "Pourcentage without % (numeric)",
+                        "widget": {
+                            "id": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "size": {
+            "type": "array",
+            "title": "Sizes",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "title": "Type",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "title": "Height",
+                                "description": "Height",
+                                "enum": [
+                                    "height"
+                                ]
+                            },
+                            {
+                                "title": "Width",
+                                "description": "Width",
+                                "enum": [
+                                    "width"
+                                ]
+                            },
+                            {
+                                "title": "Depth",
+                                "description": "Depth",
+                                "enum": [
+                                    "depth"
+                                ]
+                            },
+                            {
+                                "title": "Size",
+                                "description": "Size",
+                                "enum": [
+                                    "depth"
+                                ]
+                            }
+                        ]
+                    },
+                    "value": {
+                        "type": "string",
+                        "title": "Value",
+                        "widget": {
+                            "id": "string"
+                        }
+                    },
+                    "unit": {
+                        "type": "string",
+                        "title": "Unit",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "title": "Inch",
+                                "description": "Inch",
+                                "enum": [
+                                    "in"
+                                ]
+                            },
+                            {
+                                "title": "Centimer",
+                                "description": "Centimer",
+                                "enum": [
+                                    "cm"
+                                ]
+                            },
+                            {
+                                "title": "EU",
+                                "description": "EU",
+                                "enum": [
+                                    "eu"
+                                ]
+                            },
+                            {
+                                "title": "UK",
+                                "description": "UK",
+                                "enum": [
+                                    "uk"
+                                ]
+                            },
+                            {
+                                "title": "US",
+                                "description": "US",
+                                "enum": [
+                                    "us"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "manufacturingCountry": {
+            "type": "string",
+            "title": "Country (manufacturing)",
+            "default": "",
+            "description": "Country of manufacture in final assembly stage. (ISO 3166 alpha-3)"
+        },
+        "facilityId": {
+            "type": "string",
+            "title": "Facility Identification number",
+            "default": "",
+            "description": "Facility Identification in Open Apparel Registry (OAR) or GS1 database"
+        },
+        "productCertification": {
+            "type": "array",
+            "title": "Product Certifications & Compliance",
+            "description": "List any certifications that the product has received.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "title": "Name",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "title": "Fair Trade",
+                                "description": "Fair Trade",
+                                "enum": [
+                                    "fairtrade"
+                                ]
+                            },
+                            {
+                                "title": "WWF",
+                                "description": "WWF",
+                                "enum": [
+                                    "wwf"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "required": [
+        "$schema"
+    ]
+}

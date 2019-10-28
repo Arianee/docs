@@ -85,6 +85,10 @@
                         "widget": {
                             "id": "string"
                         }
+                    },
+                    "order": {
+                        "type": "number",
+                        "title": "Order (number)"
                     }
                 }
             }
@@ -190,6 +194,10 @@
                                     "title": "Url",
                                     "widget": {
                                         "id": "string"
+                                    },
+                                    "order": {
+                                        "type": "number",
+                                        "title": "Order (number)"
                                     }
                                 }
                             }

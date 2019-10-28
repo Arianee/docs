@@ -14,7 +14,7 @@ The Arianee project standards relate to the Arianee protocol features and are bu
 
 [Arianee Brand Identity i18n](ArianeeBrandIdentity-i18n) describes the identity of a brand
 
-[Arianee Asset i18n](ArianeeAsset-i18n) describes the identity of a certificate for a digital or real-life product (watch, sneaker, etc.)
+[Arianee Product Certificate i18n](ArianeeProductCertificate-i18n) describes the identity of a certificate for a digital or real-life product (watch, sneaker, etc.)
 
 [Arianee Event i18n](ArianeeEvent-i18n) describes the identity of an event (service, auction, etc.)
 

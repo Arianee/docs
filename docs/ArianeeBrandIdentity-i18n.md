@@ -404,9 +404,23 @@ All items must be of the type: `object` with following properties:
 
 | Property | Type   | Required |
 | -------- | ------ | -------- |
+| `order`  | number | Optional |
 | `title`  | string | Optional |
 | `type`   | string | Optional |
 | `url`    | string | Optional |
+
+#### order
+
+##### Order (number)
+
+`order`
+
+- is optional
+- type: `number`
+
+##### order Type
+
+`number`
 
 #### title
 
