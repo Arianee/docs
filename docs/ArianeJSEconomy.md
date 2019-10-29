@@ -82,7 +82,7 @@ To let Arianee Protocol spend your ARIA tokens, your wallet needs to approve the
 
 #### Example
 ```
-await wallet.ariaContract.methods.approve(wallet.storeContract.options.address,"10000000000000000000000000000").send()
+await wallet.approveStore()
      .then(i => console.log('arianee approved')
      .catch(i => console.log('fail')); 
 ``` 
@@ -98,16 +98,13 @@ await wallet.ariaContract.methods.approve(wallet.storeContract.options.address,"
 Each paid feature on Arianee protocol need *credits* to be spend.
 
 ```
-ArianeeWallets.storeContract.methods.buyCredit(creditType, numberOfCredit, publicAddress).send()
+ArianeeWallets.methods.buyCredit(creditType, numberOfCredit, publicAddress)
 ```
 
 #### Parameter
-1. `creditType` - `integer`:  the type of credit (0: certificate, 1: event, 2: message) 
+1. `creditType` - `string`:  the type of credit 'certificate', 'event', 'message') 
 2. `numberOfCredit` - `integer`:  the number of credit to buy
-2. `publicAddress` - `string`:  the public address of credit receiver
-
-
-
+3. `publicAddress` - `string`:  the public address of credit receiver
 
 #### Result
 `promise` returns `object`: The receipt of the blockchain transaction
@@ -116,7 +113,7 @@ ArianeeWallets.storeContract.methods.buyCredit(creditType, numberOfCredit, publi
 #### Example
 ```
 // Buy 5 certificate credits  
-await wallet.storeContract.methods.buyCredit(0, 5, wallet.publicKey).send()   
+await wallet.methods.buyCredit('certificate', 5).send()   
      .then(i => console.log("Buying credits"))
      .catch(i => console.log("Fail" ));
 ```
