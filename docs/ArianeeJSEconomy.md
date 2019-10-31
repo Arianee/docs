@@ -82,7 +82,7 @@ To let Arianee Protocol spend your ARIA tokens, your wallet needs to approve the
 
 #### Example
 ```
-await wallet.approveStore()
+await wallet.methods.approveStore()
      .then(i => console.log('arianee approved')
      .catch(i => console.log('fail')); 
 ``` 
@@ -94,17 +94,17 @@ await wallet.approveStore()
 ***
 ***
 
-## Buy credit
+## Buy credits
 Each paid feature on Arianee protocol need *credits* to be spend.
 
 ```
-ArianeeWallets.methods.buyCredit(creditType, numberOfCredit, publicAddress)
+ArianeeWallets.methods.buyCredits(creditType, numberOfCredit, publicAddress)
 ```
 
 #### Parameter
 1. `creditType` - `string`:  the type of credit 'certificate', 'event', 'message') 
 2. `numberOfCredit` - `integer`:  the number of credit to buy
-3. `publicAddress` - `string`:  the public address of credit receiver
+3. `publicAddress` - `string`: (optional) the public address of credit receiver. Default: current wallet public addresse
 
 #### Result
 `promise` returns `object`: The receipt of the blockchain transaction
@@ -113,7 +113,7 @@ ArianeeWallets.methods.buyCredit(creditType, numberOfCredit, publicAddress)
 #### Example
 ```
 // Buy 5 certificate credits  
-await wallet.methods.buyCredit('certificate', 5).send()   
+await wallet.methods.buyCredits('certificate', 5).send()   
      .then(i => console.log("Buying credits"))
      .catch(i => console.log("Fail" ));
 ```
