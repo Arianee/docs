@@ -93,7 +93,7 @@
                 }
             }
         },
-        "descriptioni18n": {
+        "i18n": {
             "type": "array",
             "title": "Other languages :  description / external contents",
             "description": "Brand / Company description in HTML & external contents (specific language)",

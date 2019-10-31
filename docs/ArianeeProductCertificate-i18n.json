@@ -169,6 +169,43 @@
             "title": "Model",
             "description": "Product model"
         },
+        "language": {
+            "type": "string",
+            "title": "Language",
+            "widget": {
+                "id": "select"
+            },
+            "oneOf": [
+                {
+                    "title": "French",
+                    "description": "French",
+                    "enum": [
+                        "fr-FR"
+                    ]
+                },
+                {
+                    "title": "English (US)",
+                    "description": "English (US)",
+                    "enum": [
+                        "en-US"
+                    ]
+                },
+                {
+                    "title": "Chinese (traditional)",
+                    "description": "Chinese (traditional)",
+                    "enum": [
+                        "zh-TW"
+                    ]
+                },
+                {
+                    "title": "Chinese (simplified)",
+                    "description": "Chinese (simplified)",
+                    "enum": [
+                        "zh-CN"
+                    ]
+                }
+            ]
+        },
         "description": {
             "type": "string",
             "title": "Description",
@@ -293,7 +330,7 @@
                 }
             }
         },
-        "descriptioni18n": {
+        "i18n": {
             "type": "array",
             "title": "Other languages :  description / external contents",
             "items": {
@@ -336,9 +373,9 @@
                             }
                         ]
                     },
-                    "content": {
+                    "description": {
                         "type": "string",
-                        "title": "Content",
+                        "title": "Description",
                         "widget": {
                             "id": "textarea"
                         }

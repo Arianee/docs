@@ -17,11 +17,12 @@ https://cert.arianee.org/version1/ArianeeProductCertificate-i18n.json
 | [brandInternalId](#brandinternalid)           | `string`   | Optional     | No       | `""`                                                                      | Arianee Certificate (this schema) |
 | [category](#category)                         | `string`   | Optional     | No       |                                                                           | Arianee Certificate (this schema) |
 | [description](#description)                   | `string`   | Optional     | No       |                                                                           | Arianee Certificate (this schema) |
-| [descriptioni18n](#descriptioni18n)           | `object[]` | Optional     | No       |                                                                           | Arianee Certificate (this schema) |
 | [externalContents](#externalcontents)         | `object[]` | Optional     | No       |                                                                           | Arianee Certificate (this schema) |
 | [facilityId](#facilityid)                     | `string`   | Optional     | No       | `""`                                                                      | Arianee Certificate (this schema) |
 | [gtin](#gtin)                                 | `string`   | Optional     | No       | `""`                                                                      | Arianee Certificate (this schema) |
+| [i18n](#i18n)                                 | `object[]` | Optional     | No       |                                                                           | Arianee Certificate (this schema) |
 | [intended](#intended)                         | `string`   | Optional     | No       |                                                                           | Arianee Certificate (this schema) |
+| [language](#language)                         | `string`   | Optional     | No       |                                                                           | Arianee Certificate (this schema) |
 | [manufacturingCountry](#manufacturingcountry) | `string`   | Optional     | No       | `""`                                                                      | Arianee Certificate (this schema) |
 | [materials](#materials)                       | `object[]` | Optional     | No       |                                                                           | Arianee Certificate (this schema) |
 | [medias](#medias)                             | `object[]` | Optional     | No       |                                                                           | Arianee Certificate (this schema) |
@@ -148,17 +149,126 @@ Product Description
 
 `string`
 
-## descriptioni18n
+## externalContents
 
-### Other languages : description / external contents
+### External Contents
 
-`descriptioni18n`
+`externalContents`
 
 - is optional
 - type: `object[]`
 - defined in this schema
 
-### descriptioni18n Type
+### externalContents Type
+
+Array type: `object[]`
+
+All items must be of the type: `object` with following properties:
+
+| Property | Type   | Required |
+| -------- | ------ | -------- |
+| `order`  | number | Optional |
+| `title`  | string | Optional |
+| `type`   | string | Optional |
+| `url`    | string | Optional |
+
+#### order
+
+##### Order (number)
+
+`order`
+
+- is optional
+- type: `number`
+
+##### order Type
+
+`number`
+
+#### title
+
+##### Title
+
+`title`
+
+- is optional
+- type: `string`
+
+##### title Type
+
+`string`
+
+#### type
+
+##### Type
+
+`type`
+
+- is optional
+- type: `string`
+
+##### type Type
+
+`string`
+
+#### url
+
+##### Url
+
+`url`
+
+- is optional
+- type: `string`
+
+##### url Type
+
+`string`
+
+## facilityId
+
+### Facility Identification number
+
+Facility Identification in Open Apparel Registry (OAR) or GS1 database
+
+`facilityId`
+
+- is optional
+- type: `string`
+- default: `""`
+- defined in this schema
+
+### facilityId Type
+
+`string`
+
+## gtin
+
+### GTIN
+
+Product GTIN
+
+`gtin`
+
+- is optional
+- type: `string`
+- default: `""`
+- defined in this schema
+
+### gtin Type
+
+`string`
+
+## i18n
+
+### Other languages : description / external contents
+
+`i18n`
+
+- is optional
+- type: `object[]`
+- defined in this schema
+
+### i18n Type
 
 Array type: `object[]`
 
@@ -166,21 +276,21 @@ All items must be of the type: `object` with following properties:
 
 | Property           | Type   | Required |
 | ------------------ | ------ | -------- |
-| `content`          | string | Optional |
+| `description`      | string | Optional |
 | `externalContents` | array  | Optional |
 | `language`         | string | Optional |
 | `subDescription`   | array  | Optional |
 
-#### content
+#### description
 
-##### Content
+##### Description
 
-`content`
+`description`
 
 - is optional
 - type: `string`
 
-##### content Type
+##### description Type
 
 `string`
 
@@ -345,115 +455,6 @@ All items must be of the type: `object` with following properties:
 
 `string`
 
-## externalContents
-
-### External Contents
-
-`externalContents`
-
-- is optional
-- type: `object[]`
-- defined in this schema
-
-### externalContents Type
-
-Array type: `object[]`
-
-All items must be of the type: `object` with following properties:
-
-| Property | Type   | Required |
-| -------- | ------ | -------- |
-| `order`  | number | Optional |
-| `title`  | string | Optional |
-| `type`   | string | Optional |
-| `url`    | string | Optional |
-
-#### order
-
-##### Order (number)
-
-`order`
-
-- is optional
-- type: `number`
-
-##### order Type
-
-`number`
-
-#### title
-
-##### Title
-
-`title`
-
-- is optional
-- type: `string`
-
-##### title Type
-
-`string`
-
-#### type
-
-##### Type
-
-`type`
-
-- is optional
-- type: `string`
-
-##### type Type
-
-`string`
-
-#### url
-
-##### Url
-
-`url`
-
-- is optional
-- type: `string`
-
-##### url Type
-
-`string`
-
-## facilityId
-
-### Facility Identification number
-
-Facility Identification in Open Apparel Registry (OAR) or GS1 database
-
-`facilityId`
-
-- is optional
-- type: `string`
-- default: `""`
-- defined in this schema
-
-### facilityId Type
-
-`string`
-
-## gtin
-
-### GTIN
-
-Product GTIN
-
-`gtin`
-
-- is optional
-- type: `string`
-- default: `""`
-- defined in this schema
-
-### gtin Type
-
-`string`
-
 ## intended
 
 ### Intended
@@ -465,6 +466,20 @@ Product GTIN
 - defined in this schema
 
 ### intended Type
+
+`string`
+
+## language
+
+### Language
+
+`language`
+
+- is optional
+- type: `string`
+- defined in this schema
+
+### language Type
 
 `string`
 

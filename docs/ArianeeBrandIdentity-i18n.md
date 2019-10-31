@@ -20,8 +20,8 @@ Describing an Arianee Brand Identity.
 | [companyName](#companyname)             | `string`   | Optional     | No       |                                                                      | Arianee Brand Identity (this schema) |
 | [contacts](#contacts)                   | `object[]` | Optional     | No       |                                                                      | Arianee Brand Identity (this schema) |
 | [description](#description)             | `string`   | Optional     | No       |                                                                      | Arianee Brand Identity (this schema) |
-| [descriptioni18n](#descriptioni18n)     | `object[]` | Optional     | No       |                                                                      | Arianee Brand Identity (this schema) |
 | [externalContents](#externalcontents)   | `object[]` | Optional     | No       |                                                                      | Arianee Brand Identity (this schema) |
+| [i18n](#i18n)                           | `object[]` | Optional     | No       |                                                                      | Arianee Brand Identity (this schema) |
 | [name](#name)                           | `string`   | Optional     | No       |                                                                      | Arianee Brand Identity (this schema) |
 | [parentCompanyName](#parentcompanyname) | `string`   | Optional     | No       |                                                                      | Arianee Brand Identity (this schema) |
 | [pictures](#pictures)                   | `object[]` | Optional     | No       |                                                                      | Arianee Brand Identity (this schema) |
@@ -272,19 +272,96 @@ Brand / Company description in HTML (main language)
 
 `string`
 
-## descriptioni18n
+## externalContents
 
-### Other languages : description / external contents
+### External Contents
 
-Brand / Company description in HTML & external contents (specific language)
+List of External Contents such as website / documentation
 
-`descriptioni18n`
+`externalContents`
 
 - is optional
 - type: `object[]`
 - defined in this schema
 
-### descriptioni18n Type
+### externalContents Type
+
+Array type: `object[]`
+
+All items must be of the type: `object` with following properties:
+
+| Property | Type   | Required |
+| -------- | ------ | -------- |
+| `order`  | number | Optional |
+| `title`  | string | Optional |
+| `type`   | string | Optional |
+| `url`    | string | Optional |
+
+#### order
+
+##### Order (number)
+
+`order`
+
+- is optional
+- type: `number`
+
+##### order Type
+
+`number`
+
+#### title
+
+##### Title
+
+`title`
+
+- is optional
+- type: `string`
+
+##### title Type
+
+`string`
+
+#### type
+
+##### Type
+
+`type`
+
+- is optional
+- type: `string`
+
+##### type Type
+
+`string`
+
+#### url
+
+##### Url
+
+`url`
+
+- is optional
+- type: `string`
+
+##### url Type
+
+`string`
+
+## i18n
+
+### Other languages : description / external contents
+
+Brand / Company description in HTML & external contents (specific language)
+
+`i18n`
+
+- is optional
+- type: `object[]`
+- defined in this schema
+
+### i18n Type
 
 Array type: `object[]`
 
@@ -381,83 +458,6 @@ All items must be of the type: `object` with following properties:
 - type: `string`
 
 ##### language Type
-
-`string`
-
-## externalContents
-
-### External Contents
-
-List of External Contents such as website / documentation
-
-`externalContents`
-
-- is optional
-- type: `object[]`
-- defined in this schema
-
-### externalContents Type
-
-Array type: `object[]`
-
-All items must be of the type: `object` with following properties:
-
-| Property | Type   | Required |
-| -------- | ------ | -------- |
-| `order`  | number | Optional |
-| `title`  | string | Optional |
-| `type`   | string | Optional |
-| `url`    | string | Optional |
-
-#### order
-
-##### Order (number)
-
-`order`
-
-- is optional
-- type: `number`
-
-##### order Type
-
-`number`
-
-#### title
-
-##### Title
-
-`title`
-
-- is optional
-- type: `string`
-
-##### title Type
-
-`string`
-
-#### type
-
-##### Type
-
-`type`
-
-- is optional
-- type: `string`
-
-##### type Type
-
-`string`
-
-#### url
-
-##### Url
-
-`url`
-
-- is optional
-- type: `string`
-
-##### url Type
 
 `string`
 

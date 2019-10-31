@@ -11,61 +11,6 @@
             "default": "https://cert.arianee.org/version1/ArianeeEvent-i18n.json",
             "widget": "hidden"
         },
-        "title": {
-            "type": "string",
-            "title": "Title",
-            "description": "Event title",
-            "default": ""
-        },
-        "titlei18n": {
-            "type": "array",
-            "title": "Title (languages)",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "language": {
-                        "type": "string",
-                        "title": "Language",
-                        "widget": {
-                            "id": "select"
-                        },
-                        "oneOf": [
-                            {
-                                "description": "French",
-                                "enum": [
-                                    "fr-FR"
-                                ]
-                            },
-                            {
-                                "description": "English (US)",
-                                "enum": [
-                                    "en-US"
-                                ]
-                            },
-                            {
-                                "description": "Chinese (traditional)",
-                                "enum": [
-                                    "zh-TW"
-                                ]
-                            },
-                            {
-                                "description": "Chinese (simplified)",
-                                "enum": [
-                                    "zh-CN"
-                                ]
-                            }
-                        ]
-                    },
-                    "content": {
-                        "type": "string",
-                        "title": "Content",
-                        "widget": {
-                            "id": "textarea"
-                        }
-                    }
-                }
-            }
-        },
         "eventType": {
             "type": "string",
             "title": "Type",
@@ -75,18 +20,63 @@
             },
             "oneOf": [
                 {
+                    "title": "Service",
                     "description": "Service",
                     "enum": [
                         "service"
                     ]
                 },
                 {
+                    "title": "Auction",
                     "description": "Auction",
                     "enum": [
                         "auction"
                     ]
                 }
             ]
+        },
+        "language": {
+            "type": "string",
+            "title": "Language",
+            "widget": {
+                "id": "select"
+            },
+            "oneOf": [
+                {
+                    "title": "French",
+                    "description": "French",
+                    "enum": [
+                        "fr-FR"
+                    ]
+                },
+                {
+                    "title": "English (US)",
+                    "description": "English (US)",
+                    "enum": [
+                        "en-US"
+                    ]
+                },
+                {
+                    "title": "Chinese (traditional)",
+                    "description": "Chinese (traditional)",
+                    "enum": [
+                        "zh-TW"
+                    ]
+                },
+                {
+                    "title": "Chinese (simplified)",
+                    "description": "Chinese (simplified)",
+                    "enum": [
+                        "zh-CN"
+                    ]
+                }
+            ]
+        },
+        "title": {
+            "type": "string",
+            "title": "Title",
+            "description": "Event title",
+            "default": ""
         },
         "description": {
             "type": "string",
@@ -95,9 +85,67 @@
                 "id": "textarea"
             }
         },
-        "descriptioni18n": {
+        "externalContents": {
+            "required": false,
             "type": "array",
-            "title": "Description (languages)",
+            "title": "External Contents",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "title": "Type",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "enum": [
+                                    "website"
+                                ],
+                                "title": "Website (main)",
+                                "description": "Website (main)"
+                            },
+                            {
+                                "enum": [
+                                    "eshop"
+                                ],
+                                "title": "Eshop",
+                                "description": "Eshop"
+                            },
+                            {
+                                "enum": [
+                                    "other"
+                                ],
+                                "title": "other",
+                                "description": "other"
+                            }
+                        ]
+                    },
+                    "title": {
+                        "type": "string",
+                        "title": "Title",
+                        "widget": {
+                            "id": "string"
+                        }
+                    },
+                    "url": {
+                        "type": "string",
+                        "title": "Url",
+                        "widget": {
+                            "id": "string"
+                        }
+                    },
+                    "order": {
+                        "type": "number",
+                        "title": "Order (number)"
+                    }
+                }
+            }
+        },
+        "i18n": {
+            "type": "array",
+            "title": "Other contents (international)",
             "items": {
                 "type": "object",
                 "properties": {
@@ -109,24 +157,28 @@
                         },
                         "oneOf": [
                             {
+                                "title": "French",
                                 "description": "French",
                                 "enum": [
                                     "fr-FR"
                                 ]
                             },
                             {
+                                "title": "English (US)",
                                 "description": "English (US)",
                                 "enum": [
                                     "en-US"
                                 ]
                             },
                             {
+                                "title": "Chinese (traditional)",
                                 "description": "Chinese (traditional)",
                                 "enum": [
                                     "zh-TW"
                                 ]
                             },
                             {
+                                "title": "Chinese (simplified)",
                                 "description": "Chinese (simplified)",
                                 "enum": [
                                     "zh-CN"
@@ -134,12 +186,144 @@
                             }
                         ]
                     },
-                    "content": {
+                    "title": {
                         "type": "string",
-                        "title": "Content",
+                        "title": "Title",
                         "widget": {
                             "id": "textarea"
                         }
+                    },
+                    "description": {
+                        "type": "string",
+                        "title": "Description",
+                        "widget": {
+                            "id": "textarea"
+                        }
+                    },
+                    "externalContents": {
+                        "required": false,
+                        "type": "array",
+                        "title": "External Contents",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "type": "string",
+                                    "title": "Type",
+                                    "widget": {
+                                        "id": "select"
+                                    },
+                                    "oneOf": [
+                                        {
+                                            "enum": [
+                                                "website"
+                                            ],
+                                            "title": "Website (main)",
+                                            "description": "Website (main)"
+                                        },
+                                        {
+                                            "enum": [
+                                                "eshop"
+                                            ],
+                                            "title": "Eshop",
+                                            "description": "Eshop"
+                                        },
+                                        {
+                                            "enum": [
+                                                "other"
+                                            ],
+                                            "title": "other",
+                                            "description": "other"
+                                        }
+                                    ]
+                                },
+                                "title": {
+                                    "type": "string",
+                                    "title": "Title",
+                                    "widget": {
+                                        "id": "string"
+                                    }
+                                },
+                                "url": {
+                                    "type": "string",
+                                    "title": "Url",
+                                    "widget": {
+                                        "id": "string"
+                                    }
+                                },
+                                "order": {
+                                    "type": "number",
+                                    "title": "Order (number)"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "medias": {
+            "type": "array",
+            "title": "Medias",
+            "description": "List of Medias (picture, video, ...)",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "mediaType": {
+                        "type": "string",
+                        "title": "Media Type",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "enum": [
+                                    "picture"
+                                ],
+                                "title": "Picture (png / jpg)",
+                                "description": "Picture (png / jpg)"
+                            },
+                            {
+                                "enum": [
+                                    "youtube"
+                                ],
+                                "title": "Youtube video",
+                                "description": "Youtube video"
+                            }
+                        ]
+                    },
+                    "type": {
+                        "type": "string",
+                        "title": "Type",
+                        "widget": {
+                            "id": "select"
+                        },
+                        "oneOf": [
+                            {
+                                "enum": [
+                                    "product"
+                                ],
+                                "title": "Event media / picture",
+                                "description": "Event media / picture"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "type": "string",
+                        "title": "URL",
+                        "widget": {
+                            "id": "string"
+                        }
+                    },
+                    "hash": {
+                        "type": "string",
+                        "title": "Media Hash",
+                        "widget": {
+                            "id": "string"
+                        }
+                    },
+                    "order": {
+                        "type": "number",
+                        "title": "Media Order (number)"
                     }
                 }
             }
@@ -158,18 +342,21 @@
                         },
                         "oneOf": [
                             {
+                                "title": "Color",
                                 "description": "Color",
                                 "enum": [
                                     "color"
                                 ]
                             },
                             {
+                                "title": "Material",
                                 "description": "Material",
                                 "enum": [
                                     "material"
                                 ]
                             },
                             {
+                                "title": "Printed",
                                 "description": "Printed",
                                 "enum": [
                                     "printed"
@@ -187,30 +374,43 @@
                 }
             }
         },
-        "externalContents": {
-            "required": false,
-            "type": "array",
-            "title": "External Contents",
-            "description": "pictures / files",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "title": {
-                        "type": "string",
-                        "title": "Title",
-                        "widget": {
-                            "id": "string"
-                        }
-                    },
-                    "url": {
-                        "type": "string",
-                        "title": "Url",
-                        "widget": {
-                            "id": "string"
-                        }
-                    }
+        "valuePrice": {
+            "type": "string",
+            "title": "Event price",
+            "default": "",
+            "description": "Event price"
+        },
+        "currencyPrice": {
+            "type": "string",
+            "title": "Currency",
+            "default": "",
+            "description": "Currency",
+            "widget": {
+                "id": "select"
+            },
+            "oneOf": [
+                {
+                    "title": "US Dollar",
+                    "description": "US Dollar",
+                    "enum": [
+                        "USD"
+                    ]
+                },
+                {
+                    "title": "Euro",
+                    "description": "Euro",
+                    "enum": [
+                        "EUR"
+                    ]
+                },
+                {
+                    "title": "Pound",
+                    "description": "Pound",
+                    "enum": [
+                        "GBP"
+                    ]
                 }
-            }
+            ]
         },
         "location": {
             "type": "string",
