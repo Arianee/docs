@@ -23,5 +23,4 @@ Arianee Message i18n describes the identity of a message (coming soon)
 
 ## _Deprecated schema_
 
-If you want to support the older schema for certificates, please refer to [Arianee Asset](ArianeeAsset)
-
+If you want to support our older schema for certificates, please contact us at hello@arianee.org and we will send that documentation to you. None of the older certification are in production use.
