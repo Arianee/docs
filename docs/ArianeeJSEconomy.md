@@ -4,7 +4,7 @@ title: Economy
 sidebar_label: Economy
 ---
 
-To interact with Arianee Protocol, you need the native cryptotokens (currently POA) and Aria, our token
+To interact with Arianee Protocol, you need the native cryptotokens (currently POA) and Aria, our token.
 
 ### Request POA
 Ask for POA Faucet and receive 0.05 POA if your wallet is below
@@ -104,7 +104,7 @@ ArianeeWallets.methods.buyCredits(creditType, numberOfCredit, publicAddress)
 #### Parameter
 1. `creditType` - `string`:  the type of credit 'certificate', 'event', 'message') 
 2. `numberOfCredit` - `integer`:  the number of credit to buy
-3. `publicAddress` - `string`: (optional) the public address of credit receiver. Default: current wallet public addresse
+3. `publicAddress` - `string`: (optional) the public address of credit receiver. Default: current wallet public address
 
 #### Result
 `promise` returns `object`: The receipt of the blockchain transaction
@@ -118,9 +118,9 @@ await wallet.methods.buyCredits('certificate', 5).send()
      .catch(i => console.log("Fail" ));
 ```
 
-> You need ARIA tokens and your wallet need to approve the arianee protocol (see above)
+> You need ARIA tokens and your wallet needs to approve the arianee protocol (see above)
 
-> This method performs a blockchain transaction. Costs  Aria and Gas
+> This method performs a blockchain transaction. Costs Aria and Gas
 ***
 ***
 
