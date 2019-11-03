@@ -23,7 +23,7 @@ We recommend you employ the certification module as an NPM package in your appli
 $ npm i --save @arianee/arianeejs 
 ```
 
-To import the package inside you app
+To import the package inside your app
 ``` 
 import { Arianee } from '@arianee/arianeejs'
 ```
