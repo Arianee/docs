@@ -84,7 +84,7 @@ await wallet.methods.requestCertificateOwnership(3703454,'j2ukmnj6weyz')
 
 ***
 
-### Read certificate content and meta data
+### Read certificate content and metadata
 ```
 ArianeeWallets.methods.getCertificate(certificateId[,passphrase[,query]])
 ```
@@ -148,7 +148,7 @@ await wallet.methods.getCertificate(3703454,'j2ukmnj6weyz')
 
 ***
 
-### Read certificate content and meta data from link
+### Read certificate content and metadata from link
 ```
 ArianeeWallets.methods.getCertificateFromLink(link)
 ```
@@ -321,13 +321,17 @@ await wallet.methods.isCertificateProofValid(3703454,'j2ukmnjd6weyz')
     
 ### Prove ownership
 
+(To document)
 
 ## Create identity
 
 
 ### Ask for identity validation (KYB process)
 
-
 ### Publish identity
 
+(To document)
+
 ## Manage event
+
+(To document)
