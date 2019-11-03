@@ -27,7 +27,7 @@ The Arianee Protocol is available for testing on Sokol network (POA Network test
   <tr>
    <td><strong>ArianeeStore</strong>
    </td>
-   <td><a href="https://blockscout.com/poa/sokol/address/0x1cec6e16aca79d36be73ec45acda43cfac647f4c/transactions">0x1cec6e16aca79d36be73ec45acda43cfac647f4c</a>
+   <td><a href="https://blockscout.com/poa/sokol/address/0x1Cec6E16aCa79d36BE73ec45aCdA43CfAC647f4C/transactions">0x1Cec6E16aCa79d36BE73ec45aCdA43CfAC647f4C</a>
    </td>
   </tr>
   <tr>
@@ -51,7 +51,7 @@ The Arianee Protocol is available for testing on Sokol network (POA Network test
   <tr>
    <td><strong>ArianeeStaking</strong>
    </td>
-   <td><a href="https://blockscout.com/poa/sokol/address/0x3a125be5bb8a3e1c171947c384795b4a488b74a0/transactions">0x3a125be5bb8a3e1c171947c384795b4a488b74a0</a>
+   <td><a href="https://blockscout.com/poa/sokol/address/0x3A125bE5bB8A3E1C171947c384795B4a488B74A0/transactions">0x3A125bE5bB8A3E1C171947c384795B4a488B74A0</a>
    </td>
   </tr>
   <tr>
