@@ -55,7 +55,7 @@ ArianeeWalletBuilder.fromMnemonic(mnemonic);
 Creates a wallet from a mnemonic (12 words)
 
 #### Parameter
-1. `mnemomonic` - `string`:  a string representing 12 words passphrase. 
+1. `mnemomonic` - `string`:  a string representing 12-word passphrase. 
 
 
 
@@ -82,7 +82,7 @@ let wallet = arianee.fromMnemonic('path return wheel crime share torch orbit aun
 ArianeeWalletBuilder.fromRandomMnemonic();
 ``` 
 
-Creates a random wallet based on a 12 words mnemonic 
+Creates a random wallet based on a 12-word passphrase ("mnemonic") 
 
 #### Result
 `object`: ArianeeWallet object - an arianee wallet object
@@ -97,7 +97,7 @@ let wallet = arianee.fromRandomMnemonic();
 
 ### public and private keys
 
-When your wallet is instancied, public key and private key are available.
+When your wallet is instantiated, public key and private key are available.
 
 
 ```
