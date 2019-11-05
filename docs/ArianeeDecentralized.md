@@ -125,4 +125,4 @@ The Arianee protocol provides the tools to verify the authenticity of a certific
 *   The **certificate is authentic**. That means the content of the certificate has not changed since the certificate issuance.
 
 
-The Arianee protocol uses the certification process designed by [0xCert](https://0xcert.org/). 
+The Arianee protocol uses the certification process designed by [0xcert](https://0xcert.org/). 
