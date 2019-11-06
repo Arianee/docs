@@ -39,7 +39,7 @@ The Aria spent for premium features are **automatically distributed among stakeh
 *   20% to the Certificate Management Platform provider.
 *   20% to the Wallet provider.
 *   40% to the Arianee project.
-*    10% to the Nodes.
+*   10% to the Nodes.
 *   10% to Owners.
 
 
