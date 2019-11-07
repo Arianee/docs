@@ -1,5 +1,4 @@
 ---
-id: ArianeeSmartContracts
 title: Arianee Smart Contracts
 sidebar_label: Arianee Smart Contracts
 ---
@@ -8,7 +7,7 @@ sidebar_label: Arianee Smart Contracts
 ### 
     **Testnet – Smart contracts**
 
-The Arianee Protocol is available for testing on Sokol network (POA Network testnet). Please find below the addresses of the smart contracts. You can start using them **<span style="text-decoration:underline;">right now</span>** without installing any software.
+The Arianee Protocol is available for testing on Sokol network (POA Network testnet). Please find below the addresses of the smart contracts. You can start using them **right now** without installing any software.
 
  
 
@@ -71,7 +70,7 @@ The Arianee Protocol is available for testing on Sokol network (POA Network test
 ### 
     **Mainnet – Smart contracts**
 
-The Arianee Protocol is available for production on POA Network. Please find below the addresses of the smart contracts. You can start using them **<span style="text-decoration:underline;">right now</span>** without installing any software.
+The Arianee Protocol is available for production on POA Network. Please find below the addresses of the smart contracts. You can start using them **right now** without installing any software.
 
  
 

@@ -1,5 +1,4 @@
 ---
-id: ArianeeJS
 title: ArianeeJS library
 sidebar_label: ArianeeJS library
 ---

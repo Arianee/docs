@@ -1,5 +1,4 @@
 ---
-id: KYBprocess
 title: Know Your Business process
 sidebar_label: KYB Process
 ---

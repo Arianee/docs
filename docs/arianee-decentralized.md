@@ -1,5 +1,4 @@
 ---
-id: ArianeeDecentralized
 title:  Arianee Decentralized Platform
 sidebar_label:  Arianee Decentralized Platform
 ---
@@ -53,12 +52,12 @@ Here is an overview of the Arianee protocol smart contracts:
 ![alt_text](../img/arianeesmartcontract.png "image_tooltip")
 
 
-To favor interoperability and adoption the Arianee protocol designed a crypto currency (the ARIA token) compliant with the[ ERC-20 Token Standard](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md) and certificates (the Arianee Smart Assets) compliant with the[ ERC-721 Token Standard](https://github.com/ethereum/eips/issues/721). To learn more about the ARIA token please refer to the [Arianee Economy](ArianeeJS) chapter.
+To favor interoperability and adoption the Arianee protocol designed a crypto currency (the ARIA token) compliant with the[ ERC-20 Token Standard](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md) and certificates (the Arianee Smart Assets) compliant with the[ ERC-721 Token Standard](https://github.com/ethereum/eips/issues/721). To learn more about the ARIA token please refer to the [Arianee Economy](arianee-economy) chapter.
 
 
 ## **About data storage**
 
-The Arianee protocol when used at its core **<span style="text-decoration:underline;">never</span>** asks, stores or uses personal information about owners. Ownership is attached to a wallet public key. **Owners are anonymous when using the Arianee protocol**.
+The Arianee protocol when used at its core **never** asks, stores or uses personal information about owners. Ownership is attached to a wallet public key. **Owners are anonymous when using the Arianee protocol**.
 
 
 

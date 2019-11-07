@@ -1,5 +1,4 @@
 ---
-id: ArianeeJSWallet
 title: Wallet
 sidebar_label: Wallet
 ---

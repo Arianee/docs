@@ -1,5 +1,4 @@
 ---
-id: StakingPolicy
 title: Staking policy
 sidebar_label: Staking policy
 ---

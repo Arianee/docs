@@ -1,5 +1,4 @@
 ---
-id: ArianeeJSCertificate
 title: Certificate
 sidebar_label: Certificate
 ---
@@ -23,7 +22,7 @@ Creates an arianee certificate
      - `hash` - `string` (optional): certificate imprint.  (either content or hash need to be provided)
      - `certificateId`- `number` (optional): arianee token id. Random if left empty
      - `passphrase` -  `string` (optional): token access passphrase. *should be put in QR Code/NFC*
-     - `recoveryTimestamp` -  `number` (optional): timestamp until issuer can recover certificate ownership. Default 90 days from creation date.
+     - `recoveryTimestamp` -  `number` (optional): timestamp until issuer can recover certificate ownership. Default: 90 days from creation date.
      - `sameRequestOwnershipPassphrase` - `boolean` (optional): should passphrase be used as certificate request passphrase. Default: true
 
 
