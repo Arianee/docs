@@ -61,3 +61,29 @@ const arianeeLib = new Arianee();
 const arianee = await arianeeLib.init("testnet");
 ``` 
 
+***
+***
+
+## setDefaultQuery
+
+First you need to instantiate arianeeJS 
+``` 
+new Arianee();
+``` 
+
+``` 
+Arianee.setDefaultQuery([ConsolidatedCertificateRequest]);
+``` 
+#### Parameter
+1. `value` - `ConsolidatedCertificateRequest`:  The network to use ("mainnet"|"testnet") (Defaults to `"testnet"`)
+
+#### Result
+`Arianee` returns `object`: Arianee object - The arianee instance
+
+#### Example
+``` 
+const arianee = new Arianee()
+    .setDefaultQuery({content:true})
+    .init();
+``` 
+
