@@ -101,6 +101,7 @@ Reads certificate content, checks authenticity, and gather metadata information 
      - `events`: `boolean`: transfer events list
      - `arianeeEvents`: `boolean`: arianee events list
      - `advanced`: `boolean`: token recovery timestamp
+     - `getMessageSenders`: `boolean`: list of validated senders 
 
 
 
