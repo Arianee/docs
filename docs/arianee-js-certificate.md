@@ -1,5 +1,4 @@
 ---
-id: ArianeeJSCertificate
 title: Certificate
 sidebar_label: Certificate
 ---
@@ -23,7 +22,7 @@ Creates an arianee certificate
      - `hash` - `string` (optional): certificate imprint.  (either content or hash need to be provided)
      - `certificateId`- `number` (optional): arianee token id. Random if left empty
      - `passphrase` -  `string` (optional): token access passphrase. *should be put in QR Code/NFC*
-     - `recoveryTimestamp` -  `number` (optional): timestamp until issuer can recover certificate ownership. Default 90 days from creation date.
+     - `recoveryTimestamp` -  `number` (optional): timestamp until issuer can recover certificate ownership. Default: 90 days from creation date.
      - `sameRequestOwnershipPassphrase` - `boolean` (optional): should passphrase be used as certificate request passphrase. Default: true
 
 
@@ -84,7 +83,7 @@ await wallet.methods.requestCertificateOwnership(3703454,'j2ukmnj6weyz')
 
 ***
 
-### Read certificate content and meta data
+### Read certificate content and metadata
 ```
 ArianeeWallets.methods.getCertificate(certificateId[,passphrase[,query]])
 ```
@@ -102,6 +101,7 @@ Reads certificate content, checks authenticity, and gather metadata information 
      - `events`: `boolean`: transfer events list
      - `arianeeEvents`: `boolean`: arianee events list
      - `advanced`: `boolean`: token recovery timestamp
+     - `getMessageSenders`: `boolean`: list of validated senders 
 
 
 
@@ -148,7 +148,7 @@ await wallet.methods.getCertificate(3703454,'j2ukmnj6weyz')
 
 ***
 
-### Read certificate content and meta data from link
+### Read certificate content and metadata from link
 ```
 ArianeeWallets.methods.getCertificateFromLink(link)
 ```
@@ -321,13 +321,17 @@ await wallet.methods.isCertificateProofValid(3703454,'j2ukmnjd6weyz')
     
 ### Prove ownership
 
+(To document)
 
 ## Create identity
 
 
 ### Ask for identity validation (KYB process)
 
-
 ### Publish identity
 
+(To document)
+
 ## Manage event
+
+(To document)

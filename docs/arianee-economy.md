@@ -1,5 +1,4 @@
 ---
-id: AriaEconomy
 title: Arianee Economy
 sidebar_label: Arianee Economy
 ---
@@ -32,23 +31,23 @@ To maintain a stable price of features expressed in USD, their price in Aria is 
 
 Anyone or any organisation can buy & sell Aria on public exchanges.
 
-The Aria spent for premium features are **automatically distributed among stakeholders** of the ecosystem so that they are incentivized to contribute. Redistribution goes as follow:
+The Aria spent for premium features are **automatically distributed among stakeholders** of the ecosystem so that they are incentivized to contribute. Redistribution goes as follows:
 
 
 
 *   20% to the Certificate Management Platform provider.
 *   20% to the Wallet provider.
 *   40% to the Arianee project.
-*    10% to the Nodes.
+*   10% to the Nodes.
 *   10% to Owners.
 
 
 
 ![alt_text](../img/arianeeconomy.png "image_tooltip")
 
-<span style="text-decoration:underline;">Supply multiplier:</span> the more ARIA are held by stakeholders, the higher the Aria Price in fiat currency (USD)
+___Supply multiplier:___ the more ARIA are held by stakeholders, the higher the Aria Price in fiat currency (USD)
 
-<span style="text-decoration:underline;">Demand multiplier:</span> the more ARIA are asked by Brands or token holders, the higher the Aria Price in fiat currency (USD)
+___Demand multiplier:___< the more ARIA are asked by Brands or token holders, the higher the Aria Price in fiat currency (USD)
 
 
 ## **Why a dedicated cryptocurrency?**
@@ -58,7 +57,7 @@ Issuing a dedicated cryptocurrency has its benefits:
 *   The Aria is a utility token and the only means of payment on the Arianee protocol. This enables all transactions to take place directly on the protocol, which facilitates digital interactions between users of the protocol. 
 
 
-*   The Arianee project can finance its developement by selling tokens to early users and distribute some to contributors to this open-source project. The Arianee project issued 200 million Aria tokens, this amount is fixed and will never change. Part of the Aria circulation were kept as reserve.
+*   The Arianee project can finance its development by selling tokens to early users and distribute some to contributors to this open-source project. The Arianee project issued 200 million Aria tokens, this amount is fixed and will never change. Part of the Aria circulation were kept as reserve.
      
 
 *   As a token holder, this is the closest thing to equity you can get in the crypto world. Neither dividends nor voting rights are attached to the Aria token. The price of aria is a function of the Arianee protocol activity and the Aria token market liquidity. The only way that might change is if, for some reason, another protocol decides to use the Aria token.

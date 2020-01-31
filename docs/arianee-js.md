@@ -1,5 +1,4 @@
 ---
-id: ArianeeJS
 title: ArianeeJS library
 sidebar_label: ArianeeJS library
 ---
@@ -23,7 +22,7 @@ We recommend you employ the certification module as an NPM package in your appli
 $ npm i --save @arianee/arianeejs 
 ```
 
-To import the package inside you app
+To import the package inside your app
 ``` 
 import { Arianee } from '@arianee/arianeejs'
 ```
@@ -60,5 +59,31 @@ Arianee.init([networkName]);
 ``` 
 const arianeeLib = new Arianee();
 const arianee = await arianeeLib.init("testnet");
+``` 
+
+***
+***
+
+## setDefaultQuery
+
+First you need to instantiate arianeeJS 
+``` 
+new Arianee();
+``` 
+
+``` 
+Arianee.setDefaultQuery([ConsolidatedCertificateRequest]);
+``` 
+#### Parameter
+1. `value` - `ConsolidatedCertificateRequest`:  The network to use ("mainnet"|"testnet") (Defaults to `"testnet"`)
+
+#### Result
+`Arianee` returns `object`: Arianee object - The arianee instance
+
+#### Example
+``` 
+const arianee = new Arianee()
+    .setDefaultQuery({content:true})
+    .init();
 ``` 
 

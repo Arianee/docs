@@ -1,10 +1,9 @@
 ---
-id: introstd
 title: Introduction
 sidebar_label: Introduction
 ---
 
-According to the European Committe for Standardization **a standard is a technical document designed to be used as a rule, guideline or definition**. It is a consensus-built, repeatable way of doing something. 
+According to the European Committee for Standardization **a standard is a technical document designed to be used as a rule, guideline or definition**. It is a consensus-built, repeatable way of doing something. 
 
 With one more thing in mind, interoperability across software solutions, **the Arianee project chose to share its standards using JSON schema** to support multi-language and to be extensible. These JSON schema describe the structure and content expected when using the Arianee Protocol. 
 

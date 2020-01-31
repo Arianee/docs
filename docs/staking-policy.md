@@ -1,5 +1,4 @@
 ---
-id: StakingPolicy
 title: Staking policy
 sidebar_label: Staking policy
 ---
@@ -30,11 +29,11 @@ The stakes the Arianee project requests from Brands and third parties to complet
 
 The amount requested depends on the number of employees of the staking entity:
 
-- $1’000.00      : less than 10 employees.
-- $5’000.00      : 10 to 49 employees.
-- $25’000.00    : 50 to 499 employees.
-- $50’000.00   : 500 to 4’999 employees.
-- $100’000.00 : more than 5’000 employees.
+- 1 000 USD : less than 10 employees.
+- 5 000 USD : 10 to 49 employees.
+- 25 000 USD : 50 to 499 employees.
+- 50 000 USD : 500 to 4 999 employees.
+- 100 000 USD : more than 5 000 employees.
 
 ## **Staking rules**
 

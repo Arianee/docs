@@ -45,13 +45,13 @@ The Arianee Protocol is available for production on POA Network. Please find bel
   <tr>
    <td><strong>ArianeeAriaToken</strong>
    </td>
-   <td><a href="https://blockscout.com/poa/core/address/0x55d536e4d6c1993d8ef2e2a4ef77f02088419420/transactions" target="_blank">0x55d536e4d6c1993d8ef2e2a4ef77f02088419420</a>
+   <td><a href="https://blockscout.com/poa/core/address/0x55d536E4d6c1993d8ef2e2a4EF77f02088419420/transactions" target="_blank">0x55d536E4d6c1993d8ef2e2a4EF77f02088419420</a>
    </td>
   </tr>
   <tr>
    <td><strong>ArianeeStaking</strong>
    </td>
-   <td><a href="https://blockscout.com/poa/core/address/0x3a125be5bb8a3e1c171947c384795b4a488b74a0/transactions" target="_blank">0x3a125be5bb8a3e1c171947c384795b4a488b74a0</a>
+   <td><a href="https://blockscout.com/poa/core/address/0x3A125bE5bB8A3E1C171947c384795B4a488B74A0/transactions" target="_blank">0x3A125bE5bB8A3E1C171947c384795B4a488B74A0</a>
    </td>
   </tr>
   <tr>

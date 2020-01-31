@@ -1,5 +1,7 @@
 # Arianee Event Schema
 
+The Arianee event specification uses [JSON Schema](https://json-schema.org). This schema document describes, and allows you to validate, Arianee event documents:
+
 ```
 https://cert.arianee.org/version1/ArianeeEvent-i18n.json
 ```

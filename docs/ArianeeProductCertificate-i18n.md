@@ -1,4 +1,8 @@
+
+
 # Arianee Certificate Schema
+
+The Arianee certificate specification uses [JSON Schema](https://json-schema.org). This schema document describes, and allows you to validate, Arianee certificates:
 
 ```
 https://cert.arianee.org/version1/ArianeeProductCertificate-i18n.json

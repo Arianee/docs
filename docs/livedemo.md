@@ -1,5 +1,4 @@
 ---
-id: livedemo
 title: Live Demo
 sidebar_label: Live Demo
 ---
@@ -13,11 +12,11 @@ To fully enjoy this demo, you need to install Arianee Wallet on your smartphone.
 
 
 
-<div style="width:50%; float: left; text-align:center">
+<div class="left">
 <a href="https://apps.apple.com/ch/app/arianee-wallet/id1435782507" target="_blank"><img src="../img/appstore.svg" alt="drawing" width="200"/></a>
 </div>
 
-<div style="width:50%; float: left;text-align:center">
+<div class="left">
 <a href="https://play.google.com/store/apps/details?id=com.arianee.wallet&hl=ln" target="_blank"><img src="../img/googleplay.svg" alt="drawing" width="200"/></a>
 </div>
 
@@ -25,7 +24,7 @@ To fully enjoy this demo, you need to install Arianee Wallet on your smartphone.
 <br/><br/><br/><br/>
 
 ## Create an Arianee certificate on testnet
-This demo initializes the environment and creates a basic certificate based on this <a href="https://cert.arianee.org/cert/sampleCert.json" target="_blank">json file</a>
+This demo initializes the environment and creates a basic certificate based on this <a href="https://cert.arianee.org/cert/sampleCert.json" target="_blank">JSON file</a>
 
 The issuer is unknown (wallet is a random one), so the authenticity of the issuer cannot be verified.
 
@@ -38,7 +37,7 @@ The issuer is unknown (wallet is a random one), so the authenticity of the issue
 
 ## Create a certificate and request it with a second wallet
 
-This demo initializes the environment and creates a basic certificate based on this <a href="https://cert.arianee.org/cert/sampleCert.json" target="_blank">json file</a>
+This demo initializes the environment and creates a basic certificate based on this <a href="https://cert.arianee.org/cert/sampleCert.json" target="_blank">JSON file</a>
 It transfers it to another wallet. And give you a request ownership link to read and get ownership.
 
 The issuer is unknown (wallet is a random one), so the authenticity of the issuer cannot be verified.
@@ -56,7 +55,7 @@ The issuer is unknown (wallet is a random one), so the authenticity of the issue
 
 ## Create a custom certificate with a verified identity
 
-This demo initializes the environment and creates a custom certificate based on this <a href="https://cert.arianee.org/cert/sampleCert.json" target="_blank">json file</a> but with a custom title
+This demo initializes the environment and creates a custom certificate based on this <a href="https://cert.arianee.org/cert/sampleCert.json" target="_blank">JSON file</a> but with a custom title
 
 The issuer is a verified wallet, so the authenticity of the issuer is verified and the certificate is genuine (but on testnet !).
 

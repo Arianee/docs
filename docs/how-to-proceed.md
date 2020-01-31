@@ -1,5 +1,4 @@
 ---
-id: howToProceed
 title: How to proceed
 ---
 
@@ -11,7 +10,7 @@ To build interfaces and expose the Arianee protocol in all its beauty, multiple 
 
 The Arianee project embraces a world where developers, startups, integrators or even Brands build their own applications, integrations or connectors to leverage the Arianee protocol.
 
-Such world does not exist (yet!), so Arianee SAS developed a suite of applications to support pilot projects and the adoption of the Arianee protocol:
+Such a world does not exist (yet!), so Arianee SAS developed a suite of applications to support pilot projects and the adoption of the Arianee protocol:
 
 - The **Brand Data Hub** is a web application for Brands to create and manage certificates (Certificate Management Platform). Each Brand Data Hub is dedicated to one Brand only.
 

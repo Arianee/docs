@@ -1,5 +1,7 @@
 # Arianee Brand Identity Schema
 
+The Arianee brand identity specification uses [JSON Schema](https://json-schema.org). This schema document describes, and allows you to validate, Arianee brand identity documents:
+
 ```
 https://cert.arianee.org/version1/ArianeeBrandIdentity-i18n.json
 ```
