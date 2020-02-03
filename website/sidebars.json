@@ -5,7 +5,8 @@
     "Getting Started": ["how-to-proceed", "requirements","kyb-process","staking-policy","livedemo"],
 
 
-    "SDK": ["arianee-js","arianee-js-wallet","arianee-js-economy","arianee-js-certificate","arianee-js-identity", "arianee-js-messaging","arianee-privacy-gateway"],
+    "SDK": ["arianee-js","arianee-js-wallet","arianee-js-economy","arianee-js-certificate","arianee-js-identity", "arianee-js-messaging","arianee-js-event","arianee-privacy-gateway"],
+
 
     "JSON Standards": ["standard-introduction","ArianeeProductCertificate-i18n", "ArianeeBrandIdentity-i18n", "ArianeeEvent-i18n", "ArianeeMessage-i18n"],
 
