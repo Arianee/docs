@@ -52,16 +52,16 @@ const {  contentImprint, arianeeEventId } = await await wallet.methods.createAri
 
 
 ```
-ArianeeWallets.methods.storeArianeeEvent(certificateId,arianeeEventId, event.content,url)
+ArianeeWallets.methods.storeArianeeEvent(certificateId,arianeeEventId, content,url)
 ```
 
 Store content of ArianeeEvent on a arianee-rpc-server (https://github.com/Arianee/arianee-rpc-server).
 
 #### Parameter
 1. `certificateId`- `number`: arianee token id.
-2. `arianeeEventId`- `number`: (optional) arianeeEvent id.
-3. `content` - `object` (optional) : arianeeEvent content object (json)
-
+2. `arianeeEventId`- `number`: arianeeEvent id.
+3. `content` - `object` : arianeeEvent content object (json)
+4. `uri` - `string` : uri of rpc server where you want to store event content. It may be brand's rpc server.
 
 #### Result
 `promise` returns `any`
@@ -89,7 +89,7 @@ ArianeeWallets.methods.acceptArianeeEvent(arianeeEventId)
 Accept an ArianeeEvent. The arianeeEvent will be in the history (arianeeEvents list) of the certicates.
 
 #### Parameter
-1. `arianeeEventId`- `number`: (optional) arianeeEvent id.
+1. `arianeeEventId`- `number`: arianeeEvent id.
 
 
 #### Result
@@ -114,7 +114,7 @@ ArianeeWallets.methods.refuseArianeeEvent(arianeeEventId)
 Refuse an ArianeeEvent. The arianeeEvent will not be in the history (arianeeEvents list) of the certicates.
 
 #### Parameter
-1. `arianeeEventId`- `number`: (optional) arianeeEvent id.
+1. `arianeeEventId`- `number`: arianeeEvent id.
 
 
 #### Result
