@@ -5,6 +5,7 @@ sidebar_label: ArianeeJS library
 
 ArianeeJS is the first official SDK to interact with the Arianee Protocol
 
+ArianeeJS works on NodeJs and browser.
 
 If you want to play straight away with the library, a **[live demo](livedemo)** is available directly within your browser
 
