@@ -69,7 +69,7 @@ The Arianee Protocol is available for testing on Sokol network (POA Network test
   <tr>
    <td><strong>ArianeeEvent</strong>
    </td>
-   <td>TBD
+   <td>0x8e8de8fe625c376f6d4fb2fc351337268a73388b
    </td>
   </tr>  
 </table>
