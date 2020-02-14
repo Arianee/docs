@@ -69,7 +69,7 @@ The Arianee Protocol is available for production on POA Network. Please find bel
   <tr>
    <td><strong>ArianeeEvent</strong>
    </td>
-   <td>TBD
+   <td>0x86AD25F4143e608aE4341C0C09Dcf45A7b03C499
    </td>
   </tr>  
 </table>
