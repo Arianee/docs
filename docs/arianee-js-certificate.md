@@ -55,6 +55,38 @@ await wallet.methods.createCertificate({
 ```
 ***
 
+### Store content of certificate
+
+
+```
+ArianeeWallets.methods.storeContentInRPCServer(certificateId,content,RPCURL)
+```
+
+Store content of an Arianee certificate
+
+#### Parameter
+1. `certificateId` - `number`:  Certificate Id of Arianee Certificate
+2. `data` - `object`:  Exact content of Arianee Certificate
+3. `url` - `string`: url of RPC Server. Usually, it is the url of issuer's RPC Server 
+
+#### Result
+`promise` returns `object`:
+
+#### Example
+```
+// fetch certificate content
+var certificate = await fetch("https://cert.arianee.org/cert/sampleCert.json");
+var content = await certificate.json();
+
+// Store content of a Arianee certificate
+await wallet.methods.storeContentInRPCServer(
+       1234,
+     content,
+    'https://arianee.cleverapps.io/testnet/rpc'
+    )      
+```
+***
+
 ### Request certificate ownership
 ```
 ArianeeWallets.methods.requestCertificateOwnership([certificateId],[passphrase])
