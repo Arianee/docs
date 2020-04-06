@@ -187,6 +187,7 @@ ArianeeWallets.methods.getCertificateFromLink(link)
 
 Reads certificate content, checks authenticity, and gather metadata information about a certificate (issuer, transfer history, events, owner,...) from an Arianee link
 
+
 #### Parameter
 1. `link` - `string`:  and arianee link (requestOwnership, proof, ...)
 
@@ -233,6 +234,10 @@ await wallet.methods.getCertificateFromLink('https://test.arian.ee/3703454,j2ukm
 ```
 
 
+> Check [Arianee links](arianee-links) standard
+
+***
+
 ### Create a request ownership link 
 ```
 ArianeeWallets.methods.createRequestOwnershipLink(certificateId[,passphrase])
@@ -259,6 +264,9 @@ await wallet.methods.createRequestTransferOwnershipLink(3703454)
   passphrase: 'evo8mrqmuo42',
   link: 'https://test.arian.ee/3703454,evo8mrqmuo42' }
 ```
+
+
+> Check [Arianee links](arianee-links) standard
 
 ***
 
@@ -320,7 +328,9 @@ await wallet.methods.createCertificateProofLink(3703454)
   link: 'https://test.arian.ee/proof/3703454,s4cx5wnr8bol' }
 ```
 
-***
+
+
+> Check [Arianee links](arianee-links) standard***
     
 ### Test a proof
 ```

@@ -9,6 +9,12 @@ With one more thing in mind, interoperability across software solutions, **the A
 
 The Arianee project standards relate to the Arianee protocol features and are built / updated by bringing together all interested parties.
 
+## Arianee links
+
+[Arianee Links](arianee-links) describes how to use arianee links to get certificate ownership and to personnalize links based on your needs
+
+
+
 ## Supported JSON schema
 
 [Arianee Brand Identity i18n](ArianeeBrandIdentity-i18n) describes the identity of a brand
