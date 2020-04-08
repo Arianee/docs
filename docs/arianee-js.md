@@ -38,6 +38,7 @@ If you want to use it directly in your browser with javascript, you can include
 ***
 ***
 
+
 This code is for demonstration purpose so we can use ``@latest`` bundle. In real world, you should always add SRI (sub-resource integrity) as recommended by W3C: https://www.w3.org/TR/SRI/
 
 ```html
@@ -45,6 +46,13 @@ This code is for demonstration purpose so we can use ``@latest`` bundle. In real
 integrity="sha384-Ay7oXTEIhZSeW8AFjocYolR96Vl14omuBh2PcTiCuO5tkU1B6NOGqHzZwwVT3XC+" 
 crossorigin="anonymous"></script>
 ```
+
+## Issues and bugs
+
+If you have an issue or you found a bug, please open an issue on our github repo: https://github.com/Arianee/arianeeJS/issues
+Try to give us piece of code and the most details you can so we can reproduce your issue easily, and the help you faster.
+
+
 
 ## Initialize
 
