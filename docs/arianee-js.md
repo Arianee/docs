@@ -38,6 +38,12 @@ If you want to use it directly in your browser with javascript, you can include
 ***
 ***
 
+## Issues and bugs
+
+If you have an issue or you found a bug, please open an issue on our github repo: https://github.com/Arianee/arianeeJS/issues
+Try to give us piece of code and the most details you can so we can reproduce your issue easily, and the help you faster.
+
+
 ## Initialize
 
 First you need to instantiate arianeeJS 
