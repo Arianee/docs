@@ -126,13 +126,13 @@ Reads certificate content, checks authenticity, and gather metadata information 
 1. `certificateId` - `number`:  arianee certificate id
 2. `passphrase` - `string`(optional):  token access passphrase. *If certificate is public (self hosted on a public server), passphrase are not required*
 3. `query` - `object`(optional) : Default : all blocks are fetched
-     - `isTransferable`: `boolean`: certificate is transferable with provided passphrase
+     - `isRequestable`: `boolean`: certificate is transferable with provided passphrase
      - `content`: `boolean`: certificate json content
-     - `issuer`: `boolean`: issuer information
+     - `issuer`: `object`: issuer information
      - `owner`: `boolean`: owner information
      - `events`: `boolean`: transfer events list
      - `arianeeEvents`: `boolean`: arianee events list
-     - `advanced`: `boolean`: token recovery timestamp
+     - `advanced`: `object`: token recovery timestamp
      - `getMessageSenders`: `boolean`: list of validated senders 
 
 
@@ -177,6 +177,32 @@ await wallet.methods.getCertificate(3703454,'j2ukmnj6weyz')
    CertificateEventsSummary { transfer: [ [Object], [Object] ], arianeeEvents: [] } }
 ```
 
+
+***
+
+### Read all the certificates owned by wallet
+
+
+``` javascript
+wallet.methods.getMyCertificates()
+```
+
+Get an array with all the certificates.
+
+#### Parameter
+1. `query` - `object`(optional) : Default : all blocks are fetched
+     - `isRequestable`: `boolean`: certificate is transferable with provided passphrase
+     - `content`: `boolean`: certificate json content
+     - `issuer`: `object`: issuer information
+     - `owner`: `boolean`: owner information
+     - `events`: `boolean`: transfer events list
+     - `arianeeEvents`: `boolean`: arianee events list
+     - `advanced`: `object`: token recovery timestamp
+     - `getMessageSenders`: `boolean`: list of validated senders 
+2. `verifyOwnership` - `boolean`(optional) : Verify the list of owned certificate in the blockchain (bypass the cache)
+
+#### Result
+`promise` returns `array`: an array with arianee certificate objects
 
 ***
 
