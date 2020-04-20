@@ -8,7 +8,7 @@
     "SDK": ["arianee-js","arianee-js-wallet","arianee-js-economy","arianee-js-certificate","arianee-js-identity", "arianee-js-messaging","arianee-js-event","arianee-privacy-gateway"],
 
 
-    "Standards": ["standard-introduction","arianee-links","ArianeeProductCertificate-i18n", "ArianeeBrandIdentity-i18n", "ArianeeEvent-i18n", "ArianeeMessage-i18n"],
+    "Standards": ["standard-introduction","arianee-links","ArianeeProductCertificate-i18n", "ArianeeBrandIdentity-i18n", "ArianeeEvent-i18n", "ArianeeMessage-i18n","arianee-wallet-sharing"],
 
     "Smart Contracts": ["testnet","mainnet"]
 
