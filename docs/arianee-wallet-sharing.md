@@ -1,7 +1,9 @@
 ---
 title: Arianee Wallet Sharing
-sidebar_label: Arianee Wallet Sharing
+sidebar_label: Arianee Wallet Sharing (BETA)
 ---
+
+***Still in BETA***
 
 To increase user adoption, and smoother user experience, Arianee designed a standard to share a user wallet between multiple mobile applications.
 
@@ -44,17 +46,24 @@ Two keys in identity json content define mobile app scheme :
 * iosScheme for iOS
 * androidScheme for Android
 
-{"name":"Arianee","iosScheme":"com.arianee.wallet","androidScheme":"com.arianee.wallet"}
-
-
-
 ## Detect compatible wallet app
 
 ***Your app need to check if a compatible app is installed on the user device and eventually propose to import a wallet from a compatible app to the user***
 
 1. App retrieves compatible wallet apps list
 >You can have the whole list in a centralized way : 
-https://api.arianee.org/report/mainnet/identities
+https://api.arianee.org/report/apkss/identities
+
+```
+[{
+    name: "Arianee",
+    iosScheme: "com.arianee.wallet",
+    androidScheme: "com.arianee.wallet",
+    address: "0xb908B66915ecD1ec31e669adc9C71BDcE44EC601",
+    identityId: "0xb908B6",
+    appName: "Arianee Wallet"
+}]
+```
 
 2. Detect installed apps
 > [cordova-plugin-appavailability](https://www.npmjs.com/package/cordova-plugin-appavailability) is a cordova plugin to check if an app is installed on the same device
@@ -69,7 +78,8 @@ https://api.arianee.org/report/mainnet/identities
 
 ***Your app need to prepare a link that will open the chosen wallet app including all mandatory information.***
 
-1. Create a key pair to encrypt/decrypt wallet between apps.
+1. Create a key pair to encrypt/decrypt wallet between apps. (see [encrypt](#encrypt) for more infos)
+
 
 ```
     encryptAlgorithm = {
@@ -78,6 +88,8 @@ https://api.arianee.org/report/mainnet/identities
         publicExponent: new Uint8Array([0x01, 0x00, 0x01]),
         hash: 'sha-512'
     };
+    const keyUsages = ['encrypt', 'decrypt'];
+    const keys = await crypto.subtle.generateKey(this.encryptAlgorithm, true, keyUsages);
     const privateKey = await crypto.subtle.exportKey('jwk', keys.privateKey);
     const publicKey = await crypto.subtle.exportKey('jwk', keys.publicKey);
 ```
@@ -87,12 +99,18 @@ https://api.arianee.org/report/mainnet/identities
 2. Store the public/private key, somewhere self (check secure storage)
 
 3. Redirect user using this deeplink :
+ 
+The deeplink is forged that way :
+ 
 ```
-let deeplink = scheme + '://apkssRequest?requestingApp=com.arianee.plastron&publicKey=' + JSON.stringify(publicKey)
+let deeplink = scheme + '://apkssRequest?requestId=0x135935&publicKey=' + JSON.stringify(publicKey)
 ```
-> **scheme** is the selected scheme
+> * Scheme : Scheme of the app, can be found in the identity previously requested
+> * Route : apkssRequest
+> * QueryParams:
+>  * requestId: The identity ID of your identity
+>  * publicKey : The public key formated in JWK (see [encrypt](#encrypt)) 
 
-> **requestingApp** value is the scheme of the current app 
 
 
 ## Receiving a Arianee Wallet Sharing request
@@ -106,43 +124,38 @@ let deeplink = scheme + '://apkssRequest?requestingApp=com.arianee.plastron&publ
 
 3. App *need* to ask user's permission to share his/her wallet to requesting app
 
-4. App forge Arianee wallet sharing response deeplink with encrypted mnemonic
+4. Encrypt the mnemonic with requester public key
 
 ```
-objectLink = handleNativeLink (link) // link is deeplink wallet sharing request
-let deeplink = objectLink.receiver+'://test/apkssResponse?encryptedMnemonics='+objectLink.encryptedMnemonics
-```
->TODO : why test ? add response scheme && identity public key ?
-
-
-**encryption method**
-```
-  async encryptMnemonics(jwk:JsonWebKey):Promise<ArrayBuffer>{
-
-    if(jwk.alg === "RSA-OAEP-512"){
-      const algorithm = {
+const algorithm = {
         name:"RSA-OAEP",
         hash: "SHA-512"
       };
-      const publicKey = await crypto.subtle.importKey(
-        'jwk',
-        jwk,
-        algorithm,
-        true,
-        jwk.key_ops
-      );
 
-      // 12 words mnemonic
-      const mnemonic = await this.userService.getMnemonic().pipe(take(1)).toPromise();
-      
-      const enc = new TextEncoder()
-      return await crypto.subtle.encrypt(algorithm, publicKey, enc.encode(mnemonic));
-    }
-    else{
-      console.error('[APKSS] Encrypt algorithm not supported');
-    }
-  }
+const publicKey = await crypto.subtle.importKey(
+    'jwk',
+    jwk,
+    algorithm,
+    true,
+    jwk.key_ops
+);
+const enc = new TextEncoder()
+const encryptedMnemonics = await crypto.subtle.encrypt(algorithm, publicKey, enc.encode(mnemonic));
 ```
+
+5. App forge Arianee wallet sharing response deeplink with encrypted mnemonic
+
+```
+const encryptedMnemonicsBuffer = new Buffer(encryptedMnemonics)
+let deeplink = Schema+'://apkssResponse?encryptedMnemonics='+JSON.stringify(objectLink.encryptedMnemonics)
+```
+> * Scheme : Scheme of the requesting app, can be found with getIdentity from the requestId 
+> * Route : apkssResponse
+> * QueryParams:
+>  * encryptedMnemonics : the encrypted mnemonics in buffer
+
+>TODO : why test ? add response scheme && identity public key ?
+
 
 5. App redirect user using deeplink
 
@@ -157,17 +170,35 @@ let deeplink = objectLink.receiver+'://test/apkssResponse?encryptedMnemonics='+o
 > Todo add link to identity // add mnemonic param
 
 3. App decrypts ***encryptedMnemonics*** Query Param using previously created keypair
-```
-    const privateKey = await storage.get('apkssKey');
-    const privateKeyCrypt = await crypto.subtle.importKey('jwk', JSON.parse(privateKey), this.encryptAlgorithm, true, ['decrypt']);
+```    
+    const privateKeyCrypt = await crypto.subtle.importKey('jwk', privateKey, this.encryptAlgorithm, true, ['decrypt']);
 
-    const encrypted2 = new Uint8Array(encryptedMnemonics.length);
+    const encryptedMnemonicArray = new Uint8Array(encryptedMnemonics.length);
     for (let i = 0; i < encryptedMnemonics.length; i++) {
-      encrypted2[i] = encryptedMnemonics[i];
+      encryptedMnemonicArray[i] = encryptedMnemonics[i];
     }
 
-    const decrypt = await crypto.subtle.decrypt(this.encryptAlgorithm, privateKeyCrypt, encrypted2);
+    const decrypt = await crypto.subtle.decrypt(this.encryptAlgorithm, privateKeyCrypt, encryptedMnemonicArray);
+    const mnemonic = new TextDecoder().decode(decrypt);
 ```
 
 4. App replaces existing wallet
+```
+wallet.fromMnemonic(mnemonic);
+```
+ 
+## Encrypt <a id="encrypt"></a> 
+
+To ensure compatibility between all the Arianee application we need to use the sames encryption system.
+
+The encryption system required at this time is :
+* Algorithm: RSA-OAEP
+* Hash: sha-512
+* Key length: 4096
+
+This requirement is compatible with the [Web Crupto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API)
+
+The compatible algorithm will evolve over the time. You must integrate them to ensure compatibility with other app.
+
+To communicate correctly the public key please use a JSON Web Key as defined in [RFC7517](https://tools.ietf.org/html/rfc7517)
 
