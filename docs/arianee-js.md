@@ -66,7 +66,13 @@ Arianee.init([networkName]);
 ``` 
 #### Parameter
 1. `networkName` - `string`(optional):  The network to use ("mainnet"|"testnet") (Defaults to `"testnet"`)
-
+2. `arianeeCustomConfiguration` - `object`(optional) :  some options can be overriden
+     - `walletReward`: `object<{address:string>` (optional): address of wallet to be rewarded
+     - `brandDataHubReward`: `object<{address:string>` (optional): address of BDH to be rewarded
+     - `httpProvider`: `provider` (optional): provider as defined by web3js
+     - `transactionOptions`: `object<gas:number, gasPrice:any>` : transaction options
+     - `deepLink`: `string`: deeplink to be used by arianeejs to create deeplink
+     
 #### Result
 `promise` returns `object`: ArianeeWalletBuilder object - The arianee instance with the choosen network
 `
