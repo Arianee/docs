@@ -124,7 +124,7 @@ So, all identities with a scheme mean that there's an &quot;official&quot; walle
 <li><p>App doublechecks scheme of selected app in Arianee identity</p></li>
 </ol>
 <blockquote>
-<p>TODO: link to identity mnemonic ?</p>
+<p>Check <a href="/docs/arianee-js-identity#read-identity-using-shortcode">read-identity-using-shortcode</a></p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="forge-and-arianee-sharing-wallet-request"></a><a href="#forge-and-arianee-sharing-wallet-request" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Forge and Arianee Sharing Wallet request</h2>
 <p><strong><em>Your app need to prepare a link that will open the chosen wallet app including all mandatory information.</em></strong></p>
@@ -165,10 +165,10 @@ So, all identities with a scheme mean that there's an &quot;official&quot; walle
 <p><strong><em>Your app need to handle Arianee Wallet Sharing request deeplink and reply with an Arianee Wallet Sharing response deeplink</em></strong></p>
 <ol>
 <li><p>App need to handle <strong><em>apkssRequest</em></strong> route.</p></li>
-<li><p>App checks if <strong><em>requestingApp</em></strong> QueryParam match the identity schema using getIdentity</p></li>
+<li><p>App checks if <strong><em>requestingId</em></strong> QueryParam match the identity schema using getIdentity</p></li>
 </ol>
 <blockquote>
-<p>TODO : link to mnemonic ? add param in request // Add link to method in identity section</p>
+<p>Check <a href="/docs/arianee-js-identity#read-identity-using-shortcode">read-identity-using-shortcode</a></p>
 </blockquote>
 <ol start="3">
 <li><p>App <em>need</em> to ask user's permission to share his/her wallet to requesting app</p></li>
@@ -199,12 +199,8 @@ So, all identities with a scheme mean that there's an &quot;official&quot; walle
 <ul>
 <li>Scheme : Scheme of the requesting app, can be found with getIdentity from the requestId</li>
 <li>Route : apkssResponse</li>
-<li>QueryParams:</li>
-<li>encryptedMnemonics : the encrypted mnemonics in buffer</li>
+<li>QueryParams: encryptedMnemonics : the encrypted mnemonics in buffer</li>
 </ul>
-</blockquote>
-<blockquote>
-<p>TODO : why test ? add response scheme &amp;&amp; identity public key ?</p>
 </blockquote>
 <ol start="5">
 <li>App redirect user using deeplink</li>
@@ -213,13 +209,8 @@ So, all identities with a scheme mean that there's an &quot;official&quot; walle
 <p><strong><em>Your app need to handle Arianee Wallet Sharing response deeplink and eventually replaces existing wallet</em></strong></p>
 <ol>
 <li><p>App need to handle <strong><em>apkssResponse</em></strong> route.</p></li>
-<li><p>App <em>need</em> to ask user's permission to import this wallet &amp; check if's a legit app</p></li>
-</ol>
-<blockquote>
-<p>Todo add link to identity // add mnemonic param</p>
-</blockquote>
-<ol start="3">
-<li>App decrypts <strong><em>encryptedMnemonics</em></strong> Query Param using previously created keypair</li>
+<li><p>App <em>need</em> to ask user's permission to import this wallet</p></li>
+<li><p>App decrypts <strong><em>encryptedMnemonics</em></strong> Query Param using previously created keypair</p></li>
 </ol>
 <pre><code class="hljs">    <span class="hljs-keyword">const</span> privateKeyCrypt = <span class="hljs-keyword">await</span> crypto.subtle.importKey(<span class="hljs-string">'jwk'</span>, privateKey, <span class="hljs-keyword">this</span>.encryptAlgorithm, <span class="hljs-literal">true</span>, [<span class="hljs-string">'decrypt'</span>]);
 
