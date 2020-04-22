@@ -70,8 +70,8 @@ https://api.arianee.org/report/apkss/identities
 
 3. User choose app to import the wallet from
 
-4. App doublechecks scheme of selected app in Arianee identity  
->TODO: link to identity mnemonic ?
+4. App doublechecks scheme of selected app in Arianee identity 
+> Check [read-identity-using-shortcode](/docs/arianee-js-identity#read-identity-using-shortcode)
 
 
 ## Forge and Arianee Sharing Wallet request
@@ -119,8 +119,11 @@ let deeplink = scheme + '://apkssRequest?requestId=0x135935&publicKey=' + JSON.s
 
 1. App need to handle ***apkssRequest*** route.
 
-2. App checks if ***requestingApp*** QueryParam match the identity schema using getIdentity 
->TODO : link to mnemonic ? add param in request // Add link to method in identity section
+2. App checks if ***requestingId*** QueryParam match the identity schema using getIdentity 
+> Check [read-identity-using-shortcode](/docs/arianee-js-identity#read-identity-using-shortcode) 
+
+
+
 
 3. App *need* to ask user's permission to share his/her wallet to requesting app
 
@@ -151,10 +154,8 @@ let deeplink = Schema+'://apkssResponse?encryptedMnemonics='+JSON.stringify(obje
 ```
 > * Scheme : Scheme of the requesting app, can be found with getIdentity from the requestId 
 > * Route : apkssResponse
-> * QueryParams:
->  * encryptedMnemonics : the encrypted mnemonics in buffer
+> * QueryParams: encryptedMnemonics : the encrypted mnemonics in buffer
 
->TODO : why test ? add response scheme && identity public key ?
 
 
 5. App redirect user using deeplink
@@ -166,8 +167,7 @@ let deeplink = Schema+'://apkssResponse?encryptedMnemonics='+JSON.stringify(obje
 
 1. App need to handle ***apkssResponse*** route.
 
-2. App *need* to ask user's permission to import this wallet & check if's a legit app 
-> Todo add link to identity // add mnemonic param
+2. App *need* to ask user's permission to import this wallet 
 
 3. App decrypts ***encryptedMnemonics*** Query Param using previously created keypair
 ```    
