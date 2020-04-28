@@ -84,7 +84,7 @@ class Footer extends React.Component {
         </section>
 
 
-        <section className="copyright">{this.props.config.copyright}</section>
+        <section className="copyright">{this.props.config.copyright} <br/>Association subject to the Law of 1 July 1901 and the Decree of 16 August 1901 <br/> Siret Number 852 836 105 00019 – APE 9499Z</section>
       </footer>
     );
   }

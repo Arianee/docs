@@ -1,5 +1,4 @@
 ---
-id: introstd
 title: Introduction
 sidebar_label: Introduction
 ---
@@ -9,6 +8,12 @@ According to the European Committee for Standardization **a standard is a techni
 With one more thing in mind, interoperability across software solutions, **the Arianee project chose to share its standards using JSON schema** to support multi-language and to be extensible. These JSON schema describe the structure and content expected when using the Arianee Protocol. 
 
 The Arianee project standards relate to the Arianee protocol features and are built / updated by bringing together all interested parties.
+
+## Arianee links
+
+[Arianee Links](arianee-links) describes how to use arianee links to get certificate ownership and to personnalize links based on your needs
+
+
 
 ## Supported JSON schema
 

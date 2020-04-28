@@ -1,5 +1,4 @@
 ---
-id: livedemo
 title: Live Demo
 sidebar_label: Live Demo
 ---
@@ -13,11 +12,11 @@ To fully enjoy this demo, you need to install Arianee Wallet on your smartphone.
 
 
 
-<div style="width:50%; float: left; text-align:center">
+<div class="left">
 <a href="https://apps.apple.com/ch/app/arianee-wallet/id1435782507" target="_blank"><img src="../img/appstore.svg" alt="drawing" width="200"/></a>
 </div>
 
-<div style="width:50%; float: left;text-align:center">
+<div class="left">
 <a href="https://play.google.com/store/apps/details?id=com.arianee.wallet&hl=ln" target="_blank"><img src="../img/googleplay.svg" alt="drawing" width="200"/></a>
 </div>
 

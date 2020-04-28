@@ -1,5 +1,4 @@
 ---
-id: ArianeeJSEconomy
 title: Economy
 sidebar_label: Economy
 ---
