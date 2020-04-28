@@ -4,10 +4,9 @@
 
     "Getting Started": ["howToProceed", "Requirements","KYBprocess","StakingPolicy","livedemo"],
 
-
     "SDK": ["ArianeeJS","ArianeeJSWallet","ArianeeJSEconomy","ArianeeJSCertificate"],
 
-    "JSON Standards": ["introstd","ArianeeProductCertificate-i18n", "ArianeeBrandIdentity-i18n", "ArianeeEvent-i18n", "ArianeeMessage-i18n"],
+    "Features / JSON Standards": ["introstd","ArianeeProductCertificate-i18n", "ArianeeBrandIdentity-i18n", "ArianeeEvent-i18n", "ArianeeMessage-i18n"],
 
     "Smart Contracts": ["testnet","mainnet"]
 
