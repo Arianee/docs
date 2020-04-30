@@ -23,8 +23,7 @@ or scan this QR Code
 ![alt_text](../img/democertificateqrcode.png)
 
 
-#### To view raw json 
-https://cert.arianee.org/cert/sampleCertAdv.json
+
 
 
 #### Certificate render in Arianee Wallet
@@ -35,9 +34,14 @@ https://cert.arianee.org/cert/sampleCertAdv.json
 
 ## Certificate structure walkthrough
 
+You can read the whole JSON related to this certificate.
+https://cert.arianee.org/cert/sampleCertAdv.json
+
+We will walkthrough all the json schema fields
+
 ### $Schema : URL to related json schema
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 {
     "$schema": "https://cert.arianee.org/version1/ArianeeProductCertificate-i18n.json",
@@ -69,7 +73,7 @@ https://cert.arianee.org/cert/sampleCertAdv.json
 Name of the product.
 Likely to be the first thing displayed on a wallet app.
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "name": "The Navyclock [DEMO]",
@@ -95,7 +99,7 @@ Likely to be the first thing displayed on a wallet app.
 ### sku : Product sku
 The stock keeping unit (SKU) is an alphanumeric code assigned to a product by a business to identify the price, product options and manufacturer of the merchandise
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "sku": "NAC-BB-LS20-06",
@@ -123,7 +127,7 @@ The stock keeping unit (SKU) is an alphanumeric code assigned to a product by a 
 ### gtin : Product GTIN
 The Global Trade Item Number (GTIN) is a globally unique 14-digit number used to identify trade items, products, or services. GTIN is also an umbrella term that refers to the entire family of UCC. EAN data structures. The entire family of data structures within the GTIN is: GTIN-12 (UPC).
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "gtin": "0 00 12345 60001 2",
@@ -153,7 +157,7 @@ The Global Trade Item Number (GTIN) is a globally unique 14-digit number used to
 ### brandInternalId : Product brandInternalId
 The Global Trade Item Number (GTIN) is a globally unique 14-digit number used to identify trade items, products, or services. GTIN is also an umbrella term that refers to the entire family of UCC. EAN data structures. The entire family of data structures within the GTIN is: GTIN-12 (UPC).
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "brandInternalId": "NYC12345",
@@ -181,7 +185,7 @@ The Global Trade Item Number (GTIN) is a globally unique 14-digit number used to
 ### category : Product category
 Information on the broad category the product belongs to.
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "category": "accessory",
@@ -225,7 +229,7 @@ Information on the broad category the product belongs to.
 ### intended : Product intended
 Information on the target customer market of the product.
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "intended": "womens",
@@ -281,7 +285,7 @@ Identification numbers that end customers will have access to.
 Array of typed serial numbers
 
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
 "serialnumber": [{
@@ -362,7 +366,7 @@ Array of typed serial numbers
 This field may be used when a product is part of a sub Brand owned by the Brand who creates the certificate.
 
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "subBrand": "Arianee watches",
@@ -394,7 +398,7 @@ This field may be used when a product is part of a sub Brand owned by the Brand 
 Model of the product to bring precisions to the Name.
 Likely to be the second thing displayed on a wallet app.
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "model": "Limited serie 2020",
@@ -422,7 +426,7 @@ Likely to be the second thing displayed on a wallet app.
 Main certificate language
 
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "language": "en-US",
@@ -487,7 +491,7 @@ Main certificate language
 Certificate description. HTML is allowed
 
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "description": "<b>Description</b>\nThe Navyclock by Arianee watch, small model, quartz movement. Case in 18k pink gold, beaded crown in 18k pink gold set with a synthetic cabochon-shaped spinel, strap in leather. \n\n<b>Case dimensions</b>\ndiameter: 29.5 mm, thickness: 6.35 mm, water-resistant to 3 bar (approx. 30 meters/100 feet).",
@@ -515,7 +519,7 @@ Certificate sub description. HTML is allowed.
 Array of typed subdescription
 
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "subDescription": [{
@@ -609,7 +613,7 @@ Array of typed link with an order field.
 Type can be website, proofLinkAction (TODO: link to proof link action section)
 
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "externalContents": [{
@@ -706,7 +710,7 @@ Array of internation contents.
 Object is : language, description, subdescription, externalContents. Please refer to related fields
 
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
   "i18n": [{
@@ -922,7 +926,7 @@ Object is : language, description, subdescription, externalContents. Please refe
 ### msrp : manufacturer's suggested retail price
 The manufacturer's suggested retail price (MSRP) is the price a product's producer recommends it be sold for in retail stores. MSRP Country should respect ISO 3166 alpha-3
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
  "msrp": [{
@@ -998,7 +1002,8 @@ The manufacturer's suggested retail price (MSRP) is the price a product's produc
 ...  
 ```
 <!--END_DOCUSAURUS_CODE_TABS-->
-> Currently, this field is not displayed on Arianee Wallet App. 
+
+> Currently, this field is not displayed on Arianee Wallet App.
 
 <br/>
 <br/>
@@ -1019,7 +1024,7 @@ order : media order
 
 
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "medias": [{
@@ -1160,7 +1165,7 @@ value : attribute value
 
 
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "attributes": [{
@@ -1217,7 +1222,8 @@ value : attribute value
 ...  
 ```
 <!--END_DOCUSAURUS_CODE_TABS-->
-> Currently, this field is not displayed on Arianee Wallet App. 
+
+> Currently, this field is not displayed on Arianee Wallet App.
 
 <br/>
 <br/>
@@ -1235,7 +1241,7 @@ pourcentage : pourcentage value
 
 
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "materials": [{
@@ -1312,7 +1318,8 @@ pourcentage : pourcentage value
 ...  
 ```
 <!--END_DOCUSAURUS_CODE_TABS-->
-> Currently, this field is not displayed on Arianee Wallet App. 
+
+> Currently, this field is not displayed on Arianee Wallet App.
 
 <br/>
 <br/>
@@ -1329,7 +1336,7 @@ unit : size unit (inch / centimer / millimeter / EU / UK / US)
 
 
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "size": [{
@@ -1446,7 +1453,8 @@ unit : size unit (inch / centimer / millimeter / EU / UK / US)
 ...  
 ```
 <!--END_DOCUSAURUS_CODE_TABS-->
-> Currently, this field is not displayed on Arianee Wallet App. 
+
+> Currently, this field is not displayed on Arianee Wallet App.
 
 <br/>
 <br/>
@@ -1458,7 +1466,7 @@ Country of manufacture in final assembly stage. (ISO 3166 alpha-3)
 
 
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "manufacturingCountry": "Switzerland",
@@ -1477,7 +1485,8 @@ Country of manufacture in final assembly stage. (ISO 3166 alpha-3)
 ...  
 ```
 <!--END_DOCUSAURUS_CODE_TABS-->
-> Currently, this field is not displayed on Arianee Wallet App. 
+
+> Currently, this field is not displayed on Arianee Wallet App.
 
 <br/>
 <br/>
@@ -1489,7 +1498,7 @@ Country of manufacture in final assembly stage. (ISO 3166 alpha-3)
 Facility Identification in Open Apparel Registry (OAR) or GS1 database
 
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "facilityId": "12345",
@@ -1508,7 +1517,8 @@ Facility Identification in Open Apparel Registry (OAR) or GS1 database
 ...  
 ```
 <!--END_DOCUSAURUS_CODE_TABS-->
-> Currently, this field is not displayed on Arianee Wallet App. 
+
+> Currently, this field is not displayed on Arianee Wallet App.
 
 <br/>
 <br/>
@@ -1523,7 +1533,7 @@ It is currently an information not verified and the Brand bares all responsibili
 Array of certification
 
 <!--DOCUSAURUS_CODE_TABS-->
-<!--JSON-->
+<!--JSON SNIPPET-->
 ```
 ...
     "productCertification": [{
@@ -1569,7 +1579,8 @@ Array of certification
 ...  
 ```
 <!--END_DOCUSAURUS_CODE_TABS-->
-> Currently, this field is not displayed on Arianee Wallet App. 
+
+> Currently, this field is not displayed on Arianee Wallet App.
 
 <br/>
 <br/>
