@@ -1,0 +1,70 @@
+{
+    "$schema":"https://cert.arianee.org/version1/ArianeeBrandIdentity-i18n.json",
+    "name":"Arianee",
+    "description":"<b>The Digital Identity Consortium</b><br/>\nConsumption behaviors are changing, new generations have a digital life of their own and the demand for data privacy is increasing.\nWhat if brands could propose a modern way of owning their creations? What if, thanks to technology, we could augment the ownership of goods?\n\nAt Arianee we are building perpetual relationships between brands and owners, made of trust, respect and transparency.\n\nWith the Arianee protocol, ownership is augmented and groundbreaking features are added to the most valuable items.",
+    "externalContents":[
+ 
+    ],
+    "i18n":[
+ 
+    ],
+    "arianeeMembership":"associate_member",
+    "address":{
+       "street_address":"120 rue Réaumur",
+       "zipcode":"75002",
+       "city":"Paris",
+       "country":"France"
+    },
+    "contacts":[
+ 
+    ],
+    "pictures":[
+       {
+          "type":"brandLogoHeader",
+          "url":"https://theseus.arianee.org/pub/-LvRQM23uL73ArIyshF0"
+       },
+       {
+          "type":"brandLogoHeaderReversed",
+          "url":"https://theseus.arianee.org/pub/-LvRRVI126tywVNOHdOM"
+       },
+       {
+          "type":"brandLogoSquare",
+          "url":"https://theseus.arianee.org/pub/-M0vj64EKf288-E08H_K_arianeeResized"
+       },
+       {
+          "type":"brandHomePicture",
+          "url":"https://theseus.arianee.org/pub/-LvRQkAOVY9XBrQIR_TZ"
+       },
+       {
+          "type":"brandItemBackgroundPicture",
+          "url":"https://theseus.arianee.org/pub/-LvRQrmb_IvXRTKdkYx5"
+       },
+       {
+          "type":"itemBackgroundPicture",
+          "url":"https://theseus.arianee.org/pub/-Lvk4MBEz5KjmE95dr9n"
+       },
+       {
+          "type":"brandBackgroundPicture",
+          "url":"https://theseus.arianee.org/pub/-M0vhSQcadtYDapY8qdb_arianeeResized"
+       },
+       {
+          "type":"certificateBackgroundPicture",
+          "url":"https://theseus.arianee.org/pub/-LvRRHXoEBb_l89d1YdW"
+       }
+    ],
+    "socialmedia":[
+       {
+          "type":"facebook",
+          "value":"208072396631649"
+       },
+       {
+          "type":"twitter",
+          "value":"arianeeproject"
+       },
+       {
+          "type":"youtube",
+          "value":"UCE2QoVA3Fx29NM-lG6T52oQ"
+       }
+    ],
+    "rpcEndpoint":"https://theseus.arianee.org/rpc"
+ }
