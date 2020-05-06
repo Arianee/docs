@@ -1,5 +1,4 @@
 ---
-id: howToProceed
 title: How to proceed
 ---
 

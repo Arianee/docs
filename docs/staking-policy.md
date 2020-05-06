@@ -1,5 +1,4 @@
 ---
-id: StakingPolicy
 title: Staking policy
 sidebar_label: Staking policy
 ---
@@ -14,9 +13,9 @@ The Arianee project requests Brands and third parties to stake in order to compl
 
 ## **Staking process**
 
-First, the staking entity needs some Aria because stakes are accounted for in Aria (the currency of the Arianee protocol). To learn more about the ARIA token and how to buy some, please refer to the [Arianee Economy](AriaEconomy) chapter.
+First, the staking entity needs some Aria because stakes are accounted for in Aria (the currency of the Arianee protocol). To learn more about the ARIA token and how to buy some, please refer to the [Arianee Economy](arianee-economy) chapter.
 
-Second, staking Aria consists of sending them to the *Arianee staking* smart contract. To learn more about smart contracts, please refer to the [Arianee Decentralized Platform](ArianeeDecentralized) chapter.
+Second, staking Aria consists of sending them to the *Arianee staking* smart contract. To learn more about smart contracts, please refer to the [Arianee Decentralized Platform](arianee-decentralized) chapter.
 
 Multiple options are available for this second step, depending on the technical level of the staking entity:
 
@@ -26,7 +25,7 @@ Multiple options are available for this second step, depending on the technical 
 
 ## **Staking amounts**
 
-The stakes the Arianee project requests from Brands and third parties to complete their [Know Your Business (KYB)](KYBprocess) process are defined in fiat currency (USD) payable only in Aria. The price in Aria is adjusted every day by Oracles based on the Day-1 8:00pm CEST Aria/USD exchange rate.
+The stakes the Arianee project requests from Brands and third parties to complete their [Know Your Business (KYB)](kyb-process) process are defined in fiat currency (USD) payable only in Aria. The price in Aria is adjusted every day by Oracles based on the Day-1 8:00pm CEST Aria/USD exchange rate.
 
 The amount requested depends on the number of employees of the staking entity:
 

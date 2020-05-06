@@ -1,5 +1,4 @@
 ---
-id: ArianeeJSWallet
 title: Wallet
 sidebar_label: Wallet
 ---
@@ -97,14 +96,15 @@ let wallet = arianee.fromRandomMnemonic();
 
 ### public and private keys
 
-When your wallet is instantiated, public key and private key are available.
+When your wallet is instantiated, address and private key are available.
 
 
 ```
-let publicKey = wallet.publicKey;
+let address = wallet.address;
 ```
 
 ```
 let privateKey = wallet.privateKey;
 ```
 
+nb: `publicKey` property is deprecated.

@@ -1,5 +1,4 @@
 ---
-id: AriaEconomy
 title: Arianee Economy
 sidebar_label: Arianee Economy
 ---
@@ -39,16 +38,16 @@ The Aria spent for premium features are **automatically distributed among stakeh
 *   20% to the Certificate Management Platform provider.
 *   20% to the Wallet provider.
 *   40% to the Arianee project.
-*    10% to the Nodes.
+*   10% to the Nodes.
 *   10% to Owners.
 
 
 
 ![alt_text](../img/arianeeconomy.png "image_tooltip")
 
-<span style="text-decoration:underline;">Supply multiplier:</span> the more ARIA are held by stakeholders, the higher the Aria Price in fiat currency (USD)
+___Supply multiplier:___ the more ARIA are held by stakeholders, the higher the Aria Price in fiat currency (USD)
 
-<span style="text-decoration:underline;">Demand multiplier:</span> the more ARIA are asked by Brands or token holders, the higher the Aria Price in fiat currency (USD)
+___Demand multiplier:___< the more ARIA are asked by Brands or token holders, the higher the Aria Price in fiat currency (USD)
 
 
 ## **Why a dedicated cryptocurrency?**

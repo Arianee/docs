@@ -1,9 +1,98 @@
 /* your custom css */
 
+    .intro {
+    display: flex;
+    }
+
+     
+    h1, h2 {
+        border-bottom: 1px solid #eaecef;
+    }
+
+        .tiers {
+            width: 33%;
+            float: left;
+            text-align:center;
+        }
+        .tiers_inside {
+            width: 80%;
+            text-align:left;
+            margin:auto;
+            padding: 10px;
+            border: 1px solid #b79144;
+            border-radius: 10px;
+            background-color: #FAFAFA;
+        }
+        
+        #intro h3 {
+            margin: 0;
+        }
+        #intro table{
+            width:100%;
+            table-layout: fixed;
+            overflow-wrap: break-word;
+        }
+        #intro .mainContainer .wrapper {
+            width: 90%;
+        }
+
+    
+    .left {
+        width:50%; float: left; text-align:center;
+    }
+
+
+
+    .tiers {
+        width: 33%;
+        float: left;
+        text-align:center;
+    }
+    .tiers_inside {
+        width: 80%;
+        text-align:left;
+        margin:auto;
+        padding: 10px;
+        border: 1px solid #b79144;
+        border-radius: 10px;
+        background-color: #FAFAFA;
+    }
+    .onPageNav {
+        display: none;
+    }
+
+
+    h3 {
+        margin: 0;
+    }
+    table{
+        width:100%;
+        table-layout: fixed;
+        overflow-wrap: break-word;
+    }
+    .mainContainer .wrapper {
+        width: 90%;
+    }
+    .tiers {
+        width: 100%;
+        float: none;
+        text-align:center;
+        margin-bottom: 30px;
+    }
+    .mainContainer .wrapper {
+        width: 100%;
+    }  
+ 
+
+
+
 .projectLogo {
     display: none;
 }
 
+hr {
+    clear: both;
+}
 
 
 @media only screen and (max-width: 1024px) {
@@ -30,7 +119,6 @@
 
 
 .navPusher{
-    //background-color: #f5f7f9!important;
     border-right: 1px solid #eaecef;
 }
 
@@ -38,10 +126,6 @@
      border-right: 1px solid #eaecef;   
 }
 
-.container {
-    //background-color: #fff!important;
-
-}
 
 .fixedHeaderContainer {
         box-shadow: 0 2px 14px rgba(60,59,77,.5);
@@ -54,6 +138,10 @@
 h1, h2 {
 
     border-bottom: 1px solid #eaecef;
+}
+
+h2.headerTitleWithLogo {
+    border-bottom: none!important;
 }
 
 header h2 {
