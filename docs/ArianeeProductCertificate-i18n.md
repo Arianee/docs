@@ -610,7 +610,7 @@ Specific external contents can be stored for each language.
 
 Array of typed link with an order field.
 
-Type can be website, proofLinkAction (TODO: link to proof link action section)
+Type can be website, proofLinkAction [Check action proof link method](arianee-js-certificate#create-an-action-proof-link)
 
 <!--DOCUSAURUS_CODE_TABS-->
 <!--JSON SNIPPET-->

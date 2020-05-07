@@ -52,7 +52,7 @@ const {  contentImprint, arianeeEventId } = await await wallet.methods.createAri
 
 
 ```
-ArianeeWallets.methods.storeArianeeEvent(certificateId,arianeeEventId, content,url)
+ArianeeWallets.methods.storeArianeeEvent(certificateId, arianeeEventId, content, url)
 ```
 
 Store content of ArianeeEvent on a arianee-rpc-server (https://github.com/Arianee/arianee-rpc-server).
@@ -100,8 +100,7 @@ Accept an ArianeeEvent. The arianeeEvent will be in the history (arianeeEvents l
 
 #### Example
 ```
-    await wallet.methods.acceptArianeeEvent(4433);
-
+await wallet.methods.acceptArianeeEvent(4433);
 ```
 ***
 
@@ -125,7 +124,6 @@ Refuse an ArianeeEvent. The arianeeEvent will not be in the history (arianeeEven
 
 #### Example
 ```
-    await wallet.methods.refuseArianeeEvent(4433);
-
+await wallet.methods.refuseArianeeEvent(4433);
 ```
 ***

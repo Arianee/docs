@@ -62,7 +62,7 @@ new Arianee();
 ``` 
 
 ``` 
-Arianee.init([networkName]);
+Arianee.init([networkName] [, arianeeCustomConfiguration]);
 ``` 
 #### Parameter
 1. `networkName` - `string`(optional):  The network to use ("mainnet"|"testnet") (Defaults to `"testnet"`)
@@ -95,7 +95,7 @@ new Arianee();
 ``` 
 
 ``` 
-Arianee.setDefaultQuery([ConsolidatedCertificateRequest]);
+Arianee.setDefaultQuery(ConsolidatedCertificateRequest);
 ``` 
 #### Parameter
 1. `value` - `ConsolidatedCertificateRequest`:  The network to use ("mainnet"|"testnet") (Defaults to `"testnet"`)

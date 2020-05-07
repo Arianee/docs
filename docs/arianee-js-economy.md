@@ -97,7 +97,7 @@ await wallet.methods.approveStore()
 Each paid feature on Arianee protocol need *credits* to be spend.
 
 ```
-ArianeeWallets.methods.buyCredits(creditType, numberOfCredit, publicAddress)
+ArianeeWallets.methods.buyCredits(creditType, numberOfCredit [, publicAddress])
 ```
 
 #### Parameter
