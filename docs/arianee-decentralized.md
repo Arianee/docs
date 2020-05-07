@@ -36,7 +36,7 @@ Smart contracts were first proposed in 1994 by Nick Szabo. He defined them as co
 
  
 
-In practical words, a Blockchain smart contract is a **collection of code (its functions) and data (its state)** that resides at a specific address on the Blockchain. Smart contracts are **self-executing and render transactions traceable and irreversible**.
+In practical words, a Blockchain smart contract is a **collection of code (its functions) and data (its states)** that resides at a specific address on the Blockchain. Smart contracts are **self-executing and render transactions traceable and irreversible**.
 
 
 ## **The Arianee smart contracts**
@@ -52,7 +52,7 @@ Here is an overview of the Arianee protocol smart contracts:
 ![alt_text](../img/arianeesmartcontract.png "image_tooltip")
 
 
-To favor interoperability and adoption the Arianee protocol designed a crypto currency (the ARIA token) compliant with the[ ERC-20 Token Standard](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md) and certificates (the Arianee Smart Assets) compliant with the[ ERC-721 Token Standard](https://github.com/ethereum/eips/issues/721). To learn more about the ARIA token please refer to the [Arianee Economy](arianee-economy) chapter.
+To favor interoperability and adoption the Arianee protocol designed certificates (the Arianee Smart Assets) compliant with the[ ERC-721 Token Standard](https://github.com/ethereum/eips/issues/721) and a crypto currency (the ARIA token) compliant with the[ ERC-20 Token Standard](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md). To learn more about the ARIA token please refer to the [Arianee Economy](arianee-economy) chapter.
 
 
 ## **About data storage**
@@ -91,7 +91,7 @@ Data stored by the Certificate Management Platform provider can be updated and r
 
 *   Updates of the data provided by the Certificate Management Platform provider may lead to an authentication failure of certificates.
 *   If the links within the Blockchain Certificates do not point to active content anymore, owners will not have access to this content.
-*   Vault breach may lead to the hack of a Brand private keys, leading to the misuse of features available to the Brand.
+*   Vault breach may lead to the hack of the Brand's private keys, leading to the misuse of features available to the Brand.
 
      
 
@@ -101,7 +101,7 @@ Data stored by the Wallet provider can be recovered according to the Wallet prov
 
 
 *   Recovery of the owner’s wallet depends on the Wallet provider ability to safely save the owner’s private keys or to give him/her a way, such as mnemonic words, to recover their private keys in case of the loss of the wallet.
-*   Wallet breach may lead to the hack of the owner private keys, leading to the misuse of his/her certificates.
+*   Wallet breach may lead to the hack of the owner's private keys, leading to the misuse of his/her certificates.
 
 
 ![alt_text](../img/arianeewallet.png "image_tooltip")
@@ -116,7 +116,7 @@ The Arianee protocol provides the tools to verify the authenticity of a certific
 
 
 
-*   The **Brand identity is verified**. That means the Brand went through a [Know your business (KYB) process](KYBprocess) and was registered by the Arianee project as a verified Brand ont the Arianee Identity smart contract.
+*   The **Brand identity is verified**. That means the Brand went through a [Know your business (KYB) process](kyb-process) and was registered by the Arianee project as a verified Brand ont the Arianee Identity smart contract.
 
      
 

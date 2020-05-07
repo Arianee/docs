@@ -4,7 +4,7 @@ sidebar_label: KYB Process
 ---
 **Brands** are the source of each certificate. For their certificates to be classified as authentic when issued: 
 
-- The **Brand identity (Brand ID) must be verified.** That means the Brand went through a *Know Your Business* (KYB) process, described in this paper.
+- The **Brand identity (Brand ID) must be verified.** That means the Brand went through a *Know Your Business* (KYB) process, described here.
 - The **Brand identity (Brand ID) must be authentic.** That means the Brand ID used to issue the certificate is the same than the one verified.
 
 ## **What is the KYB Process ?**
@@ -25,11 +25,13 @@ The information provided by a Brand is verified by the **Onboarding team of the 
 
 The Brand may choose to use a Certificate Management Platform designed by Arianee SAS: a Brand Data Hub.
 
-The Blockchain address of the Brand main wallet is approved and set as verified on the Blockchain by the **Arianee Identity Multisig team** from the Arianee Project & Arianee SAS.
+The Blockchain address of the Brand main wallet is approved and set as verified on the Blockchain by the **Arianee Identity Multisig team**.
 
 ## **KYB fees**
 
-Initiating the KYB process and going through the whole process is **free** for Brands. All the administrative costs are supported by the Arianee project.
+Aside from staking, initiating the KYB process and going through the whole process is **free** for Brands. All the administrative costs are supported by the Arianee project.
+
+To learn more about staking please refer to [the Staking Policy](staking-policy).
 
 ## **Administrative verification**
 
@@ -38,10 +40,7 @@ The KYB process starts with the Brand filling the **form below to collect the ne
 - FR : https://forms.monday.com/forms/2e69ff966a5fc539a12134b305791cc4
 - EN : https://forms.monday.com/forms/9511074102dce79ec415c35416376862 
 
-Filling the form initiates the review of its content by the Onboarding team at Arianee project. Once the information is reviewed and verified, two cases arise:
-
-- The Brand decided to use the Brand Data Hub as its Certificate Management Platform: the Arianee SAS team builds it and then the staking verification starts.
-- The Brand decided **not** to use the Brand Data Hub as its Certificate Management Platform: the staking verification starts right away.
+Filling the form initiates the review of its content by the Onboarding team at Arianee project. Once the information is reviewed and verified, the staking verification starts right away.
 
 **Notes:** 
 
@@ -51,9 +50,9 @@ Filling the form initiates the review of its content by the Onboarding team at A
 
 ## **Staking verification**
 
-The second step of the KYB process starts with the staking leader from the Arianee project requesting the Brand to stake. To learn more about the structure and amount of staking please refer to the [staking policy](StakingPolicy) chapter.
+The second step of the KYB process starts with the staking leader from the Arianee project requesting the Brand to stake. To learn more about staking please refer to the [staking policy](StakingPolicy).
 
-Next, the Blockchain address of the Brand main wallet is approved on the Blockchain by the Arianee Identity Multisig team from the Arianee Project. 
+Next, the Blockchain address of the Brand's main wallet is approved on the Blockchain by the Arianee Identity Multisig team from the Arianee Project. 
 
 At this point the Brand ID verification starts.
 
@@ -66,7 +65,7 @@ The second step of the KYB process starts by the Brand filling the **form below 
 
 Filling the form initiates the review of its content by the Onboarding team from the Arianee project. 
 
-Once the information is reviewed and verified, the Blockchain address of the Brand main wallet is set as verified on the Blockchain by the Arianee Identity Multisig team from the Arianee Project. 
+Once the information is reviewed and verified, the Blockchain address of the Brand main wallet is set as verified on the Blockchain by the Arianee Identity Multisig team. 
 
 **At this point the Brand is verified and can start issuing authentic certificates.**
 

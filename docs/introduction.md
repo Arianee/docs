@@ -22,15 +22,15 @@ Arianee project overview <br> and key concepts
 </div>
 
 
-
 <div class="tiers">
 <div class="tiers_inside">
-<h3>How to proceed</h3>
+<h3>Get started</h3>
 <br>Step-by-step process <br> and live demo 
 <br/><br/>
 <b><a href="how-to-proceed">Read more</a></b>
 </div>
 </div>
+
 
 <div class="tiers">
 <div class="tiers_inside">
@@ -46,7 +46,7 @@ Details about our SDK, standards and smart contracts
 
 <br/>
 
-*If you are a developer, reading this documentation and going through the demo should take a couple of hours. No previous knowledge of Blockchain is required. Once you are done, you will know how to manage a certificate on a Blockchain using the Arianee protocol.*
+*If you are a developer, reading this documentation and going through the demo should take a couple of hours. No previous knowledge of Blockchain is required. Once you are done, you will know how to create and manage a certificate on a Blockchain using the Arianee protocol.*
 
 
 </div>

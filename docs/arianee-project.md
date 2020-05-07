@@ -80,7 +80,7 @@ The necessary ecosystem for the Arianee protocol to run includes six stakeholder
 
 Additional stakeholders have or will have a part to play in the ecosystem:
 
-*   **Third parties** such as resellers, secondhand buyers or insurers will interact with products and might want to **read or add an event on certificates**.
+*   **Third parties** such as resellers, secondhand buyers or insurers will interact with products and might want to **interact with certificates**.
 *   **Identification technology providers** are the link between the digital or real-life product and the certificate.
 *   **Token holders** trade the Aria token, the cryptocurrency used to pay for the main features of the Arianee protocol. To learn more please refer to the [Arianee Economy](arianee-economy) chapter.
 
