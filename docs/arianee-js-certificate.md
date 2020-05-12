@@ -59,7 +59,7 @@ await wallet.methods.createCertificate({
 
 
 ```
-ArianeeWallets.methods.storeContentInRPCServer(certificateId,content,RPCURL)
+ArianeeWallets.methods.storeContentInRPCServer(certificateId, content, RPCURL)
 ```
 
 Store content of an Arianee certificate
@@ -89,7 +89,7 @@ await wallet.methods.storeContentInRPCServer(
 
 ### Request certificate ownership
 ```
-ArianeeWallets.methods.requestCertificateOwnership([certificateId],[passphrase])
+ArianeeWallets.methods.requestCertificateOwnership(certificateId, passphrase)
 ```
 
 Requests ownership of a given certificate
@@ -117,7 +117,7 @@ await wallet.methods.requestCertificateOwnership(3703454,'j2ukmnj6weyz')
 
 ### Read certificate content and metadata
 ```
-ArianeeWallets.methods.getCertificate(certificateId[,passphrase[,query]])
+ArianeeWallets.methods.getCertificate(certificateId [, passphrase] [, query])
 ```
 
 Reads certificate content, checks authenticity, and gather metadata information about a certificate (issuer, transfer history, events, owner,...)
@@ -266,7 +266,7 @@ await wallet.methods.getCertificateFromLink('https://test.arian.ee/3703454,j2ukm
 
 ### Create a request ownership link 
 ```
-ArianeeWallets.methods.createRequestOwnershipLink(certificateId[,passphrase])
+ArianeeWallets.methods.createRequestOwnershipLink(certificateId [, passphrase])
 ```
 
 Creates a link to request ownership of a given certificate. Wallet need to be the owner of the certificate 
@@ -299,7 +299,7 @@ await wallet.methods.createRequestTransferOwnershipLink(3703454)
     
 ### Test if a certificate is requestable
 ```
-ArianeeWallets.methods.isCertificateOwnershipRequestable(certificateId,passphrase)
+ArianeeWallets.methods.isCertificateOwnershipRequestable(certificateId, passphrase)
 ```
 
 Check if a certificate is requestable given the provided passphrase.
@@ -328,7 +328,7 @@ await wallet.methods.isCertificateOwnershipRequestable(3703454,'evo8mrqmuo42')
     
 ### Create a proof link
 ```
-ArianeeWallets.methods.createCertificateProofLink(certificateId[,passphrase])
+ArianeeWallets.methods.createCertificateProofLink(certificateId [, passphrase])
 ```
 
 Creates a link to generate a proof of ownership
@@ -357,10 +357,12 @@ await wallet.methods.createCertificateProofLink(3703454)
 
 
 > Check [Arianee links](arianee-links) standard***
-    
+   
+***
+
 ### Test a proof
 ```
-ArianeeWallets.methods.isCertificateProofValid(certificateId,passphrase)
+ArianeeWallets.methods.isCertificateProofValid(certificateId, passphrase)
 ```
 
 Check if a proof is valid. A proof is valid, if current owner created the proof within a 300 seconds timeframe.
@@ -384,22 +386,37 @@ await wallet.methods.isCertificateProofValid(3703454,'j2ukmnjd6weyz')
 ```
 
 
+***
+ 
+### Create an action proof link
+```
+ArianeeWallets.methods.createActionProofLink(url, certificateId [, passphrase])
+```
+
+Create an action proof link.
+
+An action proof link is a typed link in a certificate external content.  [Check certificate schema doc](ArianeeProductCertificate-i18n#externalcontents-certificate-external-contents)
+
+It can be used to anonymously authenticate a user on a specified link using an Arianee proof.
+
+User needs to be the owner of specified certificate
+
+#### Parameter
+1. `link` - `url`: an URL (this URL should implement test proof)
+1. `certificateId` - `number`:  arianee certificate id
+2. `passphrase` - `string`:  token proof passphrase. 
+
+#### Result
+`promise` returns `string`: A url with the proof append to the url
+
+> This method performs a blockchain transaction. It costs Gas
+
+#### Example
+```
+wallet.methods.createActionProofLink('https://myurl.com/mywebpage.html',3703454,'j2ukmnjd6weyz')
+
+> https://myurl.com/mywebpage.html?proofLink=https://arian.ee/3703454,j2ukmnjd6weyz
+```
 
 
-    
-### Prove ownership
 
-(To document)
-
-## Create identity
-
-
-### Ask for identity validation (KYB process)
-
-### Publish identity
-
-(To document)
-
-## Manage event
-
-(To document)

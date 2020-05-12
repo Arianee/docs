@@ -88,3 +88,8 @@ wallet.methods.getIdentitByShortcode('0xb908B6').then((data)  => {
 ```
 ***
 
+### Create identity
+
+*Still in progress* or you can use smart contract method directly
+
+
