@@ -1,7 +1,7 @@
 
 # Arianee Docs
 
-This repository holds the editable copy in the master branch that is compiled into the site that runs https://docs.arianee.org/docs/intro
+This repository holds the editable copy in the master branch that is compiled into the site that runs https://docs.arianee.org/docs/introduction
 
 <h1>Arianee Project documentation website</h1> <br>
 
