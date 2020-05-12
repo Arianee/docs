@@ -702,8 +702,9 @@ Type can be website, proofLinkAction [Check action proof link method](arianee-js
 
 
 ### i18n : Certificate international contents
-This field is designed to store the links to external contents the Brand whish to introduce to the end customer in a wallet app.
-Specific external contents can be stored for each language.
+This field is designed to store international content.
+
+Specific contents can be stored for each language.
 
 Array of internation contents.
 
