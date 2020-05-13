@@ -5,52 +5,48 @@ sidebar_label: Arianee Wallet Sharing (BETA)
 
 ***Still in BETA***
 
-To increase user adoption, and smoother user experience, Arianee designed a standard to share a user wallet between multiple mobile applications.
+To increase user adoption and provide a smoother user experience, Arianee designed a standard to share the same wallet across multiple mobile applications.
 
-The idea is to let a brand (or a wallet provider) designed an app, and, on first launch, detect if other Arianee compatible wallet apps are installed on the device, and if yes, to let import the main wallet and avoid creating multiple wallets for the same user.
+This standard defines how a mobile application can check if another Arianee compatible application is installed on the device  and, if so, import the main wallet used for this other application. This avoids creating multiple wallets for the same user.
 
 ## Workflow
 
-You need a user, and 2 Arianee compatible wallet app.
-One (App#1) that will import the wallet from the other app 
-One (App#2) with an already initiliazed wallet  
+The workflow starts with two Arianee compatible applications: 
 
-* User launch App#1
-* App#1 detects if App#2 is installed,  
-* User choose to import his/her wallet from App#2
-* App#1 redirect User to App#2 (with a one-time-publickey for privacy reason)
-* App#2 receives a deeplink with App#1 scheme and one-time-publickey
-* App#2 checks if scheme exists in the list of validated Arianee Identity
-* App#2 ask for a confirmation from User
-* App#2 encrypt wallet with public key, and redirect user to App#1
-* App#1 receives a deeplink with encrypted wallet
-* App#1 decrypt wallet 
+The first (App#1) that will import the wallet from the other mobile application 
+
+The second (App#2) with an already initialized wallet  
+
+* User launches App#1
+* App#1 detects if App#2 is installed on the device
+* The user confirms his/her desire to import the wallet from App#2 to App#1
+* App#1 forges an Arianee Sharing Wallet request and redirects the user to App#2 (with a one-time public key, for privacy reasons)
+* App#2 receives the Arianee Sharing Wallet request, including App#1 scheme and the one-time public key
+* App#2 confirms if App#1 scheme exists in the list of verified Brand Identities
+* The user confirms his/her desire to export the wallet to App#1
+* App#2 encrypts the wallet with the one-time public key and redirects the user to App#1
+* App#1 receives a deeplink with the encrypted wallet
+* App#1 decrypts and import the wallet 
 * Done !
 
-## Detailed workflow
-
-An [exemple ionic app](https://github.com/Arianee/apkss-example/) is available and open source.
-
-This app implements the whole Arianee Wallet Sharing process.
+An open source [exemple ionic app](https://github.com/Arianee/apkss-example/) is available for more details. This application implements the whole Arianee Wallet Sharing process.
 
 
-## Define scheme in Arianee Identity
-Each brand/company on Arianee is uniquely identified using Arianee Identity smart contract, and ensure that these entities passed the Arianee KYB process.
+## About "mobile app schemes"
+In order to avoid rogue applications to request access to the wallet stored in an Arianee compatible application, or the other way around, the Arianee wallet sharing must be done between applications with a "mobile app scheme" backed by a verified Brand.
 
-In their identity, they can put their "mobile app scheme". It's a unique identifier defined when an app is on an app store (both google & apple).
-So, all identities with a scheme mean that there's an "official" wallet app related to the brand.
+To be verified by the Arianee project a Brand must go through a [Know your business (KYB) process](kyb-process) leading to its Brand Identity registration on the Arianee Identity smart contract. Any verified Brand can then store a "mobile app scheme" in the content (JSON file) of its Brand Identity. The "mobile app scheme" is a unique identifier created when a mobile application is released on an app store (Google & Apple).
 
-With that in mind, it's easy for a wallet app developer to detect if a user got an Arianee Compatible wallet app.
+In short, when developing a mobile application, **a requirement for the Arianee wallet sharing to work is that the "mobile app scheme" of App#1 and App#2 are stored in verified Brand identities**. Two "mobile app schemes" can be stored in the content (JSON file) of a Brand identity:
 
-Two keys in identity json content define mobile app scheme :
 * iosScheme for iOS
 * androidScheme for Android
 
-## Detect compatible wallet app
+## How to detect a compatible wallet application ?
 
-***Your app need to check if a compatible app is installed on the user device and eventually propose to import a wallet from a compatible app to the user***
+***First, App#1 needs to check if a compatible wallet application is installed on the user device and, if so, it should propose to import the main wallet from this compatible wallet application***
 
-1. App retrieves compatible wallet apps list
+1. App#1 retrieves the list of "mobile app schemes" backed by verified Brands
 >You can have the whole list in a centralized way : 
 https://api.arianee.org/report/apkss/identities
 
@@ -65,20 +61,20 @@ https://api.arianee.org/report/apkss/identities
 }]
 ```
 
-2. Detect installed apps
-> [cordova-plugin-appavailability](https://www.npmjs.com/package/cordova-plugin-appavailability) is a cordova plugin to check if an app is installed on the same device
+2. App#1 detects mobile applications installed on the user device and with a "mobile app scheme" backed by verified Brand
+> [cordova-plugin-appavailability](https://www.npmjs.com/package/cordova-plugin-appavailability) is a cordova plugin to check if an app is installed on the device
 
-3. User choose app to import the wallet from
+3. The user chooses the app (App#2) to import the wallet from
 
-4. App doublechecks scheme of selected app in Arianee identity 
+4. App#1 double checks the "mobile app scheme" of App#2 in Arianee identity 
 > Check [read-identity-using-shortcode](/docs/arianee-js-identity#read-identity-using-shortcode)
 
 
-## Forge and Arianee Sharing Wallet request
+## How to forge an Arianee Sharing Wallet request ?
 
-***Your app need to prepare a link that will open the chosen wallet app including all mandatory information.***
+***Second, App#1 needs to forge a link that will open App#2 and carry all the mandatory information to pursue the process.***
 
-1. Create a key pair to encrypt/decrypt wallet between apps. (see [encrypt](#encrypt) for more infos)
+1. App#1 creates a key pair (PrivateOneTimeKey & PublicOneTimeKey) to encrypt/decrypt the wallet between App#1 and App#2. (see [About encryption](#encrypt) for more details)
 
 
 ```
@@ -94,40 +90,38 @@ https://api.arianee.org/report/apkss/identities
     const publicKey = await crypto.subtle.exportKey('jwk', keys.publicKey);
 ```
 
-> Arianee ecosystem handle only this algorithm for now
+> Please note the keys should use a JSON Web Key as defined in [RFC7517](https://tools.ietf.org/html/rfc7517).
+>
+> Please note the Arianee ecosystem only handles this algorithm for now
 
-2. Store the public/private key, somewhere self (check secure storage)
+2. App#1 stores the key pair (PrivateOneTimeKey & PublicOneTimeKey) somewhere safe (check secure storage for more details - documentation ongoing)
 
-3. Redirect user using this deeplink :
- 
-The deeplink is forged that way :
- 
+3. App#1 forges the following deeplink and it redirects the user with this deeplink :
+
 ```
 let deeplink = scheme + '://apkssRequest?requestId=0x135935&publicKey=' + JSON.stringify(publicKey)
 ```
-> * Scheme : Scheme of the app, can be found in the identity previously requested
+> * Scheme : "mobile app scheme" of the requested App#2
 > * Route : apkssRequest
 > * QueryParams:
->  * requestId: The identity ID of your identity
->  * publicKey : The public key formated in JWK (see [encrypt](#encrypt)) 
+>  * requestId: The Brand identity ID of the Brand Identity backing App#1
+>  * publicKey : PublicOneTimeKey (formated with the JSON Web Key as defined in [RFC7517](https://tools.ietf.org/html/rfc7517))
 
 
 
-## Receiving a Arianee Wallet Sharing request
+## How to handle an Arianee Wallet Sharing request ?
 
-***Your app need to handle Arianee Wallet Sharing request deeplink and reply with an Arianee Wallet Sharing response deeplink***
+***Next, App#2 needs to handle the Arianee Wallet Sharing request and it should return an Arianee Wallet Sharing response. Since App#1 might be App#2 in some other cases, All mobile applications should be able to handle an Arianee Wallet Sharing request.***
 
-1. App need to handle ***apkssRequest*** route.
+1. App#2 needs to handle ***apkssRequest*** route.
 
-2. App checks if ***requestingId*** QueryParam match the identity schema using getIdentity 
+2. App#2 checks if ***requestId*** QueryParam matches the Brand identity schema using getIdentity 
 > Check [read-identity-using-shortcode](/docs/arianee-js-identity#read-identity-using-shortcode) 
 
 
+3. App#2 should ask user's permission to share its main wallet with App#1
 
-
-3. App *need* to ask user's permission to share his/her wallet to requesting app
-
-4. Encrypt the mnemonic with requester public key
+4. App#2 encrypts the mnemonic of its main wallet with the ***publickey*** (PublicOneTimeKey)
 
 ```
 const algorithm = {
@@ -146,30 +140,32 @@ const enc = new TextEncoder()
 const encryptedMnemonics = await crypto.subtle.encrypt(algorithm, publicKey, enc.encode(mnemonic));
 ```
 
-5. App forge Arianee wallet sharing response deeplink with encrypted mnemonic
+Please note the publickey (PublicOneTimeKey) should use a JSON Web Key as defined in [RFC7517](https://tools.ietf.org/html/rfc7517).
 
-```
-const encryptedMnemonicsBuffer = new Buffer(encryptedMnemonics)
-let deeplink = Schema+'://apkssResponse?encryptedMnemonics='+JSON.stringify(objectLink.encryptedMnemonics)
-```
-> * Scheme : Scheme of the requesting app, can be found with getIdentity from the requestId 
-> * Route : apkssResponse
-> * QueryParams: encryptedMnemonics : the encrypted mnemonics in buffer
+5. App#2 forges the Arianee Wallet Sharing response deeplink with encrypted mnemonic
+
+   ```
+   const encryptedMnemonicsBuffer = new Buffer(encryptedMnemonics)
+   let deeplink = Scheme +'://apkssResponse?encryptedMnemonics='+JSON.stringify(objectLink.encryptedMnemonics)
+   ```
+
+   > * Scheme : "mobile app scheme" of the requesting App#1, can be found with getIdentity from the requestId 
+   > * Route : apkssResponse
+   > * QueryParams: 
+   > * encryptedMnemonics : the encrypted mnemonic in buffer
+
+6. App#2 redirects the user with this deeplink
 
 
+## How to handle an Arianee Wallet Sharing response ?
 
-5. App redirect user using deeplink
+***Last, App#1 needs to handle the Arianee Wallet Sharing response deeplink and import the wallet from App#2***
 
+1. App#1 needs to handle ***apkssResponse*** route
 
-## Receiving an Arianee Wallet Sharing response
+2. App#1 should ask user's permission to import the main wallet of App#2
 
-***Your app need to handle Arianee Wallet Sharing response deeplink and eventually replaces existing wallet***
-
-1. App need to handle ***apkssResponse*** route.
-
-2. App *need* to ask user's permission to import this wallet 
-
-3. App decrypts ***encryptedMnemonics*** Query Param using previously created keypair
+3. App#1 decrypts the ***encryptedMnemonics*** QueryParam using the key pair (PrivateOneTimeKey & PublicOneTimeKey) it created and stored earlier
 ```    
     const privateKeyCrypt = await crypto.subtle.importKey('jwk', privateKey, this.encryptAlgorithm, true, ['decrypt']);
 
@@ -182,23 +178,22 @@ let deeplink = Schema+'://apkssResponse?encryptedMnemonics='+JSON.stringify(obje
     const mnemonic = new TextDecoder().decode(decrypt);
 ```
 
-4. App replaces existing wallet
+Please note the privatekey (PrivateOneTimeKey) should use a JSON Web Key as defined in [RFC7517](https://tools.ietf.org/html/rfc7517).
+
+4. App#1 imports the main wallet of App#2
 ```
 wallet.fromMnemonic(mnemonic);
 ```
- 
-## Encrypt <a id="encrypt"></a> 
 
-To ensure compatibility between all the Arianee application we need to use the sames encryption system.
+## About encryption <a id="encrypt"></a> 
 
-The encryption system required at this time is :
+Interoperability across mobile applications is essential for the Arianee protocol adoption and using the same encryption system is a good beginning to support interoperability. 
+
+The encryption system used is compatible with the [Web Crypto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API): 
 * Algorithm: RSA-OAEP
 * Hash: sha-512
 * Key length: 4096
 
-This requirement is compatible with the [Web Crupto API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API)
+Please note the algorithm used  will evolve over time. You must integrate the latest algorithm to ensure compatibility with other mobile applications.
 
-The compatible algorithm will evolve over the time. You must integrate them to ensure compatibility with other app.
-
-To communicate correctly the public key please use a JSON Web Key as defined in [RFC7517](https://tools.ietf.org/html/rfc7517)
-
+Also, to communicate correctly the keys should use a JSON Web Key as defined in [RFC7517](https://tools.ietf.org/html/rfc7517).
