@@ -50,7 +50,7 @@ Filling the form initiates the review of its content by the Onboarding team at A
 
 ## **Staking verification**
 
-The second step of the KYB process starts with the staking leader from the Arianee project requesting the Brand to stake. To learn more about staking please refer to the [staking policy](StakingPolicy).
+The second step of the KYB process starts with the staking leader from the Arianee project requesting the Brand to stake. To learn more about staking please refer to the [staking policy](staking-policy).
 
 Next, the Blockchain address of the Brand's main wallet is approved on the Blockchain by the Arianee Identity Multisig team from the Arianee Project. 
 
