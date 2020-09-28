@@ -70,8 +70,10 @@ Arianee.init([networkName] [, arianeeCustomConfiguration]);
      - `walletReward`: `object<{address:string>` (optional): address of wallet to be rewarded
      - `brandDataHubReward`: `object<{address:string>` (optional): address of BDH to be rewarded
      - `httpProvider`: `provider` (optional): provider as defined by web3js
-     - `transactionOptions`: `object<gas:number, gasPrice:any>` : transaction options
-     - `deepLink`: `string`: deeplink to be used by arianeejs to create deeplink
+     - `transactionOptions`: `object<gas:number, gasPrice:any>` : (optional) transaction options
+     - `deepLink`: `string`: (optional) deeplink to be used by arianeejs to create deeplink
+     - `protocolConfiguration`: `object`:(optional) Arianee protocol configuration. If not specified, the library will fetch the configuration depending on the networkName
+     - `defaultArianeePrivacyGateway`: `string` :(optional) Default Arianee Privacy Gateway URL where will be stored certificate content
      
 #### Result
 `promise` returns `object`: ArianeeWalletBuilder object - The arianee instance with the choosen network
