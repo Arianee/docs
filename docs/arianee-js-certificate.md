@@ -517,5 +517,48 @@ Create an action Arianee Access Token link.
 const b=wallet.methods.createActionArianeeAccessTokenLink('http://www.authentificate-me.com',3703454);
 
 >
-http://www.authentificate-me.com/?arianeeAccessToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJFVEgifQ%3D%3D.eyJpc3MiOiIweDQ5NjdmOTZBOTUyMDk2Q2IxODAyRDM3NWNCNzAzMTRmODcyOUE5NzciLCJzY29wZSI6ImFsbCIsImV4cCI6MTU5NTkyMjcyMTE5OCwiaWF0IjoxNTk1OTIyNDIxMTk4LCJjaGFpbiI6InRlc3RuZXQiLCJzdWIiOiJjZXJ0aWZpY2F0ZSIsInN1YklkIjozNzAzNDU0fQ%3D%3D.0x3789b08e6357bff40422889a5fde80b9ade2a610052a0453d76909a3e3b1502463d33a4929c646ba39fd6262187f0dd3a6934d09a38560822eda0d49e1550e8b1b
 ```
+
+### Is auth URL
+```
+ArianeeWallets.methods.isAuthURL(url)
+```
+
+Check if an URL is an authenticated url by either a proof or an Arianee access token.
+
+#### Parameter
+1. `link` - `url`: an URL with proof or Arianee Access Token. Pass the full url with query parmeters.
+
+#### Result
+`promise` returns `ExtendedBoolean`: 
+- `isTrue`:`true` if proof is valid, `false` otherwise.
+- `code` return code
+- `message`return message
+- `timestamp`return URL auth creation timestamp 
+- `certificateId`return certificateId
+
+
+#### Example
+```
+wallet.methods.isAuthURL('https://www.authentificate-me.com/us-fr/my-account/login/?arianee=1&arianeeAccessToken=eyJ0eXAiOiJKV1QiLCJhbGciOiJFVEgifQ%3D%3D.eyJpc3MiOiIweDA5MTg4ZEMxNzA2NDMyNmVBMmYwRjgwZkIzNUNjRTAxQkEzNTRDOTMiLCJzY29wZSI6ImFsbCIsImV4cCI6MTYwMTI3NTEzOTEzNCwiaWF0IjoxNjAxMjc0ODM5MTM1LCJjaGFpbiI6InRlc3RuZXQiLCJzdWIiOiJjZXJ0aWZpY2F0ZSIsInN1YklkIjo3MTk0NTMzMX0%3D.0x97d9f7f1b440ec5ddc6d1029c59e395c8052f096ccdc7a5c59d2f29f8dc1acd01335b6ec78c9b277b1cf50139f6909418de36b36441e29e4490e0f847c32af341b')
+>
+{ isTrue: true,
+  code: 'proof.token.valid',
+  message: 'proof is valid',
+  timestamp: 1601274961946,
+  certificateId: 71945331 }
+
+```
+
+```
+wallet.methods.isAuthURL('https://myurl.com/mywebpage.html?proofLink=https://arian.ee/3703454,j2ukmnjd6weyz')
+>
+{ isTrue: true,
+  code: 'proof.token.valid',
+  message: 'proof is valid',
+  timestamp: 1601274961946,
+  certificateId: 71945331 }
+
+```
+
+
