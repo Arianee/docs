@@ -341,13 +341,13 @@
 <p>This method performs a blockchain transaction. It costs Gas</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="example-7"></a><a href="#example-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
-<pre><code class="hljs"><span class="hljs-keyword">await</span> wallet.methods.createCertificateProofLink(<span class="hljs-number">3703454</span>)
-     .<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-params">(data)</span>=&gt;</span> <span class="hljs-built_in">console</span>.log(data));
+<pre><code class="hljs"><span class="hljs-selector-tag">await</span> <span class="hljs-selector-tag">wallet</span><span class="hljs-selector-class">.methods</span><span class="hljs-selector-class">.createCertificateProofLink</span>(<span class="hljs-number">3703454</span>)
+     <span class="hljs-selector-class">.then</span>((data)=&gt; console.log(data));
 
-&gt; { method: <span class="hljs-string">'proof'</span>, 
-  certificateId: <span class="hljs-number">3703454</span>,
-  passphrase: <span class="hljs-string">'s4cx5wnr8bol'</span>,
-  link: <span class="hljs-string">'https://test.arian.ee/proof/3703454,s4cx5wnr8bol'</span> }
+&gt; { <span class="hljs-attribute">method</span>: <span class="hljs-string">'proof'</span>, 
+  <span class="hljs-attribute">certificateId</span>: <span class="hljs-number">3703454</span>,
+  <span class="hljs-attribute">passphrase</span>: <span class="hljs-string">'s4cx5wnr8bol'</span>,
+  <span class="hljs-attribute">link</span>: <span class="hljs-string">'https://test.arian.ee/proof/3703454,s4cx5wnr8bol'</span> }
 </code></pre>
 <blockquote>
 <p>Check <a href="arianee-links">Arianee links</a> standard***</p>
@@ -415,9 +415,9 @@ It is very close to a Arianee Proof but it does not require a blockchain transac
 <h4><a class="anchor" aria-hidden="true" id="result-11"></a><a href="#result-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Result</h4>
 <p><code>string</code> : A Etherum Web Token</p>
 <h4><a class="anchor" aria-hidden="true" id="example-10"></a><a href="#example-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
-<pre><code class="hljs">wallet<span class="hljs-selector-class">.methods</span><span class="hljs-selector-class">.createCertificateArianeeAccessToken</span>(<span class="hljs-number">3703454</span>)
+<pre><code class="hljs">wallet.methods.createCertificateArianeeAccessToken(<span class="hljs-number">3703454</span>)
 
-&gt; eyJ0eXAiOiJKV1QiLCJhbGciOiJFVEgifQ==.eyJpc3MiOiIweDQ5NjdmOTZBOTUyMDk2Q2IxODAyRDM3NWNCNzAzMTRmODcyOUE5NzciLCJzY29wZSI6ImFsbCIsImV4cCI6MTU5NTkxMzMyNDk1OSwiaWF0IjoxNTk1OTEzMDI0OTYwLCJjaGFpbiI6InRlc3RuZXQiLCJzdWIiOiJjZXJ0aWZpY2F0ZSIsInN1YklkIjozNzAzNDU0fQ==.<span class="hljs-number">0</span>x1a13a3f9f47b31212bfca68b67e17053c9a95d68d356bb540c7f7af77682699316a34fdb44c07a744e8584a41a5beea5b86ba92d97a4ab03ec5598f50a3f81f21c
+&gt; eyJ0eXAiOiJKV1QiLCJhbGciOiJFVEgifQ==.eyJpc3MiOiIweDQ5NjdmOTZBOTUyMDk2Q2IxODAyRDM3NWNCNzAzMTRmODcyOUE5NzciLCJzY29wZSI6ImFsbCIsImV4cCI6MTU5NTkxMzMyNDk1OSwiaWF0IjoxNTk1OTEzMDI0OTYwLCJjaGFpbiI6InRlc3RuZXQiLCJzdWIiOiJjZXJ0aWZpY2F0ZSIsInN1YklkIjozNzAzNDU0fQ==<span class="hljs-number">.0</span>x1a13a3f9f47b31212bfca68b67e17053c9a95d68d356bb540c7f7af77682699316a34fdb44c07a744e8584a41a5beea5b86ba92d97a4ab03ec5598f50a3f81f21c
 
 </code></pre>
 <hr>

@@ -217,8 +217,8 @@
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="example-2"></a><a href="#example-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <pre><code class="hljs">
-<span class="hljs-regexp">//</span> Change optin flag <span class="hljs-keyword">for</span> a specific sender 
-wallet.methods.setMessageAuthorizationFor(<span class="hljs-number">12345</span>,<span class="hljs-string">'0x5f89d20c4a88FC2479b08522d5adD0b605001E3e'</span>,<span class="hljs-literal">false</span>).<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-params">(data)</span>  =&gt;</span> {
+<span class="hljs-comment">// Change optin flag for a specific sender </span>
+wallet.methods.setMessageAuthorizationFor(<span class="hljs-number">12345</span>,'0x5f89d20c4a88FC<span class="hljs-number">2479</span>b<span class="hljs-number">0852</span>2d5adD0b<span class="hljs-number">605001</span>E3e',false).then((data)  =&gt; {
 })
 </code></pre>
 <hr>
@@ -237,8 +237,8 @@ wallet.methods.setMessageAuthorizationFor(<span class="hljs-number">12345</span>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="example-3"></a><a href="#example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h4>
 <pre><code class="hljs">
-<span class="hljs-regexp">//</span> Read optin flag <span class="hljs-keyword">for</span> a specific sender
-wallet.methods.getMessageSenders(<span class="hljs-number">12345</span>).<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-params">(data)</span>  =&gt;</span> {
+<span class="hljs-comment">// Read optin flag for a specific sender</span>
+<span class="hljs-selector-tag">wallet</span><span class="hljs-selector-class">.methods</span><span class="hljs-selector-class">.getMessageSenders</span>(<span class="hljs-number">12345</span>)<span class="hljs-selector-class">.then</span>((data)  =&gt; {
 })
 
 </code></pre>
