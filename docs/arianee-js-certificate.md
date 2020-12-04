@@ -55,7 +55,63 @@ await wallet.methods.createCertificate({
 ```
 ***
 
-### Store content of certificate
+
+### Create certificate and store certificate content
+
+
+```
+ArianeeWallets.methods.createAndStoreCertificate(data)
+```
+
+Creates an arianee certificate and store content in RPC server
+
+#### Parameter
+1. `data` - `object`:  certificate creation data object
+     - `uri` - `string`: certificate uri
+     - `content` - `object` (optional) : certificate content object (json)
+     - `hash` - `string` (optional): certificate imprint.  (either content or hash need to be provided)
+     - `certificateId`- `number` (optional): arianee token id. Random if left empty
+     - `passphrase` -  `string` (optional): token access passphrase. *should be put in QR Code/NFC*
+     - `recoveryTimestamp` -  `number` (optional): timestamp until issuer can recover certificate ownership. Default: 90 days from creation date.
+     - `sameRequestOwnershipPassphrase` - `boolean` (optional): should passphrase be used as certificate request passphrase. Default: true
+2. `url` - `string`: url of RPC Server. Usually, it is the url of issuer's RPC Server 
+     
+
+#### Result
+`promise` returns `object`: The receipt of the blockchain transaction + keys : 
+     - certificateId : arianee certificate id created
+     - passphrase : certificate access passphrase
+
+
+> This method performs a blockchain transaction. It costs 1 certificate credit and Gas
+
+
+
+#### Example
+```
+// fetch certificate content
+var certificate = await fetch("https://cert.arianee.org/cert/sampleCert.json");
+var content = await certificate.json();
+
+// Create a certificate based on a self hosted json  
+await wallet.methods.createCertificate({
+     uri: "https://cert.arianee.org/cert/sampleCert.json",
+     content:content})      
+     .then((i) => {
+          console.log("Arianee ID:"+i.certificateId);
+          console.log("Passphrase:"+i.passphrase);
+          
+    })
+     .catch(i => console.log("Creating certificate : error ", JSON.stringify(i)));
+```
+***
+
+
+
+
+
+
+### Store certificate content 
 
 
 ```
@@ -519,6 +575,9 @@ const b=wallet.methods.createActionArianeeAccessTokenLink('http://www.authentifi
 >
 ```
 
+***
+
+
 ### Is auth URL
 ```
 ArianeeWallets.methods.isAuthURL(url)
@@ -561,4 +620,125 @@ wallet.methods.isAuthURL('https://myurl.com/mywebpage.html?proofLink=https://ari
 
 ```
 
+***
 
+
+### Update certificate
+
+
+```
+ArianeeWallets.methods.updateCertificate(data)
+```
+
+Updates an arianee certificate. The certificate is not really updated. The original imprint is still in the blockchain. Another contract "update" manage all updates of a certificate. Certificate retrievable manages automatically updates. 
+
+#### Parameter
+1. `data` - `object`:  certificate creation data object
+     - `certificateId`- `number` : arianee token id. Random if left empty
+     - `content` - `object` (optional) : certificate content object (json)
+     - `imprint` - `string` (optional): certificate imprint.  (either content or hash need to be provided)
+
+
+#### Result
+`promise` returns `object`: The receipt of the blockchain transaction 
+
+
+> This method performs a blockchain transaction. It costs 1 update credit and Gas
+
+
+
+#### Example
+```
+// fetch certificate content
+var certificate = await fetch("https://cert.arianee.org/cert/sampleCert.json");
+var content = await certificate.json();
+
+// Create a certificate based on a self hosted json  
+await wallet.methods.updateCertificate({
+     certificateId: 1234567,
+     content:content})      
+     .then((i) => {
+          ...
+          
+    })
+     .catch(i => console.log("Updating certificate : error ", JSON.stringify(i)));
+```
+***
+
+
+### Update certificate and store content in RPC server
+
+
+```
+ArianeeWallets.methods.updateAndStoreCertificate(data)
+```
+
+Updates an arianee certificate. The certificate is not really updated. The original imprint is still in the blockchain. Another contract "update" manage all updates of a certificate. Certificate retrievable manages automatically updates. 
+
+#### Parameter
+1. `data` - `object`:  certificate creation data object
+     - `certificateId`- `number` : arianee token id. Random if left empty
+     - `content` - `object` (optional) : certificate content object (json)
+     - `imprint` - `string` (optional): certificate imprint.  (either content or hash need to be provided)
+2. `url` - `string`: url of RPC Server. Usually, it is the url of issuer's RPC Server 
+
+#### Result
+`promise` returns `object`: The receipt of the blockchain transaction 
+
+
+> This method performs a blockchain transaction. It costs 1 update credit and Gas
+
+
+
+#### Example
+```
+// fetch certificate content
+var certificate = await fetch("https://cert.arianee.org/cert/sampleCert.json");
+var content = await certificate.json();
+
+// Create a certificate based on a self hosted json  
+await wallet.methods.updateCertificate({
+     certificateId: 1234567,
+     content:content},
+     'https://arianee.cleverapps.io/testnet/rpc'
+     )      
+     .then((i) => {
+          ...
+          
+    })
+     .catch(i => console.log("Updating certificate : error ", JSON.stringify(i)));
+```
+***
+
+
+### Store content of a certificate update
+
+
+```
+ArianeeWallets.methods.storeUpdateContentInRPCServer(certificateId, content, RPCURL)
+```
+
+Store content of an Arianee certificate
+
+#### Parameter
+1. `certificateId` - `number`:  Certificate Id of Arianee Certificate
+2. `data` - `object`:  Exact content of Arianee Certificate
+3. `url` - `string`: url of RPC Server. Usually, it is the url of issuer's RPC Server 
+
+#### Result
+`promise` returns `object`:
+
+#### Example
+```
+// fetch certificate content
+var certificate = await fetch("https://cert.arianee.org/cert/sampleCert.json");
+var content = await certificate.json();
+
+// Store content of a Arianee certificate
+await wallet.methods.storeUpdateContentInRPCServer(
+       1234,
+     content,
+    'https://arianee.cleverapps.io/testnet/rpc'
+    )      
+```
+***

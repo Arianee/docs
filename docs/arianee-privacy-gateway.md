@@ -132,13 +132,16 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 ### setCertificateContent
 
+Manage content relative to certificates
+
 
 This method can implements two custom methods : 
 - One for reading certificate content
 - One for storing certificate content
+- One for storing certificate content that does not yet exist on blockchain
 
 ```
-arianeeRPC.setCertificateContent(promise certificateRead(certificateId), promise certificateCreate(certificateId, content) );
+arianeeRPC.setCertificateContent(promise certificateRead(certificateId), promise certificateCreate(certificateId, content), promise certificateCreateWithoutValidationOnBC(certificateId, content) );
 ```
 
 #### Reading certificate
@@ -165,18 +168,33 @@ arianeeRPC.setCertificateContent(promise certificateRead(certificateId), promise
     }
 ```
 
+#### Creating certificate without blockchain confirmation
+```
+(certificateId:string, content:string)=>{
 
+      // This code is called only if the request is allowed to store certificate content
+      // You need to use certificateId reference to store certificate content into your database / other storage system
+      // and resolve the promise
+
+      return Promise.resolve()
+    }
+```
 
 
 ### setEventContentMethods
 
 
+Manage content relative to arianee events
+
+
 This method can implements two custom methods : 
 - One for reading event content
 - One for storing event content
+- One for storing event content that does not yet exist on blockchain
+
 
 ```
-arianeeRPC.setCertificateContent(promise fetchEventContent(eventId), promise createEvent(eventId, content) );
+arianeeRPC.setEventContent(promise fetchEventContent(eventId), promise createEvent(eventId, content), promise createEventWithoutValidationOnBC(eventId, content) );
 ```
 
 #### Reading event
@@ -191,11 +209,130 @@ arianeeRPC.setCertificateContent(promise fetchEventContent(eventId), promise cre
     }
 ```
 
-#### Creating event
+#### Creating event 
 ```
 (eventId:string, content:string)=>{
 
       // This code is called only if the request is allowed to store event content
+      // You need to use eventId reference to store event content into your database / other storage system
+      // and resolve the promise
+
+      return Promise.resolve()
+    }
+```
+
+
+#### Creating event without blockchain confirmation
+```
+(eventId:string, content:string)=>{
+
+      // This code is called only if the request is allowed to store event content
+      // You need to use eventId reference to store event content into your database / other storage system
+      // and resolve the promise
+
+      return Promise.resolve()
+    }
+```
+
+
+### setMessageContentMethods
+
+Manage content relative to arianee decentralized messages
+
+This method can implements two custom methods : 
+- One for reading message content
+- One for storing message content
+- One for storing message content that does not yet exist on blockchain
+
+
+```
+arianeeRPC.setMessageContent(promise fetchMessageContent(eventId), promise createMessage(eventId, content), promise createEventcreateMessageWithoutValidationOnBC(eventId, content) );
+```
+
+#### Reading message
+```
+(messageId:string)=>{
+
+      // This code is called only is the request is allowed to read message content
+      // You need to use messageId reference to read message content into your database / other storage system
+      // and resolve the content
+
+      return Promise.resolve(messageContent)
+    }
+```
+
+#### Creating message
+```
+(messageId:string, content:string)=>{
+
+      // This code is called only if the request is allowed to store message content
+      // You need to use messageId reference to store message content into your database / other storage system
+      // and resolve the promise
+
+      return Promise.resolve()
+    }
+```
+
+
+#### Creating message without blockchain confirmation
+```
+(messageId:string, content:string)=>{
+
+      // This code is called only if the request is allowed to store message content
+      // You need to use messageId reference to store message content into your database / other storage system
+      // and resolve the promise
+
+      return Promise.resolve()
+    }
+```
+
+
+
+### setUpdateContentMethods
+
+Manage content relative to certificate updates
+
+
+This method can implements two custom methods : 
+- One for reading update content
+- One for storing update content
+- One for storing update content that does not yet exist on blockchain
+
+
+```
+arianeeRPC.setUpdateContent(promise fetchUpdateContent(certificateId), promise createUpdate(certificateId, content),promise createEventWithoutValidationOnBC(certificateId, content) );
+```
+
+#### Reading update
+```
+(eventId:string)=>{
+
+      // This code is called only is the request is allowed to read certificate update content
+      // You need to use eventId reference to read event content into your database / other storage system
+      // and resolve the content
+
+      return Promise.resolve(eventContent)
+    }
+```
+
+#### Creating update
+```
+(certificate:string, content:string)=>{
+
+      // This code is called only if the request is allowed to store certificate update content
+      // You need to use eventId reference to store event content into your database / other storage system
+      // and resolve the promise
+
+      return Promise.resolve()
+    }
+```
+
+
+#### Creating update without blockchain confirmation
+```
+(certificateId:string, content:string)=>{
+
+      // This code is called only if the request is allowed to store certificate update content
       // You need to use eventId reference to store event content into your database / other storage system
       // and resolve the promise
 
