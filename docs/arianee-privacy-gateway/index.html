@@ -156,12 +156,14 @@ app.listen(port, <span class="hljs-function"><span class="hljs-params">()</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="methods-list"></a><a href="#methods-list" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Methods list</h2>
 <h3><a class="anchor" aria-hidden="true" id="setcertificatecontent"></a><a href="#setcertificatecontent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setCertificateContent</h3>
+<p>Manage content relative to certificates</p>
 <p>This method can implements two custom methods :</p>
 <ul>
 <li>One for reading certificate content</li>
 <li>One for storing certificate content</li>
+<li>One for storing certificate content that does not yet exist on blockchain</li>
 </ul>
-<pre><code class="hljs">arianeeRPC.set<span class="hljs-constructor">CertificateContent(<span class="hljs-params">promise</span> <span class="hljs-params">certificateRead</span>(<span class="hljs-params">certificateId</span>)</span>, promise certificate<span class="hljs-constructor">Create(<span class="hljs-params">certificateId</span>, <span class="hljs-params">content</span>)</span> );
+<pre><code class="hljs">arianeeRPC.set<span class="hljs-constructor">CertificateContent(<span class="hljs-params">promise</span> <span class="hljs-params">certificateRead</span>(<span class="hljs-params">certificateId</span>)</span>, promise certificate<span class="hljs-constructor">Create(<span class="hljs-params">certificateId</span>, <span class="hljs-params">content</span>)</span>, promise certificate<span class="hljs-constructor">CreateWithoutValidationOnBC(<span class="hljs-params">certificateId</span>, <span class="hljs-params">content</span>)</span> );
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="reading-certificate"></a><a href="#reading-certificate" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reading certificate</h4>
 <pre><code class="hljs">(certificateId:string)=&gt;{
@@ -183,13 +185,25 @@ app.listen(port, <span class="hljs-function"><span class="hljs-params">()</span>
       <span class="hljs-keyword">return</span> Promise.resolve()
     }
 </code></pre>
+<h4><a class="anchor" aria-hidden="true" id="creating-certificate-without-blockchain-confirmation"></a><a href="#creating-certificate-without-blockchain-confirmation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating certificate without blockchain confirmation</h4>
+<pre><code class="hljs">(certificateId:string, content:string)=&gt;{
+
+      // This code <span class="hljs-keyword">is</span> <span class="hljs-keyword">called</span> <span class="hljs-keyword">only</span> <span class="hljs-keyword">if</span> the request <span class="hljs-keyword">is</span> allowed <span class="hljs-keyword">to</span> store certificate content
+      // You need <span class="hljs-keyword">to</span> use certificateId reference <span class="hljs-keyword">to</span> store certificate content <span class="hljs-keyword">into</span> your <span class="hljs-keyword">database</span> / other <span class="hljs-keyword">storage</span> <span class="hljs-keyword">system</span>
+      // <span class="hljs-keyword">and</span> resolve the promise
+
+      <span class="hljs-keyword">return</span> Promise.resolve()
+    }
+</code></pre>
 <h3><a class="anchor" aria-hidden="true" id="seteventcontentmethods"></a><a href="#seteventcontentmethods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setEventContentMethods</h3>
+<p>Manage content relative to arianee events</p>
 <p>This method can implements two custom methods :</p>
 <ul>
 <li>One for reading event content</li>
 <li>One for storing event content</li>
+<li>One for storing event content that does not yet exist on blockchain</li>
 </ul>
-<pre><code class="hljs">arianeeRPC.set<span class="hljs-constructor">CertificateContent(<span class="hljs-params">promise</span> <span class="hljs-params">fetchEventContent</span>(<span class="hljs-params">eventId</span>)</span>, promise create<span class="hljs-constructor">Event(<span class="hljs-params">eventId</span>, <span class="hljs-params">content</span>)</span> );
+<pre><code class="hljs">arianeeRPC.set<span class="hljs-constructor">EventContent(<span class="hljs-params">promise</span> <span class="hljs-params">fetchEventContent</span>(<span class="hljs-params">eventId</span>)</span>, promise create<span class="hljs-constructor">Event(<span class="hljs-params">eventId</span>, <span class="hljs-params">content</span>)</span>, promise create<span class="hljs-constructor">EventWithoutValidationOnBC(<span class="hljs-params">eventId</span>, <span class="hljs-params">content</span>)</span> );
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="reading-event"></a><a href="#reading-event" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reading event</h4>
 <pre><code class="hljs">(eventId:string)=&gt;{
@@ -211,7 +225,97 @@ app.listen(port, <span class="hljs-function"><span class="hljs-params">()</span>
       <span class="hljs-keyword">return</span> Promise.resolve()
     }
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/21/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/events-listener"><span class="arrow-prev">← </span><span>Events Listener</span></a><a class="docs-next button" href="/docs/standard-introduction"><span>Introduction</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#installation">Installation</a></li><li><a href="#how-to-use">How to use</a></li><li><a href="#basic-implementation-using-express">Basic implementation using express</a></li><li><a href="#methods-list">Methods list</a><ul class="toc-headings"><li><a href="#setcertificatecontent">setCertificateContent</a></li><li><a href="#seteventcontentmethods">setEventContentMethods</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Docs</h5><a href="/docs/intro">Overview</a><a href="/docs/howToProceed">Getting started</a><a href="/docs/ArianeeJS">ArianeeJS SDK Reference</a></div><div><h5>Community</h5><a href="https://t.me/arianeeproject" target="_blank">Telegram</a><div class="social"><a href="https://twitter.com/ArianeeProject" class="twitter-follow-button">Follow @ArianeeProject</a></div></div><div><h5>More</h5><a href="https://github.com/Arianee">GitHub</a></div></section><section class="copyright">Copyright © 2020 .Arianee Project <br/>Association subject to the Law of 1 July 1901 and the Decree of 16 August 1901 <br/> Siret Number 852 836 105 00019 – APE 9499Z</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
+<h4><a class="anchor" aria-hidden="true" id="creating-event-without-blockchain-confirmation"></a><a href="#creating-event-without-blockchain-confirmation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating event without blockchain confirmation</h4>
+<pre><code class="hljs">(eventId:string, content:string)=&gt;{
+
+      // This code <span class="hljs-keyword">is</span> <span class="hljs-keyword">called</span> <span class="hljs-keyword">only</span> <span class="hljs-keyword">if</span> the request <span class="hljs-keyword">is</span> allowed <span class="hljs-keyword">to</span> store event content
+      // You need <span class="hljs-keyword">to</span> use eventId reference <span class="hljs-keyword">to</span> store event content <span class="hljs-keyword">into</span> your <span class="hljs-keyword">database</span> / other <span class="hljs-keyword">storage</span> <span class="hljs-keyword">system</span>
+      // <span class="hljs-keyword">and</span> resolve the promise
+
+      <span class="hljs-keyword">return</span> Promise.resolve()
+    }
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="setmessagecontentmethods"></a><a href="#setmessagecontentmethods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setMessageContentMethods</h3>
+<p>Manage content relative to arianee decentralized messages</p>
+<p>This method can implements two custom methods :</p>
+<ul>
+<li>One for reading message content</li>
+<li>One for storing message content</li>
+<li>One for storing message content that does not yet exist on blockchain</li>
+</ul>
+<pre><code class="hljs">arianeeRPC.set<span class="hljs-constructor">MessageContent(<span class="hljs-params">promise</span> <span class="hljs-params">fetchMessageContent</span>(<span class="hljs-params">eventId</span>)</span>, promise create<span class="hljs-constructor">Message(<span class="hljs-params">eventId</span>, <span class="hljs-params">content</span>)</span>, promise create<span class="hljs-constructor">EventcreateMessageWithoutValidationOnBC(<span class="hljs-params">eventId</span>, <span class="hljs-params">content</span>)</span> );
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="reading-message"></a><a href="#reading-message" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reading message</h4>
+<pre><code class="hljs">(messageId:string)=&gt;{
+
+      // This code <span class="hljs-keyword">is</span> <span class="hljs-keyword">called</span> <span class="hljs-keyword">only</span> <span class="hljs-keyword">is</span> the request <span class="hljs-keyword">is</span> allowed <span class="hljs-keyword">to</span> <span class="hljs-keyword">read</span> message content
+      // You need <span class="hljs-keyword">to</span> use messageId reference <span class="hljs-keyword">to</span> <span class="hljs-keyword">read</span> message content <span class="hljs-keyword">into</span> your <span class="hljs-keyword">database</span> / other <span class="hljs-keyword">storage</span> <span class="hljs-keyword">system</span>
+      // <span class="hljs-keyword">and</span> resolve the content
+
+      <span class="hljs-keyword">return</span> Promise.resolve(messageContent)
+    }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="creating-message"></a><a href="#creating-message" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating message</h4>
+<pre><code class="hljs">(messageId:string, content:string)=&gt;{
+
+      // This code <span class="hljs-keyword">is</span> <span class="hljs-keyword">called</span> <span class="hljs-keyword">only</span> <span class="hljs-keyword">if</span> the request <span class="hljs-keyword">is</span> allowed <span class="hljs-keyword">to</span> store message content
+      // You need <span class="hljs-keyword">to</span> use messageId reference <span class="hljs-keyword">to</span> store message content <span class="hljs-keyword">into</span> your <span class="hljs-keyword">database</span> / other <span class="hljs-keyword">storage</span> <span class="hljs-keyword">system</span>
+      // <span class="hljs-keyword">and</span> resolve the promise
+
+      <span class="hljs-keyword">return</span> Promise.resolve()
+    }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="creating-message-without-blockchain-confirmation"></a><a href="#creating-message-without-blockchain-confirmation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating message without blockchain confirmation</h4>
+<pre><code class="hljs">(messageId:string, content:string)=&gt;{
+
+      // This code <span class="hljs-keyword">is</span> <span class="hljs-keyword">called</span> <span class="hljs-keyword">only</span> <span class="hljs-keyword">if</span> the request <span class="hljs-keyword">is</span> allowed <span class="hljs-keyword">to</span> store message content
+      // You need <span class="hljs-keyword">to</span> use messageId reference <span class="hljs-keyword">to</span> store message content <span class="hljs-keyword">into</span> your <span class="hljs-keyword">database</span> / other <span class="hljs-keyword">storage</span> <span class="hljs-keyword">system</span>
+      // <span class="hljs-keyword">and</span> resolve the promise
+
+      <span class="hljs-keyword">return</span> Promise.resolve()
+    }
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="setupdatecontentmethods"></a><a href="#setupdatecontentmethods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>setUpdateContentMethods</h3>
+<p>Manage content relative to certificate updates</p>
+<p>This method can implements two custom methods :</p>
+<ul>
+<li>One for reading update content</li>
+<li>One for storing update content</li>
+<li>One for storing update content that does not yet exist on blockchain</li>
+</ul>
+<pre><code class="hljs">arianeeRPC.set<span class="hljs-constructor">UpdateContent(<span class="hljs-params">promise</span> <span class="hljs-params">fetchUpdateContent</span>(<span class="hljs-params">certificateId</span>)</span>, promise create<span class="hljs-constructor">Update(<span class="hljs-params">certificateId</span>, <span class="hljs-params">content</span>)</span>,promise create<span class="hljs-constructor">EventWithoutValidationOnBC(<span class="hljs-params">certificateId</span>, <span class="hljs-params">content</span>)</span> );
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="reading-update"></a><a href="#reading-update" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reading update</h4>
+<pre><code class="hljs">(eventId:string)=&gt;{
+
+      // This code <span class="hljs-keyword">is</span> <span class="hljs-keyword">called</span> <span class="hljs-keyword">only</span> <span class="hljs-keyword">is</span> the request <span class="hljs-keyword">is</span> allowed <span class="hljs-keyword">to</span> <span class="hljs-keyword">read</span> certificate <span class="hljs-keyword">update</span> content
+      // You need <span class="hljs-keyword">to</span> use eventId reference <span class="hljs-keyword">to</span> <span class="hljs-keyword">read</span> event content <span class="hljs-keyword">into</span> your <span class="hljs-keyword">database</span> / other <span class="hljs-keyword">storage</span> <span class="hljs-keyword">system</span>
+      // <span class="hljs-keyword">and</span> resolve the content
+
+      <span class="hljs-keyword">return</span> Promise.resolve(eventContent)
+    }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="creating-update"></a><a href="#creating-update" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating update</h4>
+<pre><code class="hljs">(certificate:string, content:string)=&gt;{
+
+      // This code <span class="hljs-keyword">is</span> <span class="hljs-keyword">called</span> <span class="hljs-keyword">only</span> <span class="hljs-keyword">if</span> the request <span class="hljs-keyword">is</span> allowed <span class="hljs-keyword">to</span> store certificate <span class="hljs-keyword">update</span> content
+      // You need <span class="hljs-keyword">to</span> use eventId reference <span class="hljs-keyword">to</span> store event content <span class="hljs-keyword">into</span> your <span class="hljs-keyword">database</span> / other <span class="hljs-keyword">storage</span> <span class="hljs-keyword">system</span>
+      // <span class="hljs-keyword">and</span> resolve the promise
+
+      <span class="hljs-keyword">return</span> Promise.resolve()
+    }
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="creating-update-without-blockchain-confirmation"></a><a href="#creating-update-without-blockchain-confirmation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating update without blockchain confirmation</h4>
+<pre><code class="hljs">(certificateId:string, content:string)=&gt;{
+
+      // This code <span class="hljs-keyword">is</span> <span class="hljs-keyword">called</span> <span class="hljs-keyword">only</span> <span class="hljs-keyword">if</span> the request <span class="hljs-keyword">is</span> allowed <span class="hljs-keyword">to</span> store certificate <span class="hljs-keyword">update</span> content
+      // You need <span class="hljs-keyword">to</span> use eventId reference <span class="hljs-keyword">to</span> store event content <span class="hljs-keyword">into</span> your <span class="hljs-keyword">database</span> / other <span class="hljs-keyword">storage</span> <span class="hljs-keyword">system</span>
+      // <span class="hljs-keyword">and</span> resolve the promise
+
+      <span class="hljs-keyword">return</span> Promise.resolve()
+    }
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 12/4/2020</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/events-listener"><span class="arrow-prev">← </span><span>Events Listener</span></a><a class="docs-next button" href="/docs/standard-introduction"><span>Introduction</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#installation">Installation</a></li><li><a href="#how-to-use">How to use</a></li><li><a href="#basic-implementation-using-express">Basic implementation using express</a></li><li><a href="#methods-list">Methods list</a><ul class="toc-headings"><li><a href="#setcertificatecontent">setCertificateContent</a></li><li><a href="#seteventcontentmethods">setEventContentMethods</a></li><li><a href="#setmessagecontentmethods">setMessageContentMethods</a></li><li><a href="#setupdatecontentmethods">setUpdateContentMethods</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"></a><div><h5>Docs</h5><a href="/docs/intro">Overview</a><a href="/docs/howToProceed">Getting started</a><a href="/docs/ArianeeJS">ArianeeJS SDK Reference</a></div><div><h5>Community</h5><a href="https://t.me/arianeeproject" target="_blank">Telegram</a><div class="social"><a href="https://twitter.com/ArianeeProject" class="twitter-follow-button">Follow @ArianeeProject</a></div></div><div><h5>More</h5><a href="https://github.com/Arianee">GitHub</a></div></section><section class="copyright">Copyright © 2020 .Arianee Project <br/>Association subject to the Law of 1 July 1901 and the Decree of 16 August 1901 <br/> Siret Number 852 836 105 00019 – APE 9499Z</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>window.twttr=(function(d,s, id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, 'script', 'twitter-wjs'));</script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
