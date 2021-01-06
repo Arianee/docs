@@ -35,6 +35,15 @@ The amount requested depends on the number of employees of the staking entity:
 - 25 000 USD : 500 to 4 999 employees.
 - 50 000 USD : more than 5 000 employees.
 
+Please refer to the Aria Price :
+
+<iframe width="300" height="120"  style="margin:0" src="https://datastudio.google.com/embed/reporting/91f7302e-b2eb-441c-8f1e-8124f890e6c6/page/XFevB" frameborder="0" style="border:0" ></iframe>
+
+
+
+
+
+
 ## **Staking rules**
 
 - **Automatic transactions :** no automatic transaction is set in the *Arianee staking* smart contract. Stakes are transferred to and transferred out of the *Arianee staking* smart contract on demand.
