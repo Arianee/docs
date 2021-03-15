@@ -2,7 +2,7 @@
   "docs": {
     "Overview": ["introduction","arianee-project","arianee-economy", "arianee-decentralized"],
 
-"Key Features": ["Creation","Transfer ","Proof-of-ownership","Message","Event","History", "Update"],
+"Key Features": ["arianee-key-features-intro","arianee-creation","arianee-transfer ","arianee-proof-of-ownership","arianee-message","arianee-event","arianee-history", "arianee-update"],
 
     "Getting Started": ["how-to-proceed","requirements","kyb-process","staking-policy","livedemo"],
     
