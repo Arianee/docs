@@ -1,6 +1,6 @@
 ---
-title: Transfer
-sidebar_label: Transfer
+title:Transfer
+sidebar_label:Transfer
 ---
 
 ## What is the Transfer feature ?
