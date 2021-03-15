@@ -1,9 +1,11 @@
 {
   "docs": {
-    "Overview": ["introduction","arianee-project","arianee-economy", "arianee-decentralized", "arianee-key-features"],
+    "Overview": ["introduction","arianee-project","arianee-economy", "arianee-decentralized"],
+
+"Key Features": ["Creation","Transfer ","Proof-of-ownership","Message","Event","History", "Update"],
 
     "Getting Started": ["how-to-proceed","requirements","kyb-process","staking-policy","livedemo"],
-
+    
     "SDK": ["arianee-js","arianee-js-wallet","arianee-js-economy","arianee-js-certificate","arianee-js-identity", "arianee-js-messaging","arianee-js-event","events-listener", "arianee-privacy-gateway"],
 
 
