@@ -1,6 +1,6 @@
 ---
-title: Passport History
-sidebar_label: Passport History
+title: Access Passport History
+sidebar_label: Access Passport History
 ---
 
 ##  **What is the History feature**

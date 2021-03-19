@@ -1,6 +1,6 @@
 ---
-title: Message to Passport
-sidebar_label: Message to Passport
+title: Send Message to Passport
+sidebar_label: Send Message to Passport
 ---
 
 ## **What is the Message feature?**

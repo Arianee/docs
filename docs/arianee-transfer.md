@@ -1,6 +1,6 @@
 ---
-title:Transfer of Passport
-sidebar_label:Transfer of Passport
+title:Transfer a Passport
+sidebar_label:Transfer a Passport
 ---
 
 ## What is the Transfer feature ?

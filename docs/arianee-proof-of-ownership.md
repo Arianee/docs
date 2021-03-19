@@ -1,6 +1,6 @@
 ---
-title: Proof of ownership
-sidebar_label: Proof of ownership
+title: Prove ownership
+sidebar_label: Prove ownership
 ---
 
 ## What is the Proof of Ownership feature ?

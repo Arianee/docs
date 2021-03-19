@@ -1,6 +1,6 @@
 ---
-title: Passport Update
-sidebar_label: Passport Update 
+title: Update a Passport 
+sidebar_label: Update a Passport 
 ---
 
 ## What is a Passport Update ?

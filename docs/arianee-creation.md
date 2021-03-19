@@ -1,6 +1,6 @@
 ---
-title: Creation of Passport
-sidebar_label: Creation of Passport
+title: Create a Passport
+sidebar_label: Create a Passport
 ---
 
 ## What is the Create feature ?

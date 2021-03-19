@@ -1,6 +1,6 @@
 ---
-title: Arianee Event
-sidebar_label: Arianee Event
+title: Link Event to Passport
+sidebar_label: Link Event to Passport
 ---
 
 ## What is an event? 
