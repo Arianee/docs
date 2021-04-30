@@ -12,7 +12,7 @@ The Proof of Ownership feature enables the Owner of a Passport to share access t
 
 The Proof, including a password (Proofkey), is issued by the current Owner of a Passport. Only the current Owner of a Passport can produce the password required by someone else to read the Passport.
 Usually, the current Owner generates a link from the Proof and shares it with another user. The other user uses the link to read the Passport & the time when the Proof was issued on the Blockchain.
-The Password generated from a Proof is valid until the Passportd is Transferred or another Proof is generated .
+The Password generated from a Proof is valid until the Passportd is Transferred or another Proof is generated.
 It should be noted that the Passport issuer is always able to read the Passport as well thanks to another password (viewkey) created when the Passport is issued.
 To dig into the technical details, please refer to [the Passport SDK section](https://docs.arianee.org/docs/arianee-js-certificate) or [the Arianee Passport Schema](https://docs.arianee.org/docs/ArianeeProductCertificate-i18n).
 

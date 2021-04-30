@@ -11,7 +11,7 @@ By design, a Message is linked to a Passport AND a Blockchain Wallet (the curren
 ## **Message workflow**
 
 Messages are initiated by a Blockchain Wallet, usually from a Brand or a third party. 
-Only whitelisted Blockchain Wallets can send a Message to a Passport. The Whitelist includes the Passport issuer, and 3rd party wallets who linked an Event to the Passport which has been accepted.
+Only whitelisted Blockchain Wallets can send a Message to a Passport. The whitelist includes the Passport issuer, and 3rd party wallets who linked an Event to the Passport which has been accepted.
 
 A Message request is composed by:
 
@@ -41,12 +41,12 @@ The Message is different from an Update and an Event. Recommended use cases for 
 
 ## **Message fees**
 
-The creation of a Message has a stable price in fiat currency of 0.1 USD payable only in Aria (the Arianee protocol cryptocurrency) by the issuer of the Message..
+The creation of a Message has a stable price in fiat currency of 0.1 USD payable only in Aria (the Arianee protocol cryptocurrency) by the issuer of the Message.
 Extra fees may apply if the Message issuer outsources the creation of Messages to a third party or uses an external software to Create its Messages.
 
 ## **About interfaces**
 
-The Message creation can be done using the API integration with ArianeeJS library or directly at the Blockchain level interacting with smart contracts and the passport issuer Arianee privacy gateway
+The Message creation can be done using the API integration with ArianeeJS library or directly at the Blockchain level interacting with smart contracts and the passport issuer Arianee privacy gateway.
 The Message issuer can develop its own interface, outsource the development to a third party or it can use an external interface such as the Passport Management Platform.
 Owners may consult the Messages in the Passport on the .Wallet application developed by Arianee or any compatible interface.
 

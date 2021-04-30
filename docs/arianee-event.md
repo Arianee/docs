@@ -6,7 +6,7 @@ sidebar_label: Link Event to Passport
 ## What is an event? 
 
 The Event feature enables a Blockchain wallet, from a Brand or a third party for example, to create an Event on the Blockchain.
-By design, an Event is linked to one and only one Passport. An Event can be accepted or rejected by the Brand who issued the Passport or the current owner of the Passport.An Event aims at enriching the History of a Passport. To learn more about the Passport History please refer to [the History section](https://docs.arianee.org/docs/arianee-history)
+By design, an Event is linked to one and only one Passport. An Event can be accepted or rejected by the Brand who issued the Passport or the current owner of the Passport. An Event aims at enriching the History of a Passport. To learn more about the Passport History please refer to [the History section](https://docs.arianee.org/docs/arianee-history).
 
 ## Event workflow
 

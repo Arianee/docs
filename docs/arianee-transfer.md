@@ -29,7 +29,7 @@ It is recommended to use a Passport as custody for a selling transaction and tra
 
 ## Transfer fees
 
-At the Protocol level, the Transfer is free. Free for the issuer of the Passport, the current Owner and the target new Owner 
+At the Protocol level, the Transfer is free. Free for the issuer of the Passport, the current Owner and the target new Owner.
 Extra fees may apply if the Passport issuer outsources the Transfer execution to a third party or uses an external software to initiate the transfer of its Passports.
 At the Blockchain level, the gas fees of a Transfer transaction are paid by the Arianee Protocol.
 
