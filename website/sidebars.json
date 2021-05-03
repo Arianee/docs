@@ -11,7 +11,9 @@
 
     "Standards": ["standard-introduction","arianee-links","ArianeeProductCertificate-i18n", "ArianeeBrandIdentity-i18n", "ArianeeEvent-i18n", "ArianeeMessage-i18n","arianee-wallet-sharing"],
     
-    "Smart Contracts": ["testnet","mainnet"]
+    "Smart Contracts": ["testnet","mainnet"],
+    
+    "Mobile App" : ["mobile-app-guidelines"]
 
   },
   "arianeeJS" : {
