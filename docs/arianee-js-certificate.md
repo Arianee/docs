@@ -742,3 +742,114 @@ await wallet.methods.storeUpdateContentInRPCServer(
     )      
 ```
 ***
+
+
+
+### Certificate owner
+
+
+```
+ArianeeWallets.methods.ownerOf(certificateId)
+```
+
+Get ownership information about a certificate
+
+#### Parameter
+1. `certificateId` - `number`:  Certificate Id of Arianee Certificate
+
+#### Result
+`promise` returns `object`:
+
+#### Example
+```
+
+// Get ownership info of a Arianee certificate
+await wallet.methods.ownerOf(
+       1234
+    )      
+
+>
+{
+  address: '0xbEa4D632da6aBE9b85780dC0A43bF6C2777C466E', // certificate owner address
+  hasOwner: true, // this certificate has an owner
+  isOwner: true // current wallet is the owner
+}
+```
+***
+
+
+### Certificate transfer
+
+```
+ArianeeWallets.methods.transfer(certificateId, publicAddress)
+```
+
+Transfer a certificate to an address
+
+#### Parameter
+1. `certificateId` - `number`:  Certificate Id of Arianee Certificate
+3. `publicAddress` - `string`: the public address of certificate receiver
+
+
+#### Result
+`promise` returns `object`:
+
+#### Example
+```
+
+  try {
+    transfer  = await wallet.methods.transfer(certificateId, '0x5BC8da7dE68c1af47D329B14ADdBf1d7547A1747');
+  }
+  catch(e) {
+    console.log('error',e)
+  }
+
+  console.log(transfer);
+
+
+>
+{
+  address: '0xAF561f54CDd4A2cAD2aa5aD70f87358c2399626b',
+  hasOwner: true,
+  isOwner: true
+}
+{
+  receipt: {
+    blockHash: '0x3385b04da2e85d8dcef310246431fad06db3295caaba68070e8fc9d8a1330e04',
+    blockNumber: 20992104,
+    contractAddress: null,
+    cumulativeGasUsed: 119452,
+    from: '0xaf561f54cdd4a2cad2aa5ad70f87358c2399626b',
+    gasUsed: 75692,
+    logs: [ [Object], [Object] ],
+    logsBloom: '0x00000000000000080000000000000000000000008000000000000004000000000000000000000000000000000000000000000000000000000000000010000000000000000010001000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000010000020000000000020000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000001000000000000000002000002000000000000000000000000000000100000000000000000000000000040000000000000000000000000000000000004020010000200000000000000',
+    status: true,
+    to: '0x512c1fcf401133680f373a386f3f752b98070bc5',
+    transactionHash: '0xeb070b58361500e316c1867d0205a01536c4035382391359bb19d56df340259b',
+    transactionIndex: 1
+  }
+}
+
+
+
+//In case of error (transfer initiated by non-owner)
+
+Error: This wallet is not the owner of 904554486
+  receipt: {
+    blockHash: '0x3385b04da2e85d8dcef310246431fad06db3295caaba68070e8fc9d8a1330e04',
+    blockNumber: 20992104,
+    contractAddress: null,
+    cumulativeGasUsed: 119452,
+    from: '0xaf561f54cdd4a2cad2aa5ad70f87358c2399626b',
+    gasUsed: 75692,
+    logs: [ [Object], [Object] ],
+    logsBloom: '0x00000000000000080000000000000000000000008000000000000004000000000000000000000000000000000000000000000000000000000000000010000000000000000010001000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004000010000020000000000020000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000000001000000000000000002000002000000000000000000000000000000100000000000000000000000000040000000000000000000000000000000000004020010000200000000000000',
+    status: true,
+    to: '0x512c1fcf401133680f373a386f3f752b98070bc5',
+    transactionHash: '0xeb070b58361500e316c1867d0205a01536c4035382391359bb19d56df340259b',
+    transactionIndex: 1
+  }
+}
+
+```
+***
