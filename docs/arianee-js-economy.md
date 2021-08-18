@@ -31,7 +31,7 @@ ArianeeWallet.methods.balanceOfGas()
 
 #### Example
 ```
-let gas = wallet.methods.balanceOfGas();
+let gas = wallet.methods.balanceOfPoa();
 ```    
 
 ***
