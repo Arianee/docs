@@ -485,7 +485,7 @@ ArianeeWallets.methods.createCertificateArianeeAccessToken(certificateId)
 
 Create an Arianee Access Token.
 
-An Arianee Access Token is an Etherum Web Token (or JWT using Etherum algorythm signature). 
+An Arianee Access Token is an Ethereum Web Token (or JWT using Ethereum algorythm signature). 
 It is very close to a Arianee Proof but it does not require a blockchain transaction. It is made completly off the blockchain.
 
 It can be used to anonymously authenticate a user.
@@ -496,7 +496,7 @@ User needs to be the owner of specified certificate to create a valid Arianee Ac
 1. `certificateId` - `number`:  arianee certificate id
 
 #### Result
-`string` : A Etherum Web Token
+`string` : A Ethereum Web Token
 
 
 #### Example
