@@ -1,0 +1,7 @@
+jobs:
+  - deploy-docs:
+      filters:
+        branches:
+          only:
+            - main
+            - master
