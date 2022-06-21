@@ -1,0 +1,17 @@
+docker:
+  - image: cimg/node:10.19.0
+steps:
+  - checkout
+  - node/install-packages:
+      app-dir: website
+  - run:
+      name: Setup Github Credentials
+      command: |
+        git remote set-url origin git@github.com:Arianee/docs.git
+        git config --global user.email "tech@arianee.org"
+        git config --global user.name "Arianee Deployer"
+        git config --get remote.origin.url
+  - run: 
+      working_directory: website
+      name: Publish GH Pages
+      command: GIT_USER=arianeeDeployer USE_SSH=true CURRENT_BRANCH=$CIRCLE_BRANCH npm run publish-gh-pages

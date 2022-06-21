@@ -1,0 +1,33 @@
+commands: {}
+jobs:
+    deploy-docs:
+        docker:
+            - image: cimg/node:10.19.0
+        steps:
+            - checkout
+            - node/install-packages:
+                app-dir: website
+            - run:
+                command: |
+                    git remote set-url origin git@github.com:Arianee/docs.git
+                    git config --global user.email "tech@arianee.org"
+                    git config --global user.name "Arianee Deployer"
+                    git config --get remote.origin.url
+                name: Setup Github Credentials
+            - run:
+                command: GIT_USER=arianeeDeployer USE_SSH=true CURRENT_BRANCH=$CIRCLE_BRANCH npm run publish-gh-pages
+                name: Publish GH Pages
+                working_directory: website
+orbs:
+    node: circleci/node@5.0.2
+version: 2.1
+workflows:
+    update-docs:
+        jobs:
+            - deploy-docs:
+                filters:
+                    branches:
+                        only:
+                            - main
+                            - master
+
