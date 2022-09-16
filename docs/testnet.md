@@ -4,7 +4,7 @@ title: Arianee Testnet
 sidebar_label: Arianee Testnet
 ---
 
-Network ID: 99
+Network ID: 77
 
 RPC endpoint : https://sokol.poa.network
 
