@@ -11,5 +11,11 @@
   "devDependencies": {
     "docusaurus": "^1.14.7",
     "remarkable-extlink": "^1.1.1"
+  },
+  "overrides": {
+    "shell-quote": "^1.10.0",
+    "loader-utils": "^2.0.4",
+    "immer": "^9.0.21",
+    "form-data": "^2.5.6"
   }
 }
